@@ -1,0 +1,78 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-surface/30 border-t border-white/5 py-12 mt-20 relative">
+  <div class="absolute inset-0 bg-gradient-to-t from-main to-transparent pointer-events-none"></div>
+  <div class="container mx-auto px-4 relative z-10">
+    
+    <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
+       
+       <div class="space-y-4 max-w-sm">
+         <div class="flex items-center gap-2 text-2xl font-bold tracking-tighter">
+            <span class="text-gradient">SystemPros.ai</span>
+         </div>
+         <p class="text-secondary text-sm">
+           The high-performance AI integration firm for ambitious enterprises. We build the workforce of tomorrow.
+         </p>
+       </div>
+
+       <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-sm w-full">
+          <div>
+             <h4 class="font-bold mb-4 text-white">Solutions</h4>
+             <ul class="space-y-2 text-secondary">
+                <li><a href="/voice-ai" class="hover:text-accent transition-colors">Voice AI</a></li>
+                <li><a href="/industries" class="hover:text-accent transition-colors">Industries</a></li>
+                <li><a href="/consulting" class="hover:text-accent transition-colors">Consulting</a></li>
+             </ul>
+          </div>
+          <div>
+             <h4 class="font-bold mb-4 text-white">Industry Solutions</h4>
+             <ul class="space-y-2 text-secondary">
+                <li><a href="/solutions/roofing" class="hover:text-accent transition-colors">AI for Roofing</a></li>
+                <li><a href="/solutions/landscaping" class="hover:text-accent transition-colors">AI for Landscapers</a></li>
+                <li><a href="/solutions/auto-detailing" class="hover:text-accent transition-colors">AI for Auto Detailers</a></li>
+                <li><a href="/solutions/chiropractors" class="hover:text-accent transition-colors">AI for Chiropractors</a></li>
+                <li><a href="/solutions/dental" class="hover:text-accent transition-colors">AI for Dental Practices</a></li>
+                <li><a href="/solutions/independent-living" class="hover:text-accent transition-colors">AI for Senior Living</a></li>
+                <li><a href="/solutions/counselling" class="hover:text-accent transition-colors">AI for Therapists</a></li>
+                <li><a href="/solutions/coaching" class="hover:text-accent transition-colors">AI for Coaches</a></li>
+             </ul>
+          </div>
+          <div>
+             <h4 class="font-bold mb-4 text-white">Company</h4>
+             <ul class="space-y-2 text-secondary">
+                <li><a href="/about" class="hover:text-accent transition-colors">The Team</a></li>
+                <li><a href="/pricing" class="hover:text-accent transition-colors">Pricing</a></li>
+                <li><a href="/contact" class="hover:text-accent transition-colors">Book Audit</a></li>
+             </ul>
+          </div>
+          <div>
+             <h4 class="font-bold mb-4 text-white">Legal</h4>
+             <ul class="space-y-2 text-secondary">
+                <li><a href="/privacy" class="hover:text-accent transition-colors">Privacy Policy</a></li>
+                <li><a href="/terms" class="hover:text-accent transition-colors">Terms of Service</a></li>
+             </ul>
+          </div>
+          <div>
+             <h4 class="font-bold mb-4 text-white">Contact Us</h4>
+             <ul class="space-y-2 text-secondary">
+                <li><a href="mailto:hello@systempros.ai" class="hover:text-accent transition-colors">hello@systempros.ai</a></li>
+                <li><span class="text-white/60">USA:</span> +1 844-697-9038</li>
+                <li><span class="text-white/60">AUS:</span> +61 2 5563 2110</li>
+                <li><span class="text-white/60">NZ:</span> +64 2 125 50493</li>
+             </ul>
+          </div>
+       </div>
+
+    </div>
+
+    <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-secondary/50">
+       <p>&copy; {currentYear} SystemPros.ai. All rights reserved.</p>
+       <p class="font-mono bg-white/5 px-3 py-1 rounded-full">
+         <span class="text-accent">●</span> Engineering in <span class="text-white">Auckland</span>, <span class="text-white">Sydney</span>, & <span class="text-white">New York</span>
+       </p>
+    </div>
+
+  </div>
+</footer>

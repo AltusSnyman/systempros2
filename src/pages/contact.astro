@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contact Us | SystemPros.ai">
+    <main class="overflow-x-hidden">
+        
+        <section class="min-h-screen relative flex items-center py-20">
+            <!-- Background Elements -->
+             <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-main to-main z-0"></div>
+             
+             <div class="container mx-auto px-4 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    
+                    <!-- Left Column: Info -->
+                    <div class="space-y-12">
+                        <div class="space-y-6">
+                            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter">
+                                Let's Build <br/> <span class="text-gradient">The Future.</span>
+                            </h1>
+                            <p class="text-xl text-secondary leading-relaxed">
+                                Ready to automate your operations? Fill out the form to schedule a technical discovery call with our Senior Architect.
+                            </p>
+                        </div>
+
+                        <div class="space-y-8">
+                            <div class="glass-card p-6 flex items-start gap-4 hover:bg-white/5 transition-colors">
+                                <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0 text-accent">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold mb-1">Direct Line</h3>
+                                    <p class="text-secondary mb-2">Speak to a human immediately (Emergency Support)</p>
+                                    <a href="tel:+15550123456" class="text-white font-mono hover:text-accent transition-colors">+1 (555) 012-3456</a>
+                                </div>
+                            </div>
+                            
+                            <div class="glass-card p-6 flex items-start gap-4 hover:bg-white/5 transition-colors">
+                                <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0 text-accent">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold mb-1">Email</h3>
+                                    <p class="text-secondary mb-2">Sales queries & partnership opportunities</p>
+                                    <a href="mailto:hello@systempros.ai" class="text-white font-mono hover:text-accent transition-colors">hello@systempros.ai</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Form -->
+                    <div class="relative">
+                        <!-- Glow effect behind form -->
+                        <div class="absolute inset-0 bg-blue-500/20 blur-3xl -z-10 rounded-full transform scale-90"></div>
+                        
+                        <form class="glass-card p-10 space-y-6 border-t border-white/20 shadow-2xl">
+                            <h2 class="text-2xl font-bold mb-2">Inquiry Form</h2>
+                            
+                            <!-- Name -->
+                            <div class="relative group">
+                                <input type="text" id="name" placeholder=" " class="peer w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" required />
+                                <label for="name" class="absolute left-4 top-3 text-secondary text-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary/70 peer-focus:top-1 peer-focus:text-xs peer-focus:text-accent pointer-events-none">
+                                    Full Name
+                                </label>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="relative group">
+                                <input type="email" id="email" placeholder=" " class="peer w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" required />
+                                <label for="email" class="absolute left-4 top-3 text-secondary text-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary/70 peer-focus:top-1 peer-focus:text-xs peer-focus:text-accent pointer-events-none">
+                                    Work Email
+                                </label>
+                            </div>
+
+                            <!-- Company -->
+                            <div class="relative group">
+                                <input type="text" id="company" placeholder=" " class="peer w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" />
+                                <label for="company" class="absolute left-4 top-3 text-secondary text-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary/70 peer-focus:top-1 peer-focus:text-xs peer-focus:text-accent pointer-events-none">
+                                    Company Website
+                                </label>
+                            </div>
+
+                            <!-- Budget -->
+                            <div class="relative">
+                                <select class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all appearance-none cursor-pointer">
+                                    <option value="" disabled selected class="text-gray-500">Estimated Budget</option>
+                                    <option value="10-20k" class="bg-gray-900">$10k - $25k</option>
+                                    <option value="25-50k" class="bg-gray-900">$25k - $50k</option>
+                                    <option value="50k+" class="bg-gray-900">$50k+</option>
+                                </select>
+                                <div class="absolute right-4 top-3.5 pointer-events-none text-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="relative group">
+                                <textarea id="message" rows="4" placeholder=" " class="peer w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none"></textarea>
+                                <label for="message" class="absolute left-4 top-3 text-secondary text-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary/70 peer-focus:top-1 peer-focus:text-xs peer-focus:text-accent pointer-events-none">
+                                    Project Details...
+                                </label>
+                            </div>
+
+                            <button type="submit" class="w-full btn-primary flex justify-center items-center gap-2 group">
+                                Send Inquiry
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </button>
+
+                            <p class="text-xs text-center text-secondary mt-4">
+                                Guaranteed response within 24 hours. NDA upon request.
+                            </p>
+                        </form>
+                    </div>
+
+                </div>
+             </div>
+        </section>
+
+    </main>
+    <Footer />
+</Layout>

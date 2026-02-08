@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+    --color-main: #0A0A0A;
+    --color-surface: #1A1A1A;
+    --color-glass: rgba(26, 26, 26, 0.6);
+    --color-highlight: rgba(59, 130, 246, 0.3);
+
+    --color-primary: #FFFFFF;
+    --color-secondary: #A3A3A3;
+    --color-accent: #3B82F6;
+
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-body: 'Roboto', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --animate-border-beam: border-beam 2s linear infinite;
+    --animate-spin-slow: spin 30s linear infinite;
+    --animate-fade-in-up: fade-up 0.8s ease-out forwards;
+
+    @keyframes border-beam {
+        100% {
+            offset-distance: 100%;
+        }
+    }
+
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Custom utilities */
+.btn-primary {
+    @apply px-8 py-4 bg-accent text-white font-semibold rounded-full shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:bg-blue-600 transition-all duration-300 hover:-translate-y-1;
+}
+
+.glass-card {
+    @apply bg-surface/80 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:border-accent/40 transition-colors duration-500;
+}
+
+.text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-200 to-accent;
+}
+
+.nav-link {
+    @apply text-sm text-secondary hover:text-white transition-colors duration-200 font-medium;
+}

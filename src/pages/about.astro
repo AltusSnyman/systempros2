@@ -1,0 +1,163 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+
+const values = [
+  {
+    title: "Stability Over Hype",
+    copy: "We don't experiment with your business. We use proven, stable AI models in production environments. If it isn't bulletproof, we don't ship it.",
+    icon: "/assets/about-icon-anchor.png"
+  },
+  {
+    title: "Data Sovereignty",
+    copy: "Your data belongs to you. We architect systems where you hold the keys and control the API access. We build the pipes; you own the water.",
+    icon: "/assets/about-icon-shield.png"
+  },
+  {
+    title: "Results Over Activity",
+    copy: "We don't care about 'chat volume' or vanity metrics. We care about revenue deposited in your bank. Every line of code we write is tied to ROI.",
+    icon: "/assets/about-icon-target.png"
+  }
+];
+
+const teamStats = [
+    { label: "Combined IT Experience", value: "30+ Years", sub: "Avg. per Architect" },
+    { label: "Enterprise Protocols", value: "Certified", sub: "Security & Infrastructure" },
+    { label: "Tolerance for Leaks", value: "Zero", sub: "Bank-Grade Privacy" }
+];
+---
+
+<Layout title="About The Digital Architect | SystemPros.ai">
+  <main class="overflow-x-hidden pt-20">
+    
+    <!-- SECTION 1: THE HERO (The Philosophy) -->
+    <section class="relative py-32 px-4 flex flex-col items-center justify-center text-center overflow-hidden min-h-[50vh]">
+        <!-- Background -->
+        <div class="absolute inset-0 z-0">
+             <div class="absolute inset-0 bg-[#050505] opacity-90"></div>
+             <img src="/assets/about-hero-timeline-bg.png" alt="Timeline Background" class="w-full h-full object-cover opacity-30" />
+             <div class="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold text-white tracking-tight mb-8 leading-tight drop-shadow-2xl">
+                AI is Powerful. <br/> But it is <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">Dangerous Without Architecture.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-secondary max-w-3xl mx-auto leading-relaxed font-light">
+                We are not growth hackers chasing the latest trend. We are a collective of <strong class="text-white">30-year IT veterans</strong> bringing Enterprise Discipline to the AI Wild West.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE ORIGIN STORY (The Convergence) -->
+    <section class="py-24 px-4 bg-[#080808]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- Left: Visual -->
+            <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/10 group">
+                <div class="absolute inset-0 bg-blue-500/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                <img src="/assets/about-bridge-convergence.png" alt="The Convergence: IT meets AI" class="w-full h-auto transform transition-transform duration-700 group-hover:scale-105 relative z-0" />
+                <!-- Glitch Overlay Effect -->
+                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/80 to-transparent"></div>
+            </div>
+
+            <!-- Right: Copy -->
+            <div>
+                 <h2 class="text-3xl md:text-5xl font-bold text-white mb-8"><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">The Convergence.</span></h2>
+                 <div class="space-y-6 text-lg text-secondary leading-relaxed">
+                    <p>
+                        For three decades, our core team built critical IT infrastructure for enterprise-scale organizations. We watched the rise of the Internet, the migration to Cloud, and the SaaS revolution.
+                    </p>
+                    <p>
+                        Now, we see the AI wave. But we also see a massive problem: <strong class="text-white">Businesses are plugging powerful AI models into their systems like exposed wires.</strong> It's messy, insecure, and unreliable.
+                    </p>
+                    <p>
+                        SystemPros was formed to fix that. We don't just 'turn on' AI; we integrate it with the rigor, security, and stability of an Enterprise IT rollout.
+                    </p>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE TEAM (The Engineering Core) -->
+    <section class="py-24 px-4 relative overflow-hidden">
+        <!-- Abstract BG Elements -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/5 blur-[100px] rounded-full z-0"></div>
+
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="backdrop-blur-xl bg-white/5 border border-blue-500/30 rounded-3xl p-8 md:p-12 shadow-[0_0_50px_rgba(59,130,246,0.1)] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left: Network of Minds Graphic -->
+                <div class="relative group">
+                     <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+                     <div class="relative rounded-xl overflow-hidden border border-white/10 bg-[#050505]">
+                         <img src="/assets/about-team-network-minds.png" alt="The Engineering Core" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"/>
+                     </div>
+                </div>
+
+                <!-- Right: Content & Stats -->
+                <div class="text-left w-full">
+                    <div class="mb-8">
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">The Engineering Core.</h3>
+                        <p class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 font-mono text-sm uppercase tracking-wider mb-4 font-bold">Architecture Council</p>
+                        <p class="text-secondary text-lg leading-relaxed">
+                            SystemPros is not a revolving door of interns. We are a closed-loop team of Senior Systems Architects.
+                        </p>
+                    </div>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-3 gap-4 mb-10 border-t border-b border-white/10 py-6">
+                        {teamStats.map(stat => (
+                            <div class="text-center">
+                                <div class="text-2xl md:text-3xl font-bold text-white mb-1 group-hover:text-blue-400 transition-colors">{stat.value}</div>
+                                <div class="text-xs uppercase tracking-wider text-blue-400 font-semibold mb-1">{stat.label}</div>
+                                <div class="text-xs text-secondary/60 hidden md:block">{stat.sub}</div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div class="relative pl-6 border-l-4 border-blue-500 italic text-xl text-secondary">
+                        "We treat your business data with the same respect as a bank vault. Security first. Speed second."
+                        <footer class="mt-2 text-sm text-blue-400 font-semibold not-italic">— The SystemPros Team</footer>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: THE VALUES (The SystemPros Code) -->
+    <section class="py-24 px-4 bg-[#0A0A0A]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-16">The SystemPros Code.</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {values.map((val) => (
+                    <div class="bg-[#111] border border-white/5 rounded-xl p-8 hover:border-blue-500/30 transition-all hover:-translate-y-2 group">
+                        <div class="h-20 w-20 mb-6 relative">
+                             <img src={val.icon} alt={val.title} class="w-full h-full object-contain drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">{val.title}</h3>
+                        <p class="text-secondary leading-relaxed">
+                            {val.copy}
+                        </p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FINAL CTA -->
+    <section class="py-32 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+             <h2 class="text-4xl font-bold text-white mb-10">You know our philosophy. <br/> Let's discuss your architecture.</h2>
+             
+             <a href="/contact" class="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white text-lg font-bold px-10 py-4 rounded-full shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:shadow-[0_0_50px_rgba(59,130,246,0.6)] transition-all hover:scale-105">
+                Book The Strategy Session
+             </a>
+        </div>
+    </section>
+
+    <Footer />
+  </main>
+</Layout>

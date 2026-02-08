@@ -1,0 +1,55 @@
+---
+import { PhoneMissed, Clock, UserX } from 'lucide-react';
+
+const cards = [
+  {
+    icon: PhoneMissed,
+    color: 'text-red-500',
+    title: '62% of Calls Missed',
+    description: 'Every missed call is revenue gifted to your competitor. Potential clients hang up before you pick up.',
+  },
+  {
+    icon: Clock,
+    color: 'text-orange-500',
+    title: 'Slow Speed-to-Lead',
+    description: 'Leads go cold in 5 minutes. Manual follow-up is simply too slow to catch them while interested.',
+  },
+  {
+    icon: UserX,
+    color: 'text-purple-500',
+    title: 'Staff Burnout',
+    description: 'your team hates repetitive tasks. Let AI handle the grunt work so they can focus on closing.',
+  },
+];
+---
+
+<section class="py-20 relative z-10">
+  <div class="container mx-auto px-4">
+    
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-bold mb-4">The Cost of <span class="text-gradient">Human Error</span></h2>
+      <p class="text-secondary max-w-xl mx-auto">Why relying solely on manual processes is silently draining your revenue.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {cards.map((card) => (
+        <div class="glass-card group relative overflow-hidden transition-all duration-300 hover:-translate-y-2">
+          <!-- Hover Glow -->
+          <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <div class="relative z-10">
+            <div class={`mb-6 p-4 rounded-full bg-surface w-fit border border-white/10 ${card.color}`}>
+              <card.icon size={32} />
+            </div>
+            
+            <h3 class="text-xl font-bold mb-3 group-hover:text-white transition-colors">{card.title}</h3>
+            <p class="text-sm text-secondary leading-relaxed group-hover:text-gray-300 transition-colors">
+              {card.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

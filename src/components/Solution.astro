@@ -1,0 +1,133 @@
+---
+import { Bot, TabletSmartphone, Server } from 'lucide-react';
+---
+
+<section id="solutions" class="py-20 bg-surface/30 relative">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col lg:flex-row items-center gap-16">
+      
+      <!-- Visual Side -->
+      <!-- Visual Side -->
+      <div class="w-full lg:w-1/2 relative group">
+        <!-- Floating Glow -->
+        <div class="absolute inset-0 bg-accent/20 blur-[120px] rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
+        
+        <!-- Video Container -->
+        <div class="glass-card relative rounded-xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform transition-transform duration-500 hover:scale-[1.01] hover:shadow-[0_20px_50px_rgba(59,130,246,0.2)]">
+            
+            <!-- Border Beam Animation -->
+            <div class="absolute inset-0 pointer-events-none border border-transparent rounded-xl [mask-clip:padding-box,border-box] [mask-composite:intersect] [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] z-20">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 w-1/2 h-full -skew-x-12 animate-beam"></div>
+             </div>
+
+             <!-- Demo Video - Autoplay Muted Loop -->
+             <div class="relative aspect-video bg-black">
+                <video 
+                  id="demo-video"
+                  src="/assets/demo-video.mp4" 
+                  autoplay 
+                  muted 
+                  loop 
+                  playsinline
+                  class="w-full h-full object-cover"
+                ></video>
+                
+                <!-- Mute/Unmute Toggle Button -->
+                <button 
+                  id="mute-toggle"
+                  class="absolute bottom-4 right-4 z-30 w-12 h-12 bg-black/60 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 hover:bg-accent/40 hover:border-accent/50 transition-all duration-300 hover:scale-110"
+                  aria-label="Toggle sound"
+                >
+                  <!-- Muted Icon (visible by default) -->
+                  <svg id="icon-muted" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <line x1="23" y1="9" x2="17" y2="15"></line>
+                    <line x1="17" y1="9" x2="23" y2="15"></line>
+                  </svg>
+                  <!-- Unmuted Icon (hidden by default) -->
+                  <svg id="icon-unmuted" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white hidden">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                  </svg>
+                </button>
+             </div>
+        </div>
+      </div>
+
+      <!-- Content Side -->
+      <div class="w-full lg:w-1/2 space-y-10">
+        <div>
+           <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">The All-In-One <br><span class="text-gradient">Command Center</span></h2>
+           <p class="text-secondary text-lg">Replace fragmented tools with a cohesive architectural system. We design the flow, implement the nodes, and secure the data.</p>
+        </div>
+
+        <div class="space-y-8">
+            <div class="flex gap-4 group">
+               <div class="shrink-0 w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                  <Bot size={24} />
+               </div>
+               <div>
+                  <h3 class="text-xl font-bold mb-2 text-white">AI Voice Receptionist</h3>
+                  <p class="text-secondary text-sm">Sounds 100% human. Qualifies leads, answers FAQs, and books appointments 24/7. Never calls in sick.</p>
+               </div>
+            </div>
+
+            <div class="flex gap-4 group">
+               <div class="shrink-0 w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                   <Server size={24} />
+               </div>
+               <div>
+                  <h3 class="text-xl font-bold mb-2 text-white">Smart CRM Integration</h3>
+                  <p class="text-secondary text-sm">Data doesn't just sit there; it moves. Automatic updates, tagging, and pipeline movement based on conversation intent.</p>
+               </div>
+            </div>
+
+            <div class="flex gap-4 group">
+               <div class="shrink-0 w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                   <TabletSmartphone size={24} />
+               </div>
+               <div>
+                  <h3 class="text-xl font-bold mb-2 text-white">Visual Pipelines</h3>
+                  <p class="text-secondary text-sm">See exactly where every dollar is stuck. Identify bottlenecks in your sales process instantly.</p>
+               </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes scan {
+  0% { top: 0; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+.animate-scan {
+  animation: scan 3s ease-in-out infinite;
+}
+</style>
+
+<script>
+  const video = document.getElementById('demo-video');
+  const muteToggle = document.getElementById('mute-toggle');
+  const iconMuted = document.getElementById('icon-muted');
+  const iconUnmuted = document.getElementById('icon-unmuted');
+
+  if (video && muteToggle && iconMuted && iconUnmuted) {
+    muteToggle.addEventListener('click', () => {
+      video.muted = !video.muted;
+      
+      if (video.muted) {
+        iconMuted.classList.remove('hidden');
+        iconUnmuted.classList.add('hidden');
+      } else {
+        iconMuted.classList.add('hidden');
+        iconUnmuted.classList.remove('hidden');
+      }
+    });
+  }
+</script>

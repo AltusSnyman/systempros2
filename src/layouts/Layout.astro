@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+
+import Navbar from '../components/Navbar.astro';
+import HeroCanvas from '../components/HeroCanvas.jsx';
+
+interface Props {
+	title: string;
+    hideCTA?: boolean;
+}
+
+const { title, hideCTA = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="SystemPros.ai - Enterprise AI Integration" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-main text-primary overflow-x-hidden font-body antialiased selection:bg-accent selection:text-white relative">
+		<div class="fixed inset-0 z-[-1] pointer-events-none">
+            <HeroCanvas client:only="react" />
+			<div class="absolute inset-0 bg-[url('/assets/grid.svg')] bg-[size:50px_50px] opacity-[0.05]"></div>
+			<div class="absolute inset-0 bg-gradient-to-b from-transparent via-main/50 to-main"></div>
+		</div>
+        <Navbar hideCTA={hideCTA} />
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>

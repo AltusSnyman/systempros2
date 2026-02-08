@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import PricingSection from '../components/PricingSection.jsx';
+---
+
+<Layout title="Engagement Models | SystemPros.ai">
+  <main class="overflow-x-hidden pt-20">
+    <PricingSection client:load />
+    <Footer />
+  </main>
+</Layout>

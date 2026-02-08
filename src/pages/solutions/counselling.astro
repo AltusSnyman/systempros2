@@ -1,0 +1,251 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Footer from '../../components/Footer.astro';
+import ROICalculator from '../../components/ROICalculator.jsx';
+
+const heroImage = "/assets/counselling_hero_brain.png";
+const agitationImage = "/assets/counselling_agitation_signal.png"; 
+const securityImage = "/assets/counselling_security_vault.png";
+const roiBackground = "/assets/counselling_roi_waves.png";
+
+---
+
+<Layout title="AI Intake Coordinator for Therapists | HIPAA Compliant Answering Service">
+    
+    <!-- SECTION 1: THE HERO (The "Crisis Doesn't Wait" Hook) -->
+    <section class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-main">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/10 via-main to-main z-0"></div>
+        
+        <div class="container mx-auto px-4 z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Text Left -->
+            <div class="space-y-8 fade-up text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/5 backdrop-blur-sm">
+                    <span class="text-blue-400 text-xs font-bold tracking-wider uppercase">🧠 HIPAA Compliant AI Intake</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.1]">
+                    Crisis Doesn't Wait <br/>
+                    <span class="text-gradient from-blue-400 to-cyan-500">For Office Hours.</span>
+                </h1>
+                
+                <p class="text-xl text-secondary leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    Your clients call when they finally build the courage—often at 9 PM or on weekends. If they get a voicemail, that courage fades. Our <strong>HIPAA-Compliant Intake Agent</strong> answers 24/7 with compassion, triages their needs, and books the intake session instantly.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#roi-calculator" class="btn-primary flex items-center justify-center gap-2 text-lg bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-blue-500/20">
+                        Deploy Practice AI
+                    </a>
+                </div>
+            </div>
+
+            <!-- Visual Right -->
+            <div class="relative fade-up delay-200">
+                <div class="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+                <!-- Interactive 3D/Image Container -->
+                <div class="relative z-10 rounded-2xl border border-white/10 bg-surface/50 backdrop-blur-xl overflow-hidden shadow-2xl shadow-blue-500/10 group hover:border-blue-500/30 transition-all duration-500">
+                    <img src={heroImage} alt="Neural Network Brain Connected to Support" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                    <!-- HUD Overlay Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-main/80 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between border-t border-white/10 pt-4">
+                        <div class="flex flex-col">
+                           <span class="text-xs text-blue-400 font-mono mb-1">INTAKE STATUS</span>
+                           <span class="text-white font-bold flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span> LISTENING (SECURE)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE AGITATION (The "Courage Gap") -->
+    <section class="py-24 relative overflow-hidden bg-surface/30 border-y border-white/5">
+        <div class="container mx-auto px-4 z-10 text-center max-w-4xl">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">The <span class="text-gradient from-blue-400 to-cyan-500">Courage Gap.</span></h2>
+            <p class="text-xl text-secondary mb-12 leading-relaxed">
+                It takes a client weeks to build the nerve to call a therapist. That phone call is a fragile moment of resolve. If it goes to voicemail, 70% of callers hang up and never call back. You aren't just missing a session fee; you are missing the window to <strong class="text-white">intervene</strong>.
+            </p>
+            
+            <!-- Graphic: Generated Agitation Image -->
+            <div class="relative mx-auto max-w-4xl h-auto rounded-2xl border border-white/10 overflow-hidden shadow-2xl shadow-blue-500/10 group">
+                <div class="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                <img src={agitationImage} alt="Signal Loss vs Established Connection" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE INTELLIGENT TRIAGE -->
+    <section class="py-24 relative">
+        <div class="container mx-auto px-4 z-10">
+             <div class="text-center mb-16">
+                 <h2 class="text-4xl font-bold mb-4">Context-Aware <span class="text-gradient from-blue-400 to-cyan-500">Intake Routing</span></h2>
+                 <p class="text-secondary">The Agent detects intent and switches empathy protocols instantly.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Lane 1 -->
+                <div class="p-8 rounded-2xl bg-surface/40 border border-white/10 hover:border-blue-500/50 transition-colors">
+                     <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mb-4 text-2xl">💞</div>
+                     <h3 class="text-xl font-bold text-white mb-2">Relationship & Marriage</h3>
+                     <p class="text-xs font-mono text-blue-400 mb-4">TRIGGER: "ARGUMENTS", "DIVORCE"</p>
+                     <p class="text-secondary text-sm">Checks for "Joint Session" availability. Asks: "Are you looking to come in together or individually?"</p>
+                </div>
+                 <!-- Lane 2 -->
+                 <div class="p-8 rounded-2xl bg-surface/40 border border-white/10 hover:border-cyan-500/50 transition-colors">
+                    <div class="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center mb-4 text-2xl">🛡️</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Trauma & Anxiety</h3>
+                    <p class="text-xs font-mono text-cyan-400 mb-4">TRIGGER: "PANIC", "PTSD"</p>
+                    <p class="text-secondary text-sm">Uses "Calm Voice" latency. Prioritizes "Sooner Availability" checks. Marks file as "Sensitive."</p>
+               </div>
+                <!-- Lane 3 -->
+                <div class="p-8 rounded-2xl bg-surface/40 border border-white/10 hover:border-indigo-500/50 transition-colors">
+                    <div class="w-12 h-12 bg-indigo-500/20 rounded-full flex items-center justify-center mb-4 text-2xl">🧭</div>
+                    <h3 class="text-xl font-bold text-white mb-2">General Counselling</h3>
+                    <p class="text-xs font-mono text-indigo-400 mb-4">TRIGGER: "SAD", "STUCK"</p>
+                    <p class="text-secondary text-sm">Standard Intake Script. Collects insurance vs. private pay preference.</p>
+               </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: THE PRACTICE TRIAD -->
+    <section class="py-32 relative bg-surface/20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card hover:-translate-y-2 group border-blue-500/20 hover:border-blue-500/50">
+                    <div class="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 text-2xl group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
+                        👂
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Agent 01: The Compassionate Intake</h3>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        Never sounds robotic. Trained on 'Therapeutic Presence' voice models. It collects demographics, insurance info, and presenting problems without rushing the caller.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card hover:-translate-y-2 group border-cyan-500/20 hover:border-cyan-500/50">
+                    <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 text-2xl group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-300">
+                        📖
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Agent 02: The Directory Closer</h3>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        Paying for Psychology Today profiles? When a potential client emails you, Agent 02 calls them within 60 seconds. "I saw your inquiry about anxiety support—Dr. Smith has an opening Tuesday."
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card hover:-translate-y-2 group border-indigo-500/20 hover:border-indigo-500/50">
+                    <div class="w-14 h-14 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-6 text-2xl group-hover:bg-indigo-500 group-hover:text-white transition-colors duration-300">
+                        🔁
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Agent 03: The Retention Loop</h3>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        Client ghosted after 3 sessions? Agent 03 sends a gentle voice note or text: "Just thinking about our last session and wanted to see how you've been managing [Issue]." Soft re-engagement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: SECURITY VAULT -->
+    <section class="py-24 relative overflow-hidden bg-[#050505] border-y border-blue-900/30">
+        <div class="container mx-auto px-4 z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+             <!-- Text -->
+             <div class="order-2 md:order-1">
+                 <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white">Bank-Grade Privacy. <br/><span class="text-blue-500">HIPAA Compliant.</span></h2>
+                 <p class="text-secondary text-lg mb-8">
+                     Your practice lives and dies on confidentiality. Our architecture ensures no call data trains public models. All intake transcripts are encrypted via AES-256 and deposited directly into your secure EHR (SimplePractice, Theranest, Jane).
+                 </p>
+                 <div class="flex gap-4">
+                     <span class="px-4 py-2 rounded bg-surface border border-white/10 text-xs font-mono text-gray-400">AES-256 ENCRYPTION</span>
+                     <span class="px-4 py-2 rounded bg-surface border border-white/10 text-xs font-mono text-gray-400">SOC-2 CERTIFIED</span>
+                 </div>
+             </div>
+             <!-- Visual -->
+             <div class="order-1 md:order-2">
+                 <img src={securityImage} alt="Encrypted Digital Vault for Patient Data" class="w-full h-auto rounded-xl shadow-[0_0_50px_rgba(59,130,246,0.2)] border border-blue-500/20" />
+             </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: ROI CALCULATOR -->
+    <section id="roi-calculator" class="py-32 relative bg-surface/20 border-y border-white/5">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 opacity-30 pointer-events-none overflow-hidden">
+             <img src={roiBackground} alt="Brain Waves Merging into Financial Graph" class="w-full h-full object-cover opacity-50 mix-blend-screen" />
+             <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(59,130,246,0.1)_50%,transparent_75%,transparent_100%)] bg-[length:40px_40px]"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10 max-w-4xl">
+        <!-- ROI Logic Component -->
+        <ROICalculator 
+            client:visible 
+            jobValueLabel="Avg Client Lifetime Value"
+            defaultJobValue={1000}
+            defaultMissedCalls={10}
+            accentColor="blue"
+        />
+    </div>
+    </section>
+
+    <!-- SECTION 7: COMPARISON -->
+    <section class="py-24">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-center text-3xl font-bold mb-16">Burnout vs. <span class="text-gradient from-blue-400 to-cyan-500">Support</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-8">
+                <!-- Old Way -->
+                <div class="p-8 border-l-4 border-red-500/50 bg-surface/30 rounded-r-xl md:rounded-xl mb-8 md:mb-0">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <span class="text-red-500">❌</span> The Solo Practitioner Burnout
+                    </h3>
+                    <ul class="space-y-4 text-secondary">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Answering calls between sessions (no reset time)</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Playing "Phone Tag" for 3 days</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Losing clients to the "Next Available" therapist</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Stressing about filling cancellations</li>
+                    </ul>
+                </div>
+
+                <!-- SystemPros -->
+                <div class="p-8 border-l-4 border-blue-500 bg-blue-500/5 rounded-r-xl md:rounded-xl relative">
+                    <div class="absolute -top-3 -right-3 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg shadow-blue-500/50">RECOMMENDED</div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <span class="text-blue-500">✅</span> SystemPros Practice AI
+                    </h3>
+                    <ul class="space-y-4 text-white">
+                        <li class="flex items-center gap-3"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 100% Focus on the client in the room</li>
+                        <li class="flex items-center gap-3"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Intake is done BEFORE you speak</li>
+                        <li class="flex items-center gap-3"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Calendar fills while you sleep</li>
+                        <li class="flex items-center gap-3"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> HIPAA Compliant Security</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: FINAL CTA -->
+    <section class="py-32 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-8 tracking-tighter">Focus on Healing. <br/> <span class="text-gradient from-blue-400 to-cyan-500">Automate the Intake.</span></h2>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="/contact" class="btn-primary text-xl px-12 py-6 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-[0_0_40px_rgba(59,130,246,0.4)]">
+                    Book A Demo
+                </a>
+                <a href="/pricing" class="px-8 py-4 rounded-full border border-white/10 hover:bg-white/5 transition-all font-semibold flex items-center justify-center gap-2">
+                    View Pricing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+</Layout>
+
+<style>
+    .fade-up {
+        @apply opacity-0 animate-[fade-up_0.8s_ease-out_forwards];
+    }
+</style>

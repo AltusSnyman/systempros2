@@ -1,0 +1,201 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Footer from '../../components/Footer.astro';
+import ROICalculator from '../../components/ROICalculator.jsx';
+
+const heroImage = "/assets/senior_living_hero_tree.png";
+const agitationImage = "/assets/senior_living_agitation_calendar.png"; 
+const roiBackground = "/assets/senior_living_roi_chart.png";
+
+---
+
+<Layout title="AI Sales Agent for Senior Living | Assisted Living Lead Automation">
+    
+    <!-- SECTION 1: THE HERO (The "After-Hours" Hook) -->
+    <section class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-main">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-main to-main z-0"></div>
+        
+        <div class="container mx-auto px-4 z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Text Left -->
+            <div class="space-y-8 fade-up text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/5 backdrop-blur-sm">
+                    <span class="text-blue-400 text-xs font-bold tracking-wider uppercase">🏠 Senior Living Sales Automation</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.1]">
+                    Families Call at 7 PM. <br/>
+                    <span class="text-gradient from-blue-400 to-cyan-500">Does Your Community Answer?</span>
+                </h1>
+                
+                <p class="text-xl text-secondary leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    Your Sales Director works 9-5. Adult children research care for Mom after work. Our <strong>AI Senior Living Agent</strong> answers with compassion 24/7, answers questions about amenities, and books tours directly into your CRM.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#roi-calculator" class="btn-primary flex items-center justify-center gap-2 text-lg bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-blue-500/20">
+                        Deploy Community AI
+                    </a>
+                </div>
+            </div>
+
+            <!-- Visual Right -->
+            <div class="relative fade-up delay-200">
+                <div class="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+                <!-- Interactive 3D/Image Container -->
+                <div class="relative z-10 rounded-2xl border border-white/10 bg-surface/50 backdrop-blur-xl overflow-hidden shadow-2xl shadow-blue-500/10 group hover:border-blue-500/30 transition-all duration-500">
+                    <img src={heroImage} alt="Neon Tree of Life Connected Community" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                    <!-- HUD Overlay Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-main/80 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between border-t border-white/10 pt-4">
+                        <div class="flex flex-col">
+                           <span class="text-xs text-blue-400 font-mono mb-1">COMMUNITY STATUS</span>
+                           <span class="text-white font-bold flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span> OPEN FOR TOURS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE AGITATION (The "Speed-to-Tour" Gap) -->
+    <section class="py-24 relative overflow-hidden bg-surface/30 border-y border-white/5">
+        <div class="container mx-auto px-4 z-10 text-center max-w-4xl">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">The <span class="text-gradient from-blue-400 to-cyan-500">Speed-to-Tour Gap.</span></h2>
+            <p class="text-xl text-secondary mb-12 leading-relaxed">
+                In Senior Living, the community that books the tour first wins the resident. If a lead comes in on Friday night and sits until Monday morning, that family has already toured your competitor. Speed isn't just service; it's <strong class="text-white">occupancy</strong>.
+            </p>
+            
+            <!-- Graphic: Generated Agitation Image -->
+            <div class="relative mx-auto max-w-4xl h-auto rounded-2xl border border-white/10 overflow-hidden shadow-2xl shadow-blue-500/10 group">
+                <div class="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                <img src={agitationImage} alt="Wasted Time vs Instant Booked Tour" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE SOLUTION (The Occupancy Triad) -->
+    <section class="py-32 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                 <h2 class="text-4xl font-bold mb-4">The <span class="text-gradient from-blue-400 to-cyan-500">Occupancy Triad</span></h2>
+                 <p class="text-secondary">AI agents designed for Compassion and Sales.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card hover:-translate-y-2 group border-blue-500/20 hover:border-blue-500/50">
+                    <div class="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 text-2xl group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
+                        ❤️
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Agent 01: The Community Concierge</h3>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        Never send a family to voicemail. Agent 01 answers FAQs: 'Do you allow pets?', 'What is the base rent?', 'Do you offer transportation?' It qualifies the budget and books the tour.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card hover:-translate-y-2 group border-cyan-500/20 hover:border-cyan-500/50">
+                    <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 text-2xl group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-300">
+                        📍
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Agent 02: The Tour Booker</h3>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        Internet leads from 'A Place for Mom' or your website need instant action. Agent 02 calls immediately, offers empathy, and secures the on-site visit while the intent is high.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card hover:-translate-y-2 group border-purple-500/20 hover:border-purple-500/50">
+                    <div class="w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 text-2xl group-hover:bg-purple-500 group-hover:text-white transition-colors duration-300">
+                        🔑
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Agent 03: The Waitlist Manager</h3>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        Have a database of cold leads from 6 months ago? Agent 03 calls them with 'soft touches': 'We just renovated a 1-Bedroom with a garden view...' turning cold data into move-ins.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: ROI CALCULATOR -->
+    <section id="roi-calculator" class="py-32 relative bg-surface/20 border-y border-white/5">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 opacity-30 pointer-events-none overflow-hidden">
+             <img src={roiBackground} alt="Real Estate Floor Plans and Financial Growth" class="w-full h-full object-cover opacity-50 mix-blend-screen" />
+             <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(59,130,246,0.1)_50%,transparent_75%,transparent_100%)] bg-[length:40px_40px]"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10 max-w-4xl">
+            <!-- ROI Logic Component -->
+            <ROICalculator 
+                client:visible 
+                jobValueLabel="Avg Resident Value"
+                defaultJobValue={5000}
+                defaultMissedCalls={10}
+                defaultAppointments={20}
+                accentColor="blue"
+            />
+        </div>
+    </section>
+
+    <!-- SECTION 5: COMPARISON -->
+    <section class="py-24">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-center text-3xl font-bold mb-16">The Sales Director vs. <span class="text-gradient from-blue-400 to-cyan-500">The System</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-8">
+                <!-- Old Way -->
+                <div class="p-8 border-l-4 border-red-500/50 bg-surface/30 rounded-r-xl md:rounded-xl mb-8 md:mb-0">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <span class="text-red-500">❌</span> The 9-to-5 Desk
+                    </h3>
+                    <ul class="space-y-4 text-secondary">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Unavailable nights/weekends</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Buried in paperwork/tours</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Slow follow-up on web leads</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Forgets to nurture the waitlist</li>
+                    </ul>
+                </div>
+
+                <!-- SystemPros -->
+                <div class="p-8 border-l-4 border-blue-500 bg-blue-500/5 rounded-r-xl md:rounded-xl relative">
+                    <div class="absolute -top-3 -right-3 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg shadow-blue-500/50">RECOMMENDED</div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <span class="text-blue-500">✅</span> SystemPros Senior AI
+                    </h3>
+                    <ul class="space-y-4 text-white">
+                        <li class="flex items-center gap-3"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Answers at 8 PM on Tuesday</li>
+                        <li class="flex items-center gap-3"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Instant empathy & booking</li>
+                        <li class="flex items-center gap-3"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Never forgets a follow-up</li>
+                        <li class="flex items-center gap-3"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 24/7 coverage for families</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: FINAL CTA -->
+    <section class="py-32 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-8 tracking-tighter">Reach 100% <br/> <span class="text-gradient from-blue-400 to-cyan-500">Occupancy.</span></h2>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="/contact" class="btn-primary text-xl px-12 py-6 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-[0_0_40px_rgba(59,130,246,0.4)]">
+                    Book A Demo
+                </a>
+                <a href="/pricing" class="px-8 py-4 rounded-full border border-white/10 hover:bg-white/5 transition-all font-semibold flex items-center justify-center gap-2">
+                    View Pricing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+</Layout>
+
+<style>
+    .fade-up {
+        @apply opacity-0 animate-[fade-up_0.8s_ease-out_forwards];
+    }
+</style>

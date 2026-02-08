@@ -1,0 +1,292 @@
+```
+---
+import Layout from '../../layouts/Layout.astro';
+import Footer from '../../components/Footer.astro';
+import ROICalculator from '../../components/ROICalculator.jsx';
+
+const heroImage = "/assets/coaching_hero_ascension.png";
+const agitationImage = "/assets/coaching_agitation_clock.png"; 
+const objectionImage = "/assets/coaching_objection_flow.png";
+const roiBackground = "/assets/coaching_roi_ladders.png";
+
+---
+
+<Layout title="AI Setter for Coaches | High Ticket Sales Automation & Lead Gen">
+    
+    <!-- SECTION 1: THE HERO (Unqualified Lead Hook) -->
+    <section class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-main">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/10 via-main to-main z-0"></div>
+        
+        <div class="container mx-auto px-4 z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Text Left -->
+            <div class="space-y-8 fade-up text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/5 backdrop-blur-sm">
+                    <span class="text-blue-400 text-xs font-bold tracking-wider uppercase">🚀 High-Ticket Appointment Setter Agent</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.1]">
+                    Your Calendar is for Clients. <br/>
+                    <span class="text-gradient from-blue-400 to-cyan-500">Not Tire-Kickers.</span>
+                </h1>
+                
+                <p class="text-xl text-secondary leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    Stop doing "free coaching" on sales calls with people who can't afford you. Our <strong>AI Setter Agent</strong> qualifies leads 24/7, filters for budget, and only books calls with prospects ready to invest in their growth.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#roi-calculator" class="btn-primary flex items-center justify-center gap-2 text-lg bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-blue-500/20">
+                        Deploy The Setter
+                    </a>
+                </div>
+            </div>
+
+            <!-- Visual Right -->
+            <div class="relative fade-up delay-200">
+                <div class="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+                <!-- Interactive 3D/Image Container -->
+                <div class="relative z-10 rounded-2xl border border-white/10 bg-surface/50 backdrop-blur-xl overflow-hidden shadow-2xl shadow-blue-500/10 group hover:border-blue-500/30 transition-all duration-500">
+                    <img src={heroImage} alt="Qualified Ascension Stairs" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                    <!-- HUD Overlay Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-main/80 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between border-t border-white/10 pt-4">
+                        <div class="flex flex-col">
+                           <span class="text-xs text-blue-400 font-mono mb-1">FUNNEL STATUS</span>
+                           <span class="text-white font-bold flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span> FILTERING ACTIVE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE AGITATION (Discovery Call Trap) -->
+    <section class="py-24 relative overflow-hidden bg-surface/30 border-y border-white/5">
+        <div class="container mx-auto px-4 z-10 text-center max-w-4xl">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">The <span class="text-gradient from-blue-400 to-cyan-500">Discovery Call Trap.</span></h2>
+            <p class="text-xl text-secondary mb-12 leading-relaxed">
+                You spend 60 minutes digging deep, delivering value, and opening their eyes. Then they drop the bomb: "I don't have the money." You just wasted an hour of your life. If you want to scale to $100k/month, you cannot be the filter. You need a <strong class="text-white">Guard Dog</strong>.
+            </p>
+            
+            <!-- Graphic: Generated Agitation Image -->
+            <div class="relative mx-auto max-w-4xl h-auto rounded-2xl border border-white/10 overflow-hidden shadow-2xl shadow-blue-500/10 group">
+                <div class="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                <img src={agitationImage} alt="Wasted Time Disconnected from Budget" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE NICHE ROUTER (Coaching Matrix) -->
+    <section class="py-24 relative">
+        <div class="container mx-auto px-4 z-10 pl-40">
+             <div class="text-center mb-16 max-w-5xl mx-auto -ml-20">
+                 <h2 class="text-4xl font-bold mb-4">Trained on <span class="text-gradient from-blue-400 to-cyan-500">Your Methodology</span></h2>
+                 <p class="text-secondary">Context-aware qualification profiles for your specific coaching vertical.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto -ml-20">
+                <!-- Quadrant 1: Business -->
+                <div class="p-8 rounded-2xl bg-surface/40 border border-white/10 hover:border-blue-500/50 transition-colors flex gap-6">
+                     <div class="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center text-4xl flex-shrink-0">💼</div>
+                     <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Business Coaching (B2B)</h3>
+                        <p class="text-xs font-mono text-blue-400 mb-2">FOCUS: ROI & SYSTEMS</p>
+                        <ul class="text-sm text-secondary space-y-2">
+                            <li>• "What is your current monthly revenue?"</li>
+                            <li>• "What is your revenue goal?"</li>
+                        </ul>
+                     </div>
+                </div>
+                 <!-- Quadrant 2: Marketing -->
+                 <div class="p-8 rounded-2xl bg-surface/40 border border-white/10 hover:border-cyan-500/50 transition-colors flex gap-6">
+                    <div class="w-16 h-16 bg-cyan-500/20 rounded-xl flex items-center justify-center text-4xl flex-shrink-0">🎯</div>
+                    <div>
+                       <h3 class="text-xl font-bold text-white mb-2">Marketing Strategy</h3>
+                       <p class="text-xs font-mono text-cyan-400 mb-2">FOCUS: TRAFFIC & CONVERSION</p>
+                       <ul class="text-sm text-secondary space-y-2">
+                           <li>• "What is your current ad spend?"</li>
+                           <li>• "What is your biggest funnel bottleneck?"</li>
+                       </ul>
+                    </div>
+               </div>
+                <!-- Quadrant 3: Life/Growth -->
+                <div class="p-8 rounded-2xl bg-surface/40 border border-white/10 hover:border-indigo-500/50 transition-colors flex gap-6">
+                    <div class="w-16 h-16 bg-indigo-500/20 rounded-xl flex items-center justify-center text-4xl flex-shrink-0">🦋</div>
+                    <div>
+                       <h3 class="text-xl font-bold text-white mb-2">Life & Transformation</h3>
+                       <p class="text-xs font-mono text-indigo-400 mb-2">FOCUS: MINDSET & CLARITY</p>
+                       <ul class="text-sm text-secondary space-y-2">
+                           <li>• "On a scale of 1-10, how stuck do you feel?"</li>
+                           <li>• "What is this costing you emotionally?"</li>
+                       </ul>
+                    </div>
+               </div>
+                <!-- Quadrant 4: Fitness -->
+                <div class="p-8 rounded-2xl bg-surface/40 border border-white/10 hover:border-emerald-500/50 transition-colors flex gap-6">
+                    <div class="w-16 h-16 bg-emerald-500/20 rounded-xl flex items-center justify-center text-4xl flex-shrink-0">🧬</div>
+                    <div>
+                       <h3 class="text-xl font-bold text-white mb-2">Fitness & Wellness</h3>
+                       <p class="text-xs font-mono text-emerald-400 mb-2">FOCUS: PHYSICAL RESULTS</p>
+                       <ul class="text-sm text-secondary space-y-2">
+                           <li>• "What outcome are you committed to in 90 days?"</li>
+                           <li>• "Any current injuries or limitations?"</li>
+                       </ul>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: THE SETTER TRIAD (3 Agents) -->
+    <section class="py-32 relative bg-surface/20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card hover:-translate-y-2 group border-blue-500/20 hover:border-blue-500/50">
+                    <div class="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 text-2xl group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
+                        ▶️
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Agent 01: The Funnel Setter</h3>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        They watched your webinar/VSL but didn't book? Agent 01 calls them: 'I saw you watched the training on [Topic]. Did you have any questions about applying that to your business?'
+                    </p>
+                    <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">Inbound Converter</span>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card hover:-translate-y-2 group border-cyan-500/20 hover:border-cyan-500/50">
+                    <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 text-2xl group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-300">
+                        ✅
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Agent 02: The Gatekeeper</h3>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        Manages your application forms. If they answer 'No Money', it routes them to a downsell course. If they answer 'Ready to Invest', it fast-tracks them to your calendar.
+                    </p>
+                    <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider">Application Filter</span>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card hover:-translate-y-2 group border-indigo-500/20 hover:border-indigo-500/50">
+                    <div class="w-14 h-14 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-6 text-2xl group-hover:bg-indigo-500 group-hover:text-white transition-colors duration-300">
+                        🎟️
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Agent 03: The Masterclass Filler</h3>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        Hosting a challenge or webinar? Agent 03 calls your old lead list to fill the seats. 'Hey, we're doing a live workshop on [Topic] next week, wanted to see if you wanted a free ticket?'
+                    </p>
+                    <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Event Filler</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: OBJECTION HANDLER -->
+    <section class="py-24 relative overflow-hidden bg-[#050505] border-y border-blue-900/30">
+        <div class="container mx-auto px-4 z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+             <!-- Text -->
+             <div class="order-2 md:order-1 space-y-6">
+                 <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white">It Doesn't just Book. <br/><span class="text-blue-500">It Handles Resistance.</span></h2>
+                 <p class="text-secondary text-lg">
+                     Our agents are trained on 'Sandler' and 'Challenger' sales methodologies. They know how to pivot.
+                 </p>
+                 
+                 <div class="bg-surface/50 border border-white/10 rounded-xl p-6">
+                    <p class="text-xs text-gray-400 uppercase mb-2 font-bold">Example Dialogue</p>
+                    <div class="space-y-4">
+                        <div class="flex gap-4 items-start">
+                            <span class="text-red-400 font-bold text-sm min-w-[50px]">LEAD:</span>
+                            <p class="text-white italic">"I'm just looking for information right now."</p>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <span class="text-blue-400 font-bold text-sm min-w-[50px]">AI:</span>
+                            <p class="text-white">"Totally understand. To make sure I send the right information, are you looking to solve [Problem X] or [Problem Y]?"</p>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+             <!-- Visual -->
+             <div class="order-1 md:order-2">
+                 <img src={objectionImage} alt="Objection Handling Logic Flow" class="w-full h-auto rounded-xl shadow-[0_0_50px_rgba(59,130,246,0.2)] border border-blue-500/20" />
+             </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: ROI CALCULATOR -->
+    <section id="roi-calculator" class="py-32 relative bg-surface/20 border-y border-white/5">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 opacity-30 pointer-events-none overflow-hidden">
+             <img src={roiBackground} alt="Ascension Ladders and Growth Curves" class="w-full h-full object-cover opacity-50 mix-blend-screen" />
+             <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(59,130,246,0.1)_50%,transparent_75%,transparent_100%)] bg-[length:40px_40px]"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10 max-w-4xl">
+        <!-- ROI Logic Component -->
+        <ROICalculator 
+            client:visible 
+            jobValueLabel="Program Price"
+            defaultJobValue={5000}
+            defaultMissedCalls={5}
+            accentColor="cyan"
+        />
+    </div>
+    </section>
+
+    <!-- SECTION 7: COMPARISON -->
+    <section class="py-24">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-center text-3xl font-bold mb-16">The VA vs. <span class="text-gradient from-blue-400 to-cyan-500">The System</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-8">
+                <!-- Human Setter -->
+                <div class="p-8 border-l-4 border-red-500/50 bg-surface/30 rounded-r-xl md:rounded-xl mb-8 md:mb-0">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <span class="text-red-500">❌</span> The Human Setter / VA
+                    </h3>
+                    <ul class="space-y-4 text-secondary">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Sleeps 8 hours a day (Misses international leads)</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Gets discouraged by "No"</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Costs $3k/mo + 10-15% Commission</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Inconsistent Energy</li>
+                    </ul>
+                </div>
+
+                <!-- SystemPros -->
+                <div class="p-8 border-l-4 border-blue-500 bg-blue-500/5 rounded-r-xl md:rounded-xl relative">
+                    <div class="absolute -top-3 -right-3 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg shadow-blue-500/50">SUPERIOR</div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <span class="text-blue-500">✅</span> SystemPros Coaching AI
+                    </h3>
+                    <ul class="space-y-4 text-white">
+                        <li class="flex items-center gap-3"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Dials leads within 10 seconds of opt-in</li>
+                        <li class="flex items-center gap-3"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Emotionally detached execution (Never burns out)</li>
+                        <li class="flex items-center gap-3"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Costs a fraction of a human setter</li>
+                        <li class="flex items-center gap-3"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Infinite Scalability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: FINAL CTA -->
+    <section class="py-32 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-8 tracking-tighter">Scale Your Impact. <br/> <span class="text-gradient from-blue-400 to-cyan-500">Protect Your Time.</span></h2>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="/contact" class="btn-primary text-xl px-12 py-6 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-[0_0_40px_rgba(59,130,246,0.4)]">
+                    Book A Strategy Session
+                </a>
+                <a href="/pricing" class="px-8 py-4 rounded-full border border-white/10 hover:bg-white/5 transition-all font-semibold flex items-center justify-center gap-2">
+                    View Pricing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+</Layout>
+
+<style>
+    .fade-up {
+        @apply opacity-0 animate-[fade-up_0.8s_ease-out_forwards];
+    }
+</style>
