@@ -2,32 +2,104 @@
 import '../styles/global.css';
 
 import Navbar from '../components/Navbar.astro';
-import Navbar from '../components/Navbar.astro';
 import HeroCanvas from '../components/HeroCanvas.jsx';
 import ChatbotWidget from '../components/ChatbotWidget.jsx';
 
 interface Props {
 	title: string;
+	description?: string;
+    image?: string;
+    type?: string;
     hideCTA?: boolean;
     showChatWidget?: boolean;
 }
 
-const { title, hideCTA = false, showChatWidget = true } = Astro.props;
+const { 
+    title, 
+    description = "SystemPros.ai - Enterprise AI Integration. We build the workforce of tomorrow using 30 years of enterprise architecture experience.",
+    image = "/social-preview.png",
+    type = "website",
+    hideCTA = false, 
+    showChatWidget = true 
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(image, Astro.url);
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="SystemPros.ai - Enterprise AI Integration" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+        
+        <!-- Canonical URL -->
+        <link rel="canonical" href={canonicalURL} />
+
+        <!-- Primary Meta Tags -->
 		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content={type} />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={socialImageURL} />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={canonicalURL} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={socialImageURL} />
+
+        <!-- LocalBusiness Schema -->
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "ConsultingService",
+              "name": "SystemPros.ai",
+              "url": "https://systempros.ai",
+              "logo": "https://systempros.ai/logo.png",
+              "telephone": "+18446979038",
+              "areaServed": ["US", "AU", "NZ", "GB"],
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+1-844-697-9038",
+                  "contactType": "customer service",
+                  "areaServed": "US",
+                  "availableLanguage": "English"
+                },
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+61-2-5563-2110",
+                  "contactType": "customer service",
+                  "areaServed": "AU",
+                  "availableLanguage": "English"
+                },
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+64-2-125-50493",
+                  "contactType": "customer service",
+                  "areaServed": "NZ",
+                  "availableLanguage": "English"
+                }
+              ],
+              "sameAs": [
+                "https://twitter.com/systempros",
+                "https://linkedin.com/company/systempros"
+              ]
+            }
+        </script>
 	</head>
 	<body class="bg-main text-primary overflow-x-hidden font-body antialiased selection:bg-accent selection:text-white relative">
 		<div class="fixed inset-0 z-[-1] pointer-events-none">
-            <HeroCanvas client:only="react" />
+            <HeroCanvas client:idle />
 			<div class="absolute inset-0 bg-[url('/assets/grid.svg')] bg-[size:50px_50px] opacity-[0.05]"></div>
 			<div class="absolute inset-0 bg-gradient-to-b from-transparent via-main/50 to-main"></div>
 		</div>

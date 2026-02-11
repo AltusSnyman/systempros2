@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from 'react';
 
+import counselingHero from '../assets/counselling_hero_brain.png';
+import seniorLivingHero from '../assets/senior_living_hero_tree.png';
+import roofingHero from '../assets/roofing_neural.png';
+import dentalHero from '../assets/dental_hero_implant.png';
+import chiroHero from '../assets/chiropractic_hero_spine.png';
+import detailingHero from '../assets/auto_detailing_hero_scanner.png';
+import landscapingHero from '../assets/landscaping_hero_plan.png';
+
 const industries = [
     {
         id: 'counseling',
         category: 'Medical',
         title: 'The Empathy Engine',
         stat: 'HIPAA-Compliant Triage & Intake.',
-        image: '/assets/counselling_hero_brain.png',
+        image: counselingHero.src,
         video: '/assets/industry-videos/counseling.mp4',
         link: '/solutions/counselling'
     },
@@ -15,7 +23,7 @@ const industries = [
         category: 'Medical',
         title: 'The Community Concierge',
         stat: 'Captures 100% of After-Hours Inquiries.',
-        image: '/assets/senior_living_hero_tree.png',
+        image: seniorLivingHero.src,
         video: '/assets/industry-videos/ndis.mp4',
         link: '/solutions/independent-living'
     },
@@ -24,7 +32,7 @@ const industries = [
         category: 'Home Services',
         title: 'The Storm-Chaser',
         stat: 'Zero Missed Leads During Peak Season.',
-        image: '/assets/roofing_neural.png',
+        image: roofingHero.src,
         video: '/assets/industry-videos/roofing.mp4',
         link: '/solutions/roofing'
     },
@@ -33,7 +41,7 @@ const industries = [
         category: 'Medical',
         title: 'The Practice Filler',
         stat: 'Reduces Front Desk Admin by 70%.',
-        image: '/assets/dental_hero_implant.png',
+        image: dentalHero.src,
         video: '/assets/industry-videos/dental.mp4',
         link: '/solutions/dental'
     },
@@ -42,7 +50,7 @@ const industries = [
         category: 'Medical',
         title: 'The Patient Intake',
         stat: 'Verifies Insurance & Books Plans of Care.',
-        image: '/assets/chiropractic_hero_spine.png',
+        image: chiroHero.src,
         video: '/assets/industry-videos/chiro.mp4',
         link: '/solutions/chiropractors'
     },
@@ -51,7 +59,7 @@ const industries = [
         category: 'Trades',
         title: 'The Ceramic Closer',
         stat: 'Automated Deposit Collection.',
-        image: '/assets/auto_detailing_hero_scanner.png',
+        image: detailingHero.src,
         video: '/assets/industry-videos/detailing.mp4',
         link: '/solutions/auto-detailing'
     },
@@ -60,7 +68,7 @@ const industries = [
         category: 'Home Services',
         title: 'The Spring Scheduler',
         stat: 'Routes Crews & Books Estimates.',
-        image: '/assets/landscaping_hero_plan.png',
+        image: landscapingHero.src,
         video: '/assets/industry-videos/landscaping.mp4',
         link: '/solutions/landscaping'
     }

@@ -1,22 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+
+import heroBg from '../assets/about-hero-timeline-bg.png';
+import bridgeConvergence from '../assets/about-bridge-convergence.png';
+import teamNetwork from '../assets/about-team-network-minds.png';
+
+import iconAnchor from '../assets/about-icon-anchor.png';
+import iconShield from '../assets/about-icon-shield.png';
+import iconTarget from '../assets/about-icon-target.png';
 
 const values = [
   {
     title: "Stability Over Hype",
     copy: "We don't experiment with your business. We use proven, stable AI models in production environments. If it isn't bulletproof, we don't ship it.",
-    icon: "/assets/about-icon-anchor.png"
+    icon: iconAnchor
   },
   {
     title: "Data Sovereignty",
     copy: "Your data belongs to you. We architect systems where you hold the keys and control the API access. We build the pipes; you own the water.",
-    icon: "/assets/about-icon-shield.png"
+    icon: iconShield
   },
   {
     title: "Results Over Activity",
     copy: "We don't care about 'chat volume' or vanity metrics. We care about revenue deposited in your bank. Every line of code we write is tied to ROI.",
-    icon: "/assets/about-icon-target.png"
+    icon: iconTarget
   }
 ];
 
@@ -27,7 +36,10 @@ const teamStats = [
 ];
 ---
 
-<Layout title="About The Digital Architect | SystemPros.ai">
+<Layout 
+  title="The Digital Architect Team | About SystemPros.ai"
+  description="Meet the 30-year IT veterans behind SystemPros.ai. We prioritize stability, data sovereignty, and security over hype. The engineering core for your AI workforce."
+>
   <main class="overflow-x-hidden pt-20">
     
     <!-- SECTION 1: THE HERO (The Philosophy) -->
@@ -35,7 +47,7 @@ const teamStats = [
         <!-- Background -->
         <div class="absolute inset-0 z-0">
              <div class="absolute inset-0 bg-[#050505] opacity-90"></div>
-             <img src="/assets/about-hero-timeline-bg.png" alt="Timeline Background" class="w-full h-full object-cover opacity-30" />
+             <Image src={heroBg} alt="Timeline Background" class="w-full h-full object-cover opacity-30" />
              <div class="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505]"></div>
         </div>
 
@@ -56,7 +68,7 @@ const teamStats = [
             <!-- Left: Visual -->
             <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/10 group">
                 <div class="absolute inset-0 bg-blue-500/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                <img src="/assets/about-bridge-convergence.png" alt="The Convergence: IT meets AI" class="w-full h-auto transform transition-transform duration-700 group-hover:scale-105 relative z-0" />
+                <Image src={bridgeConvergence} alt="The Convergence: IT meets AI" class="w-full h-auto transform transition-transform duration-700 group-hover:scale-105 relative z-0" />
                 <!-- Glitch Overlay Effect -->
                 <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/80 to-transparent"></div>
             </div>
@@ -91,7 +103,7 @@ const teamStats = [
                 <div class="relative group">
                      <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                      <div class="relative rounded-xl overflow-hidden border border-white/10 bg-[#050505]">
-                         <img src="/assets/about-team-network-minds.png" alt="The Engineering Core" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"/>
+                         <Image src={teamNetwork} alt="The Engineering Core" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"/>
                      </div>
                 </div>
 
@@ -135,7 +147,7 @@ const teamStats = [
                 {values.map((val) => (
                     <div class="bg-[#111] border border-white/5 rounded-xl p-8 hover:border-blue-500/30 transition-all hover:-translate-y-2 group">
                         <div class="h-20 w-20 mb-6 relative">
-                             <img src={val.icon} alt={val.title} class="w-full h-full object-contain drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
+                             <Image src={val.icon} alt={val.title} class="w-full h-full object-contain drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
                         </div>
                         <h3 class="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">{val.title}</h3>
                         <p class="text-secondary leading-relaxed">

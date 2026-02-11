@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="404 - Page Not Found | SystemPros.ai">
+	<section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+		<!-- Background Elements -->
+		<div class="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/10 to-transparent pointer-events-none"></div>
+        <div class="absolute inset-0 bg-[url('/assets/grid.svg')] bg-[size:50px_50px] opacity-[0.05]"></div>
+
+		<div class="container mx-auto px-4 relative z-10 text-center">
+			<h1 class="text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-accent/50 to-white mb-4">
+				404
+			</h1>
+			<h2 class="text-3xl md:text-5xl font-bold mb-6">
+				Page Not <span class="text-gradient">Found</span>
+			</h2>
+			<p class="text-xl text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
+				The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+			</p>
+			
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/" class="btn-primary inline-flex items-center justify-center gap-2 px-8 py-4 text-lg">
+					Return Home
+				</a>
+				<a href="/contact" class="px-8 py-4 rounded bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent/30 transition-all text-white font-semibold backdrop-blur-sm">
+					Contact Support
+				</a>
+			</div>
+		</div>
+	</section>
+</Layout>

@@ -3,15 +3,20 @@ import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import ROICalculator from '../../components/ROICalculator.jsx';
 import RoofingChatbot from '../../components/solutions/RoofingChatbot.tsx';
+import { Image } from 'astro:assets';
 
 // Placeholder or generated images
-const heroImage = "/assets/roofing_hero_storm.png"; // Generated
-const agitationImage = "/assets/roofing_agitation_ladder.png"; // Generated
+import heroImage from '../../assets/roofing_hero_storm.png';
+import agitationImage from '../../assets/roofing_agitation_ladder.png';
 // const roiBackground = "/assets/roofing_roi_background.png"; // To be generated
 
 ---
 
-<Layout title="AI Answering Service for Roofers | Storm Lead Automation" showChatWidget={false}>
+<Layout 
+    title="AI Storm Response System for Roofers | Lead Automation"
+    description="Handle 1,000+ storm calls instantly. Our AI Roofing Agent pre-qualifies damage, books inspections in AccuLynx, and beats storm chasers to every lead."
+    showChatWidget={false}
+>
     
     <!-- SECTION 1: THE HERO (The Storm Hook) -->
     <section class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-main">
@@ -49,7 +54,7 @@ const agitationImage = "/assets/roofing_agitation_ladder.png"; // Generated
                 <div class="absolute inset-0 bg-accent/20 blur-[100px] rounded-full pointer-events-none"></div>
                 <!-- Interactive 3D/Image Container -->
                 <div class="relative z-10 rounded-2xl border border-white/10 bg-surface/50 backdrop-blur-xl overflow-hidden shadow-2xl shadow-blue-500/10 group hover:border-accent/30 transition-all duration-500">
-                    <img src={heroImage} alt="AI Storm Shield protecting home" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                    <Image src={heroImage} alt="AI Storm Shield protecting home" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
                     <!-- HUD Overlay Effect -->
                     <div class="absolute inset-0 bg-gradient-to-t from-main/80 to-transparent pointer-events-none"></div>
                     <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between border-t border-white/10 pt-4">
@@ -78,7 +83,7 @@ const agitationImage = "/assets/roofing_agitation_ladder.png"; // Generated
             <!-- Graphic: Generated Agitation Image -->
             <div class="relative mx-auto max-w-4xl h-auto rounded-2xl border border-white/10 overflow-hidden shadow-2xl shadow-red-500/10 group">
                 <div class="absolute inset-0 bg-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
-                <img src={agitationImage} alt="The Ladder Paradox: Missed Calls vs. Lost Revenue" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                <Image src={agitationImage} alt="The Ladder Paradox: Missed Calls vs. Lost Revenue" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
             </div>
         </div>
     </section>

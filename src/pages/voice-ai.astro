@@ -1,9 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import triadHero from '../assets/revenue-triad-hero.png';
+import agent01 from '../assets/agent-01-shield.png';
+import agent02 from '../assets/agent-02-speed.png';
+import agent03 from '../assets/agent-03-miner.png';
+import globalInfra from '../assets/voice-ai-global-infra.png';
 ---
 
-<Layout title="Revenue Triad Architecture | SystemPros.ai">
+<Layout 
+    title="The Revenue Triad Architecture | SystemPros.ai"
+    description="Stop hiring receptionists. Deploy the world's first 3-Agent AI Architecture: The Gatekeeper, The Hunter, and The Miner. Complete revenue automation."
+>
     <main class="overflow-x-hidden">
         
         <!-- SECTION 1: HERO (The Ecosystem Hook) -->
@@ -31,8 +40,8 @@ import Footer from '../components/Footer.astro';
                  <!-- Visual Right -->
                  <div class="relative h-[500px] w-full flex items-center justify-center animate-fade-in-up delay-200">
                      <div class="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full"></div>
-                     <img 
-                        src="/assets/revenue-triad-hero.png" 
+                     <Image 
+                        src={triadHero} 
                         alt="Revenue Triad Ecosystem" 
                         class="relative z-10 w-full object-contain drop-shadow-[0_0_50px_rgba(59,130,246,0.3)] hover:scale-105 transition-transform duration-700"
                      />
@@ -46,8 +55,8 @@ import Footer from '../components/Footer.astro';
                  <!-- Visual Left -->
                  <div class="order-2 lg:order-1 glass-card p-0 overflow-hidden relative group">
                      <div class="absolute inset-0 bg-blue-500/5 group-hover:bg-blue-500/10 transition-colors duration-500"></div>
-                     <img 
-                        src="/assets/agent-01-shield.png" 
+                     <Image 
+                        src={agent01} 
                         alt="Agent 01 Gatekeeper" 
                         class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105 transform"
                      />
@@ -81,8 +90,8 @@ import Footer from '../components/Footer.astro';
                  <!-- Visual Right -->
                  <div class="glass-card p-0 overflow-hidden relative group border-red-500/20 hover:border-red-500/50">
                      <div class="absolute inset-0 bg-red-500/5 group-hover:bg-red-500/10 transition-colors duration-500"></div>
-                     <img 
-                        src="/assets/agent-02-speed.png" 
+                     <Image 
+                        src={agent02} 
                         alt="Agent 02 Speed" 
                         class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
                      />
@@ -98,8 +107,8 @@ import Footer from '../components/Footer.astro';
                  <!-- Visual Left -->
                  <div class="order-2 lg:order-1 glass-card p-0 overflow-hidden relative group border-green-500/20 hover:border-green-500/50">
                      <div class="absolute inset-0 bg-green-500/5 group-hover:bg-green-500/10 transition-colors duration-500"></div>
-                     <img 
-                        src="/assets/agent-03-miner.png" 
+                     <Image 
+                        src={agent03} 
                         alt="Agent 03 Miner" 
                         class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105 transform"
                      />
@@ -180,8 +189,8 @@ import Footer from '../components/Footer.astro';
                 <!-- Visual Right -->
                 <div class="relative h-[500px] w-full flex items-center justify-center group animate-fade-in-up delay-200">
                     <div class="absolute inset-0 bg-blue-500/5 blur-[80px] rounded-full group-hover:bg-blue-500/10 transition-colors duration-700"></div>
-                     <img 
-                        src="/assets/voice-ai-global-infra.png" 
+                     <Image 
+                        src={globalInfra} 
                         alt="Global AI Infrastructure Network" 
                         class="relative z-10 w-full object-contain drop-shadow-[0_0_40px_rgba(0,255,255,0.15)] group-hover:scale-[1.02] transition-transform duration-700"
                      />

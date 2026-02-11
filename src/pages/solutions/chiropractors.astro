@@ -2,14 +2,17 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import ROICalculator from '../../components/ROICalculator.jsx';
-
-const heroImage = "/assets/chiropractic_hero_spine.png";
-const agitationImage = "/assets/chiropractic_agitation_hourglass.png"; 
-const roiBackground = "/assets/chiropractic_roi_chart.png";
+import { Image } from 'astro:assets';
+import heroImage from '../../assets/chiropractic_hero_spine.png';
+import agitationImage from '../../assets/chiropractic_agitation_hourglass.png';
+import roiBackground from '../../assets/chiropractic_roi_chart.png';
 
 ---
 
-<Layout title="AI Answering Service for Chiropractors | New Patient Automation">
+<Layout 
+    title="AI Receptionist for Chiropractors & Clinics | SystemPros.ai"
+    description="Stop missing new patient calls during lunch. Our AI Chiropractic Agent integrates with your EHR to book adjustments and verify insurance 24/7."
+>
     
     <!-- SECTION 1: THE HERO (The "Pain Scale" Hook) -->
     <section class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-main">
@@ -43,7 +46,7 @@ const roiBackground = "/assets/chiropractic_roi_chart.png";
                 <div class="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full pointer-events-none"></div>
                 <!-- Interactive 3D/Image Container -->
                 <div class="relative z-10 rounded-2xl border border-white/10 bg-surface/50 backdrop-blur-xl overflow-hidden shadow-2xl shadow-blue-500/10 group hover:border-blue-500/30 transition-all duration-500">
-                    <img src={heroImage} alt="Neon Spinal Data Node Interface" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                    <Image src={heroImage} alt="Neon Spinal Data Node Interface" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
                     <!-- HUD Overlay Effect -->
                     <div class="absolute inset-0 bg-gradient-to-t from-main/80 to-transparent pointer-events-none"></div>
                     <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between border-t border-white/10 pt-4">
@@ -68,7 +71,7 @@ const roiBackground = "/assets/chiropractic_roi_chart.png";
             <!-- Graphic: Generated Agitation Image -->
             <div class="relative mx-auto max-w-4xl h-auto rounded-2xl border border-white/10 overflow-hidden shadow-2xl shadow-blue-500/10 group">
                 <div class="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
-                <img src={agitationImage} alt="Hourglass Wasted Time vs Connected Health Pulse" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                <Image src={agitationImage} alt="Hourglass Wasted Time vs Connected Health Pulse" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
             </div>
         </div>
     </section>
@@ -122,7 +125,7 @@ const roiBackground = "/assets/chiropractic_roi_chart.png";
     <section id="roi-calculator" class="py-32 relative bg-surface/20 border-y border-white/5">
         <!-- Abstract Background -->
         <div class="absolute inset-0 opacity-30 pointer-events-none overflow-hidden">
-             <img src={roiBackground} alt="Medical Charts and Financial Growth Background" class="w-full h-full object-cover opacity-50 mix-blend-screen" />
+             <Image src={roiBackground} alt="Medical Charts and Financial Growth Background" class="w-full h-full object-cover opacity-50 mix-blend-screen" />
              <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(59,130,246,0.1)_50%,transparent_75%,transparent_100%)] bg-[length:40px_40px]"></div>
         </div>
 

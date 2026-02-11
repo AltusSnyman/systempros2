@@ -10,8 +10,6 @@
     --color-secondary: #A3A3A3;
     --color-accent: #3B82F6;
 
-    --font-sans: 'Inter', system-ui, sans-serif;
-    --font-body: 'Roboto', system-ui, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
 
     --animate-border-beam: border-beam 2s linear infinite;
@@ -39,7 +37,8 @@
 
 /* Custom utilities */
 .btn-primary {
-    @apply px-8 py-4 bg-accent text-white font-semibold rounded-full shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:bg-blue-600 transition-all duration-300 hover:-translate-y-1;
+    @apply px-8 py-4 bg-accent text-white font-semibold rounded-full hover:bg-blue-600 transition-all duration-300 hover:-translate-y-1;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
 }
 
 .glass-card {

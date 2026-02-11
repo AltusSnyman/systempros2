@@ -2,10 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
 import IndustriesVault from '../components/IndustriesVault.jsx';
+import { Image } from 'astro:assets';
+import industriesVault from '../assets/industries-hero-vault.png';
+import customBuild from '../assets/blueprint-custom-build.png';
 
 ---
 
-<Layout title="Industry AI Library | SystemPros.ai">
+<Layout 
+    title="Industry AI Library & Neural Blueprints | SystemPros.ai"
+    description="Browse our vault of pre-trained AI agents for 50+ industries. From Dental to roofing, we have a neural blueprint ready to deploy."
+>
     <main class="overflow-x-hidden">
         
         <!-- SECTION 1: HERO (The Library Hook) -->
@@ -35,8 +41,8 @@ import IndustriesVault from '../components/IndustriesVault.jsx';
                  <!-- Visual Right -->
                  <div class="relative h-[600px] w-full flex items-center justify-center animate-fade-in-up delay-200">
                      <div class="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full"></div>
-                     <img 
-                        src="/assets/industries-hero-vault.png" 
+                     <Image 
+                        src={industriesVault} 
                         alt="AI Knowledge Vault" 
                         class="relative z-10 w-full object-contain drop-shadow-[0_0_50px_rgba(59,130,246,0.3)] hover:scale-105 transition-transform duration-700"
                      />
@@ -74,8 +80,8 @@ import IndustriesVault from '../components/IndustriesVault.jsx';
                  <!-- Visual Center -->
                  <div class="relative max-w-3xl mx-auto mb-16 group">
                      <div class="absolute inset-0 bg-blue-500/20 blur-[80px] rounded-full group-hover:bg-blue-500/30 transition-colors duration-700"></div>
-                     <img 
-                        src="/assets/blueprint-custom-build.png" 
+                     <Image 
+                        src={customBuild} 
                         alt="Custom Architecture Build" 
                         class="relative z-10 w-full rounded-xl shadow-2xl border border-white/10 hover:border-blue-500/50 transition-colors duration-500"
                      />

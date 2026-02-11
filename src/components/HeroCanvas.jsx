@@ -1,8 +1,6 @@
 import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
-// Correct import for random generation in this context usually involves simple Math.random
-// Correct import for random generation in this context usually involves simple Math.random
 import * as THREE from 'three';
 
 function ParticleSphere(props) {
