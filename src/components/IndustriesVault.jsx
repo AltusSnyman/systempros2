@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const industries = [
     {
@@ -7,7 +7,7 @@ const industries = [
         title: 'The Empathy Engine',
         stat: 'HIPAA-Compliant Triage & Intake.',
         image: '/assets/counselling_hero_brain.png',
-        audio: '/assets/industry-videos/counseling_demo.mp3',
+        video: '/assets/industry-videos/counseling.mp4',
         link: '/solutions/counselling'
     },
     {
@@ -16,7 +16,7 @@ const industries = [
         title: 'The Community Concierge',
         stat: 'Captures 100% of After-Hours Inquiries.',
         image: '/assets/senior_living_hero_tree.png',
-        audio: '/assets/industry-videos/senior_living_demo.mp3',
+        video: '/assets/industry-videos/ndis.mp4',
         link: '/solutions/independent-living'
     },
     {
@@ -25,7 +25,7 @@ const industries = [
         title: 'The Storm-Chaser',
         stat: 'Zero Missed Leads During Peak Season.',
         image: '/assets/roofing_neural.png',
-        audio: '/assets/industry-videos/roofing_demo.mp3',
+        video: '/assets/industry-videos/roofing.mp4',
         link: '/solutions/roofing'
     },
     {
@@ -34,7 +34,7 @@ const industries = [
         title: 'The Practice Filler',
         stat: 'Reduces Front Desk Admin by 70%.',
         image: '/assets/dental_hero_implant.png',
-        audio: '/assets/industry-videos/dental_demo.mp3',
+        video: '/assets/industry-videos/dental.mp4',
         link: '/solutions/dental'
     },
     {
@@ -43,7 +43,7 @@ const industries = [
         title: 'The Patient Intake',
         stat: 'Verifies Insurance & Books Plans of Care.',
         image: '/assets/chiropractic_hero_spine.png',
-        audio: '/assets/industry-videos/chiro_demo.mp3',
+        video: '/assets/industry-videos/chiro.mp4',
         link: '/solutions/chiropractors'
     },
     {
@@ -52,7 +52,7 @@ const industries = [
         title: 'The Ceramic Closer',
         stat: 'Automated Deposit Collection.',
         image: '/assets/auto_detailing_hero_scanner.png',
-        audio: '/assets/industry-videos/detailing_demo.mp3',
+        video: '/assets/industry-videos/detailing.mp4',
         link: '/solutions/auto-detailing'
     },
     {
@@ -61,7 +61,7 @@ const industries = [
         title: 'The Spring Scheduler',
         stat: 'Routes Crews & Books Estimates.',
         image: '/assets/landscaping_hero_plan.png',
-        audio: '/assets/industry-videos/landscaping_demo.mp3',
+        video: '/assets/industry-videos/landscaping.mp4',
         link: '/solutions/landscaping'
     }
 ];
@@ -74,44 +74,75 @@ const PlayIcon = ({ size, fill }) => (
         <path d="M8 5v14l11-7z" />
     </svg>
 );
-// Pause Icon
-const PauseIcon = ({ size, fill }) => (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill={fill} xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+
+// Close Icon
+const CloseIcon = ({ size, fill }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={fill} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
     </svg>
 );
 
+const VideoModal = ({ videoSrc, onClose }) => {
+    // Close on escape key
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') onClose();
+        };
+        window.addEventListener('keydown', handleEsc);
+        return () => window.removeEventListener('keydown', handleEsc);
+    }, [onClose]);
+
+    // Close on click outside
+    const handleBackdropClick = (e) => {
+        if (e.target === e.currentTarget) {
+            onClose();
+        }
+    };
+
+    return (
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 transition-opacity duration-300"
+            onClick={handleBackdropClick}
+        >
+            <div className="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl border border-white/10 animate-in fade-in zoom-in-95 duration-200">
+                <button
+                    onClick={onClose}
+                    className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white transition-colors border border-white/20"
+                    aria-label="Close video"
+                >
+                    <CloseIcon size={24} fill="white" />
+                </button>
+                <div className="relative aspect-video w-full bg-black">
+                    <video
+                        src={videoSrc}
+                        className="w-full h-full"
+                        controls
+                        autoPlay
+                        playsInline
+                    >
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 export default function IndustriesVault() {
     const [activeCategory, setActiveCategory] = useState('All');
-    const [playingId, setPlayingId] = useState(null);
-    const audioRefs = useRef({});
+    const [activeVideo, setActiveVideo] = useState(null);
 
-    // Logic to ensure the last item is handled gracefully in grid
-    // We only need special logic if we are showing ALL items and there are 7.
     const filteredIndustries = activeCategory === 'All'
         ? industries
         : industries.filter(ind => ind.category === activeCategory);
 
-    const togglePlay = (id) => {
-        if (playingId && playingId !== id) {
-            if (audioRefs.current[playingId]) {
-                audioRefs.current[playingId].pause();
-            }
-        }
-        const audio = audioRefs.current[id];
-        if (audio) {
-            if (audio.paused) {
-                audio.play().catch(e => console.error("Playback failed", e));
-                setPlayingId(id);
-            } else {
-                audio.pause();
-                setPlayingId(null);
-            }
-        }
+    const openVideo = (videoPath) => {
+        setActiveVideo(videoPath);
     };
 
-    const handleEnded = () => {
-        setPlayingId(null);
+    const closeVideo = () => {
+        setActiveVideo(null);
     };
 
     return (
@@ -135,20 +166,8 @@ export default function IndustriesVault() {
             {/* Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 content-center place-items-stretch">
                 {filteredIndustries.map((item, index) => {
-                    // Logic to center the last item if it's the 7th item in the list of ALL
-                    // AND we are currently viewing 'All' (length 7)
-                    // If viewing filtered, standard grid apply.
-                    const isLastItemODD = filteredIndustries.length % 2 !== 0 && index === filteredIndustries.length - 1;
-                    const isLastItemGrid3 = filteredIndustries.length % 3 === 1 && index === filteredIndustries.length - 1;
-
-                    // Simple heuristic: if it's the last item and we have an odd number (7), let's span differently?
-                    // The prompt asked for "last item centered or spanning".
-                    // Tailwind arbitrary classes allow specific col placement.
-
                     let gridClass = "";
                     if (filteredIndustries.length === 7 && index === 6) {
-                        // On LG (3 cols), it's on a new row alone. Center it: col-start-2
-                        // On MD (2 cols), it's on a new row alone (since 7 is odd). Span full: col-span-2
                         gridClass = "md:col-span-2 md:max-w-[50%] md:mx-auto md:w-full lg:col-span-1 lg:max-w-none lg:mx-0 lg:col-start-2";
                     }
 
@@ -157,7 +176,7 @@ export default function IndustriesVault() {
                             key={item.id}
                             className={`group relative overflow-hidden rounded-2xl bg-[#121212] border border-white/10 hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-900/20 flex flex-col ${gridClass}`}
                         >
-                            {/* Top Half - Image (Heroic) - 50% height equivalent via aspect ratio or fixed height */}
+                            {/* Top Half - Image (Heroic) */}
                             <div className="relative aspect-video w-full overflow-hidden bg-black/50">
                                 <img
                                     src={item.image}
@@ -165,6 +184,16 @@ export default function IndustriesVault() {
                                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-90"></div>
+
+                                {/* Play Button Overlay on Image */}
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <button
+                                        onClick={() => openVideo(item.video)}
+                                        className="h-16 w-16 flex items-center justify-center rounded-full bg-blue-600/80 hover:bg-blue-500 text-white backdrop-blur-sm transition-transform hover:scale-110"
+                                    >
+                                        <PlayIcon size={32} fill="currentColor" />
+                                    </button>
+                                </div>
                             </div>
 
                             {/* Bottom Half - Content */}
@@ -177,14 +206,11 @@ export default function IndustriesVault() {
 
                                 <div className="mt-auto flex items-center justify-between gap-4">
                                     <button
-                                        onClick={() => togglePlay(item.id)}
+                                        onClick={() => openVideo(item.video)}
                                         className="flex h-10 w-10 min-w-[40px] items-center justify-center rounded-full bg-blue-600 text-white shadow-lg shadow-blue-500/30 hover:bg-blue-500 transition-all"
+                                        aria-label="Play video demo"
                                     >
-                                        {playingId === item.id ? (
-                                            <PauseIcon size={18} fill="currentColor" />
-                                        ) : (
-                                            <PlayIcon size={18} fill="currentColor" />
-                                        )}
+                                        <PlayIcon size={18} fill="currentColor" />
                                     </button>
 
                                     <a href={item.link} className="flex-1 block">
@@ -192,14 +218,6 @@ export default function IndustriesVault() {
                                             View Blueprint
                                         </button>
                                     </a>
-
-                                    {/* Hidden Audio */}
-                                    <audio
-                                        ref={el => audioRefs.current[item.id] = el}
-                                        src={item.audio}
-                                        onEnded={handleEnded}
-                                        className="hidden"
-                                    />
                                 </div>
                             </div>
 
@@ -207,7 +225,11 @@ export default function IndustriesVault() {
                     );
                 })}
             </div>
+
+            {/* Video Modal */}
+            {activeVideo && (
+                <VideoModal videoSrc={activeVideo} onClose={closeVideo} />
+            )}
         </div>
     );
 }
-
