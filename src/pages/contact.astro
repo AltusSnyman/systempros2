@@ -54,63 +54,15 @@ import Footer from '../components/Footer.astro';
                         <!-- Glow effect behind form -->
                         <div class="absolute inset-0 bg-blue-500/20 blur-3xl -z-10 rounded-full transform scale-90"></div>
                         
-                        <form class="glass-card p-10 space-y-6 border-t border-white/20 shadow-2xl">
-                            <h2 class="text-2xl font-bold mb-2">Inquiry Form</h2>
-                            
-                            <!-- Name -->
-                            <div class="relative group">
-                                <input type="text" id="name" placeholder=" " class="peer w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" required />
-                                <label for="name" class="absolute left-4 top-3 text-secondary text-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary/70 peer-focus:top-1 peer-focus:text-xs peer-focus:text-accent pointer-events-none">
-                                    Full Name
-                                </label>
-                            </div>
-
-                            <!-- Email -->
-                            <div class="relative group">
-                                <input type="email" id="email" placeholder=" " class="peer w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" required />
-                                <label for="email" class="absolute left-4 top-3 text-secondary text-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary/70 peer-focus:top-1 peer-focus:text-xs peer-focus:text-accent pointer-events-none">
-                                    Work Email
-                                </label>
-                            </div>
-
-                            <!-- Company -->
-                            <div class="relative group">
-                                <input type="text" id="company" placeholder=" " class="peer w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" />
-                                <label for="company" class="absolute left-4 top-3 text-secondary text-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary/70 peer-focus:top-1 peer-focus:text-xs peer-focus:text-accent pointer-events-none">
-                                    Company Website
-                                </label>
-                            </div>
-
-                            <!-- Budget -->
-                            <div class="relative">
-                                <select class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all appearance-none cursor-pointer">
-                                    <option value="" disabled selected class="text-gray-500">Estimated Budget</option>
-                                    <option value="10-20k" class="bg-gray-900">$10k - $25k</option>
-                                    <option value="25-50k" class="bg-gray-900">$25k - $50k</option>
-                                    <option value="50k+" class="bg-gray-900">$50k+</option>
-                                </select>
-                                <div class="absolute right-4 top-3.5 pointer-events-none text-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                                </div>
-                            </div>
-
-                            <!-- Message -->
-                            <div class="relative group">
-                                <textarea id="message" rows="4" placeholder=" " class="peer w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none"></textarea>
-                                <label for="message" class="absolute left-4 top-3 text-secondary text-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary/70 peer-focus:top-1 peer-focus:text-xs peer-focus:text-accent pointer-events-none">
-                                    Project Details...
-                                </label>
-                            </div>
-
-                            <button type="submit" class="w-full btn-primary flex justify-center items-center gap-2 group">
-                                Send Inquiry
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                            </button>
-
-                            <p class="text-xs text-center text-secondary mt-4">
-                                Guaranteed response within 24 hours. NDA upon request.
-                            </p>
-                        </form>
+                        <div class="glass-card w-full border-t border-white/20 shadow-2xl bg-black/40 backdrop-blur-xl rounded-2xl overflow-hidden">
+                            <iframe 
+                                src="https://api.leadconnectorhq.com/widget/booking/L9a1VqF4ljVNaUhi30Df" 
+                                style="width: 100%;border:none;overflow: hidden; min-height: 700px;" 
+                                scrolling="no" 
+                                id="L9a1VqF4ljVNaUhi30Df_1770784749684"
+                            ></iframe>
+                            <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+                        </div>
                     </div>
 
                 </div>

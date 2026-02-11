@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import ROICalculator from '../../components/ROICalculator.jsx';
+import RoofingChatbot from '../../components/solutions/RoofingChatbot.tsx';
 
 // Placeholder or generated images
 const heroImage = "/assets/roofing_hero_storm.png"; // Generated
@@ -10,7 +11,7 @@ const agitationImage = "/assets/roofing_agitation_ladder.png"; // Generated
 
 ---
 
-<Layout title="AI Answering Service for Roofers | Storm Lead Automation">
+<Layout title="AI Answering Service for Roofers | Storm Lead Automation" showChatWidget={false}>
     
     <!-- SECTION 1: THE HERO (The Storm Hook) -->
     <section class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-main">
@@ -36,6 +37,9 @@ const agitationImage = "/assets/roofing_agitation_ladder.png"; // Generated
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <a href="#roi-calculator" class="btn-primary flex items-center justify-center gap-2 text-lg">
                         Deploy Roofing AI
+                    </a>
+                    <a href="https://app.your-login.com/v2/preview/KHa6oPXryaVUtAzV6FF0" target="_blank" rel="noopener noreferrer" class="px-8 py-3 rounded-full border border-blue-500/30 bg-blue-500/10 hover:bg-blue-500/20 backdrop-blur-sm transition-all font-semibold flex items-center justify-center gap-2 text-lg text-blue-400 hover:text-blue-300">
+                        View Live Demo
                     </a>
                 </div>
             </div>
@@ -199,7 +203,8 @@ const agitationImage = "/assets/roofing_agitation_ladder.png"; // Generated
     </section>
 
     <Footer />
-
+    
+    <RoofingChatbot client:load />
 </Layout>
 
 

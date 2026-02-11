@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import ROICalculator from '../../components/ROICalculator.jsx';
+import IndependentLivingChatbot from '../../components/solutions/IndependentLivingChatbot.tsx';
 
 const heroImage = "/assets/senior_living_hero_tree.png";
 const agitationImage = "/assets/senior_living_agitation_calendar.png"; 
@@ -9,7 +10,7 @@ const roiBackground = "/assets/senior_living_roi_chart.png";
 
 ---
 
-<Layout title="AI Sales Agent for Senior Living | Assisted Living Lead Automation">
+<Layout title="AI Sales Agent for Senior Living | Assisted Living Lead Automation" showChatWidget={false}>
     
     <!-- SECTION 1: THE HERO (The "After-Hours" Hook) -->
     <section class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-main">
@@ -34,6 +35,9 @@ const roiBackground = "/assets/senior_living_roi_chart.png";
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <a href="#roi-calculator" class="btn-primary flex items-center justify-center gap-2 text-lg bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-blue-500/20">
                         Deploy Community AI
+                    </a>
+                    <a href="https://qld-home-shine.lovable.app/" target="_blank" rel="noopener noreferrer" class="px-8 py-3 rounded-full border border-cyan-500/30 bg-cyan-500/10 hover:bg-cyan-500/20 backdrop-blur-sm transition-all font-semibold flex items-center justify-center gap-2 text-lg text-cyan-400 hover:text-cyan-300">
+                        View Live Demo
                     </a>
                 </div>
             </div>
@@ -192,6 +196,8 @@ const roiBackground = "/assets/senior_living_roi_chart.png";
     </section>
 
     <Footer />
+    
+    <IndependentLivingChatbot client:load />
 </Layout>
 
 <style>
