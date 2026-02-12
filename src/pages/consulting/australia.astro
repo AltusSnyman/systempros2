@@ -5,53 +5,98 @@ import heroImage from '../../assets/consulting_au_hero.png';
 import growthImage from '../../assets/consulting_au_growth.png';
 import Footer from '../../components/Footer.astro';
 import ServiceSchema from '../../components/seo/ServiceSchema.astro';
+import FAQSchema from '../../components/seo/FAQSchema.astro';
 import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
-import { Check, X, ArrowRight, TrendingUp, AlertTriangle, Lock, ShieldAlert, Coins, Timer } from 'lucide-react';
+import { Check, X, ArrowRight, TrendingUp, AlertTriangle, Lock, ShieldAlert, Coins, Timer, MapPin, Building2, Users, Laptop, Brain, BarChart3, Gavel, Phone } from 'lucide-react';
 
 const pageTitle = "AI Consulting Australia | Artificial Intelligence Strategy | SystemPros";
-const pageDescription = "Don't let your Australian business fall behind. Expert AI consulting to automate workflows, reduce costs, and outpace competitors. Book your strategy session today.";
+const pageDescription = "Leading AI Consulting for Australian Enterprises. We automate workflows, combat high award wages, and implement secure AI agents for Aussie businesses. Book your audit.";
+
+const faqs = [
+  {
+    question: "How can AI help my Australian business combat rising wage costs?",
+    answer: "Australia has some of the highest minimum and award wages in the world. AI is the most effective deflationary tool available. By deploying SystemPros AI agents to handle repetitive tasks like appointment setting, data entry, and level-1 customer support, you decouple your revenue growth from your headcount. You can scale your operations 24/7 without incurring penalty rates, superannuation liabilities, or recruitment fees."
+  },
+  {
+    question: "Is your AI compliant with Australian Privacy Laws?",
+    answer: "Yes. We adhere strictly to the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs). We implement robust data governance frameworks to ensure customer data is handled securely. For sensitive industries like healthcare or finance, we offer private cloud or on-premise deployments that ensure data data sovereignty, keeping your information within Australian borders where required."
+  },
+  {
+    question: "Do you offer services in Perth and regional Australia?",
+    answer: "Yes, SystemPros is a national provider. While our digital infrastructure serves Sydney, Melbourne, and Brisbane, our cloud-native solutions are perfect for businesses in Perth, Adelaide, and regional areas. We help regional businesses overcome the tyranny of distance and local talent shortages by providing a high-quality digital workforce that is accessible from anywhere."
+  },
+  {
+    question: "What specific software do you integrate with?",
+    answer: "We integrate with the standard Australian business stack. This includes Xero and MYOB for finance, Salesforce and HubSpot for CRM, and specialized tools like ServiceM8, Tradify, and Cliniko. If it has an API, we can likely build an agent to drive it."
+  },
+  {
+    question: "Will the AI understand a strong Aussie accent?",
+    answer: "Absolutely. We utilize specific language models fine-tuned on Australian datasets. Our Voice AI agents understand 'straya' slang, local place names (from Woolloomooloo to Indooroopilly), and the unique cadence of Australian speech. This ensures a frictionless experience for your customers."
+  },
+  {
+    question: "How reliable is the technology for critical business functions?",
+    answer: "We build enterprise-grade redundancy into every system. Our up-time guarantee ensures your digital workforce never calls in sick. For critical functions like emergency dispatch or after-hours triage, we design fail-over protocols that escalate to human staff only when absolutely necessary, ensuring 100% reliability."
+  },
+  {
+    question: "What is the typical ROI timeframe?",
+    answer: "For high-volume transaction businesses (tradies, clinics, real estate), ROI is often achieved in the first 30 days. The savings on a single avoided reception hire ($70k+ inc Super) pays for the entire system multiple times over. Beyond cost savings, the revenue generated from answering 100% of missed calls typically adds 15-20% to the top line immediately."
+  },
+  {
+    question: "Do you provide training for my team?",
+    answer: "Yes. Change management is a core part of our consulting. We don't just dump technology on you; we train your staff on how to work *alongside* their new AI colleagues. We show your team how to monitor performance, handle escalations, and leverage the data the AI generates to make better business decisions."
+  },
+  {
+    question: "Can AI handle complex negotiations?",
+    answer: "AI is best suited for structured tasks, qualification, and information gathering. For complex, high-stakes negotiations, we recommend a 'Human-in-the-Loop' architecture. The AI handles the initial 80% of the conversation—gathering facts, qualifying the lead, and scheduling the meeting—so your senior human negotiators can focus entirely on closing the deal."
+  },
+  {
+    question: "How do I get started?",
+    answer: "It starts with a Forensic Audit. We don't guess; we look at your data. We analyze your call logs, email volumes, and workflow bottlenecks to give you a concrete, mathematically proven roadmap for automation. Book a strategy session today to begin."
+  }
+];
+
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
   <ServiceSchema 
     name="SystemPros Australia | AI Strategic Consulting"
     description={pageDescription}
-    areaServed={["Australia", "Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide"]}
+    areaServed={["Australia", "Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide", "Gold Coast", "Canberra"]}
     serviceType="AI Consulting Service"
   />
+  <FAQSchema faqs={faqs} />
 
   <main class="overflow-hidden">
-    <!-- Breadcrumbs -->
     <Breadcrumbs currentTitle="AI Consulting Australia" />
 
-    <!-- Hero Section: Adapt or Die -->
-    <section class="relative pt-20 pb-32 overflow-hidden">
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-32 overflow-hidden bg-gray-950">
       <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-gradient-to-br from-gray-950 to-black opacity-95"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-yellow-950/20 to-gray-950 opacity-95"></div>
         <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-yellow-900/10 to-transparent blur-3xl"></div>
       </div>
 
       <div class="container mx-auto px-4 relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div class="fade-up">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 mb-8 animate-pulse">
-              <AlertTriangle className="w-4 h-4" />
-              <span class="text-sm font-bold tracking-wide uppercase">Critical Industry Alert</span>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 mb-8 animate-pulse">
+              <MapPin className="w-4 h-4" />
+              <span class="text-sm font-bold tracking-wide uppercase">Serving Australian Industry</span>
             </div>
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-8">
-              Adapt to AI or <br/>
-              <span class="text-gradient from-yellow-500 to-orange-600">Watch Your Competitors Take It All.</span>
+              Smarter Business for <br/>
+              <span class="text-gradient from-yellow-400 to-orange-600">The Lucky Country.</span>
             </h1>
             <p class="text-xl text-gray-400 leading-relaxed max-w-lg mb-10">
-              The gap is widening. While you pay Australian award wages for data entry, your competitors are automating everything for pennies. <strong class="text-white">Inaction is no longer safe—it's fatal.</strong>
+              Australia's high cost of doing business is killing margins. It's time to fight back. SystemPros deploys autonomous AI agents to slash your overheads and scale your operations from Sydney to Perth.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
               <a href="#contact" class="btn btn-primary group bg-yellow-600 hover:bg-yellow-700 border-yellow-500 text-white">
-                Book Critical Strategy Audit
+                Get Your AI Roadmap
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#problem" class="btn btn-secondary border-gray-700 hover:border-gray-500">
-                See The Hidden Costs
+              <a href="#solutions" class="btn btn-secondary border-gray-700 hover:border-gray-500">
+                See Our Solutions
               </a>
             </div>
           </div>
@@ -64,234 +109,277 @@ const pageDescription = "Don't let your Australian business fall behind. Expert 
                 height={800} 
                 class="object-cover w-full h-full hover:scale-105 transition-transform duration-700" 
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-60"></div>
             </div>
-            <!-- Floating Risk Card -->
-            <div class="absolute -bottom-6 -right-6 bg-gray-900/95 backdrop-blur-md p-6 rounded-xl border border-yellow-500/30 shadow-xl max-w-xs animate-float-delayed">
+             <!-- Floating Risk Card -->
+            <div class="absolute -bottom-6 -right-6 bg-gray-900/95 backdrop-blur-md p-6 rounded-xl border border-yellow-500/30 shadow-xl max-w-xs animate-float-delayed hidden md:block">
               <div class="flex items-center gap-4 mb-3">
                 <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-500">
                   <ShieldAlert className="w-6 h-6" />
                 </div>
                 <div>
-                  <div class="text-xs font-bold text-yellow-400 uppercase">Risk Assessment</div>
-                  <div class="text-xl font-bold text-white">High Vulnerability</div>
+                  <div class="text-xs font-bold text-yellow-400 uppercase">Risk Analysis</div>
+                  <div class="text-xl font-bold text-white">High Wage Exposure</div>
                 </div>
               </div>
-              <p class="text-xs text-secondary mt-2">Manual workflows detected. Competitor efficiency > 400%.</p>
+              <p class="text-xs text-secondary mt-2">Award rates detected. Automation recommended immediately.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- The Problem: The Hidden Tax (Loss Aversion) -->
-    <section id="problem" class="py-24 bg-gray-950 relative border-y border-white/5">
+    <!-- The Problem: AU Specific (Award Wages) -->
+    <section class="py-24 bg-gray-950 border-y border-white/5">
       <div class="container mx-auto px-4">
         <div class="text-center max-w-3xl mx-auto mb-20">
-          <h2 class="text-3xl md:text-5xl font-bold mb-6">The <span class="text-yellow-500">Hidden Tax</span> on Your AU Business</h2>
+          <h2 class="text-3xl md:text-5xl font-bold mb-6">The High Cost of <span class="text-red-500">Human Capital</span></h2>
           <p class="text-lg text-secondary">
-            Every hour your staff spends on tasks that AI could do in seconds is a direct tax on your profitability. You aren't just losing time; you are actively bleeding potential capital.
+            Australian businesses operate in one of the world's most expensive labor markets. Traditional scaling—"throwing bodies at the problem"—is no longer a viable strategy for growth.
           </p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-gradient-to-b from-gray-900 to-black p-8 rounded-2xl border border-white/5 hover:border-yellow-500/40 transition-all group">
-            <div class="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Coins className="w-7 h-7 text-gray-400 group-hover:text-yellow-500 transition-colors" />
-            </div>
-            <h3 class="text-xl font-bold mb-4 text-white">Award Wage Inflation</h3>
-            <p class="text-secondary leading-relaxed mb-4">
-              Australian award rates and salary expectations are amongst the highest in the world. Paying humans to answer FAQs or schedule appointments is mathematically unsustainable against AI agents costing $0.20/hour.
+          <div class="bg-white/5 p-8 rounded-2xl border border-white/5 hover:border-yellow-500/40 transition-all group">
+            <Coins className="w-10 h-10 text-yellow-500 mb-6" />
+            <h3 class="text-xl font-bold mb-4 text-white">Award Rate Inflation</h3>
+            <p class="text-secondary leading-relaxed">
+              With penalty rates for weekends and overtime, a simple 24/7 support line can cost over $200k/year in wages alone. AI delivers the same coverage for cents on the dollar.
             </p>
-            <ul class="space-y-2 text-sm text-yellow-400/80">
-                <li class="flex items-center gap-2"><X className="w-3 h-3" /> Penalty rates</li>
-                <li class="flex items-center gap-2"><X className="w-3 h-3" /> Superannuation costs</li>
-            </ul>
           </div>
-
-          <div class="bg-gradient-to-b from-gray-900 to-black p-8 rounded-2xl border border-white/5 hover:border-yellow-500/40 transition-all group relative overflow-hidden">
-             <!-- Spotlight effect -->
-             <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div class="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Timer className="w-7 h-7 text-gray-400 group-hover:text-yellow-500 transition-colors" />
-            </div>
-            <h3 class="text-xl font-bold mb-4 text-white">Speed to Lead Failure</h3>
-            <p class="text-secondary leading-relaxed mb-4">
-              If you don't answer a lead in 5 minutes, you lose them. Your AI-enabled competitors answer in 5 seconds, 24/7/365. You are losing deals you didn't even know existed.
+          <div class="bg-white/5 p-8 rounded-2xl border border-white/5 hover:border-yellow-500/40 transition-all group">
+            <Gavel className="w-10 h-10 text-yellow-500 mb-6" />
+            <h3 class="text-xl font-bold mb-4 text-white">Compliance Burden</h3>
+            <p class="text-secondary leading-relaxed">
+              Managing roster compliance, Fair Work regulations, and Superannuation adds massive administrative overhead. AI agents don't need breaks, don't accrue leave, and are always compliant.
             </p>
-             <ul class="space-y-2 text-sm text-yellow-400/80">
-                <li class="flex items-center gap-2"><X className="w-3 h-3" /> Missed after-hours calls</li>
-                <li class="flex items-center gap-2"><X className="w-3 h-3" /> Slow email response times</li>
-            </ul>
           </div>
-
-          <div class="bg-gradient-to-b from-gray-900 to-black p-8 rounded-2xl border border-white/5 hover:border-yellow-500/40 transition-all group">
-            <div class="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Lock className="w-7 h-7 text-gray-400 group-hover:text-yellow-500 transition-colors" />
-            </div>
-            <h3 class="text-xl font-bold mb-4 text-white">Knowledge Silos</h3>
-            <p class="text-secondary leading-relaxed mb-4">
-              When key staff leave, they take their knowledge with them. AI institutionalizes your business process, ensuring perfect execution regardless of staff turnover.
+          <div class="bg-white/5 p-8 rounded-2xl border border-white/5 hover:border-yellow-500/40 transition-all group">
+            <Timer className="w-10 h-10 text-yellow-500 mb-6" />
+            <h3 class="text-xl font-bold mb-4 text-white">Speed to Lead</h3>
+            <p class="text-secondary leading-relaxed">
+              In a competitive market like Sydney or Melbourne, if you miss a call, you lose the job. AI ensures zero missed calls and instant response times, capturing revenue your competitors are leaking.
             </p>
-             <ul class="space-y-2 text-sm text-yellow-400/80">
-                <li class="flex items-center gap-2"><X className="w-3 h-3" /> Retraining costs</li>
-                <li class="flex items-center gap-2"><X className="w-3 h-3" /> Inconsistent service quality</li>
-            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- The Solution: Authority & Expertise -->
-    <section class="py-24 bg-black relative">
-       <!-- Grid background -->
-       <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-       
-      <div class="container mx-auto px-4 relative z-10">
-        <div class="flex flex-col lg:flex-row gap-16">
-            <div class="lg:w-1/2">
-                <h2 class="text-4xl md:text-5xl font-bold mb-8">The <span class="text-blue-500">SystemPros</span> Architecture</h2>
-                <p class="text-xl text-secondary mb-8">
-                    We don't just "install AI." We re-engineer your entire business stack for autonomous operation. Our 3-phase methodology ensures zero disruption and maximum ROI.
-                </p>
-                <div class="space-y-8">
-                    <div class="flex gap-4">
-                        <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold border border-blue-500/30 shrink-0">1</div>
-                        <div>
-                            <h4 class="text-xl font-bold text-white mb-2">Forensic Audit</h4>
-                            <p class="text-secondary">We analyze every workflow, call log, and email chain to identify exactly where you are burning cash.</p>
-                        </div>
-                    </div>
-                     <div class="flex gap-4">
-                        <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold border border-blue-500/30 shrink-0">2</div>
-                        <div>
-                            <h4 class="text-xl font-bold text-white mb-2">Strategy & Roadmap</h4>
-                            <p class="text-secondary">We build a custom implementation plan. No generic advice—specific agents for specific Australian business problems.</p>
-                        </div>
-                    </div>
-                     <div class="flex gap-4">
-                        <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold border border-blue-500/30 shrink-0">3</div>
-                        <div>
-                            <h4 class="text-xl font-bold text-white mb-2">Build & Deploy</h4>
-                            <p class="text-secondary">We build usage-ready Voice Agents, Chatbots, and Automation pipelines. We train them on your data, then hand you the keys.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="lg:w-1/2">
-                <div class="bg-gray-900 rounded-2xl border border-white/10 p-8 h-full relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-32 bg-blue-500/10 blur-3xl rounded-full"></div>
-                    <h3 class="text-2xl font-bold mb-6">What We Automate</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {[
-                            "Inbound Sales Calls",
-                            "Appointment Booking",
-                            "Customer Support Triage",
-                            "Lead Qualification",
-                            "Invoice Chase-up",
-                            "Staff Onboarding",
-                            "Database Reactivation",
-                            "Feedback Collection"
-                        ].map(item => (
-                            <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
-                                <Check className="w-4 h-4 text-green-400" />
-                                <span class="text-sm font-medium">{item}</span>
-                            </div>
-                        ))}
-                    </div>
-                    <div class="mt-8 pt-8 border-t border-white/5">
-                        <div class="text-sm text-secondary mb-2">Supported Integrations</div>
-                        <div class="flex gap-4 opacity-70 grayscale hover:grayscale-0 transition-all">
-                           <!-- Text placeholders for logos to keep it fast -->
-                           <span class="font-bold text-lg">Xero</span>
-                           <span class="font-bold text-lg">HubSpot</span>
-                           <span class="font-bold text-lg">Salesforce</span>
-                           <span class="font-bold text-lg">Slack</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
+    <!-- Detailed Solutions Landscape -->
+    <section id="solutions" class="py-32 bg-black relative">
+       <div class="absolute top-0 right-0 p-96 bg-yellow-900/10 blur-[150px] rounded-full pointer-events-none"></div>
+       <div class="container mx-auto px-4 relative z-10">
+          <div class="mb-20">
+              <h2 class="text-4xl md:text-5xl font-bold mb-6">Enterprise-Grade <span class="text-yellow-500">AI Solutions</span></h2>
+              <p class="text-xl text-secondary max-w-2xl">
+                  We engineer bespoke AI architectures for Australian industry. From construction to clinical care, we have the specialized agents you need.
+              </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-16">
+              <!-- Pillar 1 -->
+              <div class="space-y-6">
+                  <div class="flex items-start gap-6">
+                      <div class="w-16 h-16 rounded-xl bg-yellow-500/10 flex items-center justify-center shrink-0 border border-yellow-500/20">
+                          <Phone className="w-8 h-8 text-yellow-400" />
+                      </div>
+                      <div>
+                          <h3 class="text-2xl font-bold mb-3">AI Voice & Reception</h3>
+                          <p class="text-secondary mb-4 leading-relaxed">
+                              Your 24/7 Aussie receptionist. Handles bookings, FAQs, and triage without the coffee breaks.
+                          </p>
+                          <ul class="space-y-2 mb-6">
+                              <li class="flex items-center gap-2 text-sm text-gray-300"><Check className="w-4 h-4 text-green-500" /> Natural Australian Accent Models</li>
+                              <li class="flex items-center gap-2 text-sm text-gray-300"><Check className="w-4 h-4 text-green-500" /> Integration with ServiceM8 & Tradify</li>
+                              <li class="flex items-center gap-2 text-sm text-gray-300"><Check className="w-4 h-4 text-green-500" /> HIPAA & Privacy Act Compliant</li>
+                          </ul>
+                          <a href="/voice-ai" class="text-yellow-400 hover:text-yellow-300 text-sm font-bold flex items-center gap-2">
+                              Explore Voice AI <ArrowRight className="w-4 h-4" />
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Pillar 2 -->
+              <div class="space-y-6">
+                  <div class="flex items-start gap-6">
+                      <div class="w-16 h-16 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0 border border-orange-500/20">
+                          <Brain className="w-8 h-8 text-orange-400" />
+                      </div>
+                      <div>
+                          <h3 class="text-2xl font-bold mb-3">Operational Automation</h3>
+                          <p class="text-secondary mb-4 leading-relaxed">
+                              The engine room of your business. Automating the flow of data between your fragmented systems.
+                          </p>
+                          <ul class="space-y-2 mb-6">
+                              <li class="flex items-center gap-2 text-sm text-gray-300"><Check className="w-4 h-4 text-green-500" /> Xero & MYOB Reconciliation</li>
+                              <li class="flex items-center gap-2 text-sm text-gray-300"><Check className="w-4 h-4 text-green-500" /> Automated Compliance Reporting</li>
+                              <li class="flex items-center gap-2 text-sm text-gray-300"><Check className="w-4 h-4 text-green-500" /> Smart CRM Management (Salesforce)</li>
+                          </ul>
+                          <a href="/solutions/ai-business-solutions" class="text-orange-400 hover:text-orange-300 text-sm font-bold flex items-center gap-2">
+                              See Business Solutions <ArrowRight className="w-4 h-4" />
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Industry Links Matrix -->
+          <div class="mt-24 pt-16 border-t border-white/5">
+              <h3 class="text-2xl font-bold mb-10 text-center">Tailored for Aussie Industries</h3>
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  <a href="/solutions/roofing" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-orange-500/20 rounded-md text-orange-400">🏠</span>
+                      <span class="font-medium">Roofing & Trades</span>
+                  </a>
+                  <a href="/solutions/landscaping" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-green-500/20 rounded-md text-green-400">🌳</span>
+                      <span class="font-medium">Landscaping</span>
+                  </a>
+                  <a href="/solutions/dental" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-blue-500/20 rounded-md text-blue-400">🦷</span>
+                      <span class="font-medium">Dental Clinics</span>
+                  </a>
+                  <a href="/solutions/chiropractors" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-green-500/20 rounded-md text-green-400">🦴</span>
+                      <span class="font-medium">Chiropractic</span>
+                  </a>
+                   <a href="/solutions/auto-detailing" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-red-500/20 rounded-md text-red-400">🚗</span>
+                      <span class="font-medium">Auto Detailing</span>
+                  </a>
+                   <a href="/solutions/independent-living" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-teal-500/20 rounded-md text-teal-400">🤝</span>
+                      <span class="font-medium">NDIS & Aged Care</span>
+                  </a>
+                   <a href="/solutions/counselling" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-pink-500/20 rounded-md text-pink-400">🧠</span>
+                      <span class="font-medium">Psychology</span>
+                  </a>
+                   <a href="/solutions/coaching" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-yellow-500/20 rounded-md text-yellow-400">🚀</span>
+                      <span class="font-medium">Coaching</span>
+                  </a>
+              </div>
+          </div>
+       </div>
     </section>
 
-    <!-- The Future: Exponential Growth -->
-    <section class="py-24 relative overflow-hidden bg-gradient-to-b from-black to-gray-900">
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="order-2 lg:order-1 relative">
-                     <div class="absolute -inset-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl blur-lg opacity-30"></div>
-                    <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                        <Image 
-                            src={growthImage} 
-                            alt="Exponential Growth Chart showing AI Impact" 
-                            width={800} 
-                            height={800} 
-                            class="object-cover w-full h-full" 
-                        />
-                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <!-- Why AU Chooses SystemPros -->
+    <section class="py-24 bg-gray-950">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center">Why Australian Business Leaders Choose Us</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div class="flex gap-6">
+                    <div class="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center shrink-0 text-yellow-400 font-bold border border-yellow-500/20">1</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-white">Sovereign Capability</h4>
+                        <p class="text-secondary leading-relaxed">
+                            We prioritize data sovereignty. We configure our systems to keep sensitive Australian consumer data onshore where possible, ensuring you comply with APPs and industry-specific regulations.
+                        </p>
                     </div>
                 </div>
-                <div class="order-1 lg:order-2">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Unlock <span class="text-gradient from-green-400 to-emerald-500">Unlimited Scale</span></h2>
-                    <p class="text-lg text-secondary mb-8">
-                        When you decouple revenue from headcount, magic happens. You can handle 10x the volume without adding a single new staff member.
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div class="p-6 bg-white/5 rounded-xl border-l-4 border-green-500">
-                            <h4 class="text-white font-bold mb-1">Zero Marginal Cost</h4>
-                            <p class="text-sm text-secondary">Serving the 1,000th customer costs the same as the 1st. No recruitment fees. No training lag.</p>
-                        </div>
-                        <div class="p-6 bg-white/5 rounded-xl border-l-4 border-emerald-500">
-                            <h4 class="text-white font-bold mb-1">Global Standard Availability</h4>
-                            <p class="text-sm text-secondary">Your business is open 24/7. Capture leads while your competitors sleep. Dominate the "instant gratification" economy.</p>
-                        </div>
+                <div class="flex gap-6">
+                    <div class="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center shrink-0 text-yellow-400 font-bold border border-yellow-500/20">2</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-white">Fair Work Compliant</h4>
+                        <p class="text-secondary leading-relaxed">
+                            Our automated rostering and payload calculations can be configured to respect award rates and break times for your human staff, reducing your liability and admin headache.
+                        </p>
                     </div>
-
-                     <div class="mt-10">
-                        <a href="/contact" class="btn btn-primary bg-green-600 hover:bg-green-700 text-white border-green-500 w-full sm:w-auto text-center">
-                            Start Your Growth Engine
-                        </a>
-                     </div>
+                </div>
+                <div class="flex gap-6">
+                    <div class="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center shrink-0 text-yellow-400 font-bold border border-yellow-500/20">3</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-white">Real Support, Real People</h4>
+                        <p class="text-secondary leading-relaxed">
+                            While we sell AI, we support it with humans. Our support team is available during Australian business hours. You won't be shouting at a chatbot when you need help—ironically.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <div class="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center shrink-0 text-yellow-400 font-bold border border-yellow-500/20">4</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-white">Integration Specialists</h4>
+                        <p class="text-secondary leading-relaxed">
+                            We speak API. Whether it's connecting to your legacy server in the back office or your modern Xero cloud stack, we ensure the data flows seamlessly without double handling.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Regional Focus -->
+    <section class="py-24 bg-gradient-to-b from-black to-gray-900 border-t border-white/5">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Serving Major Australian Hubs</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                 <div class="p-6">
+                    <div class="text-4xl mb-4 text-gray-700">🌉</div>
+                    <h3 class="text-lg font-bold text-white">Sydney</h3>
+                    <p class="text-sm text-secondary mt-2">Financial & Professional Services</p>
+                 </div>
+                 <div class="p-6">
+                    <div class="text-4xl mb-4 text-gray-700">☕</div>
+                    <h3 class="text-lg font-bold text-white">Melbourne</h3>
+                    <p class="text-sm text-secondary mt-2">Retail, Healthcare & Logistics</p>
+                 </div>
+                 <div class="p-6">
+                    <div class="text-4xl mb-4 text-gray-700">☀️</div>
+                    <h3 class="text-lg font-bold text-white">Brisbane</h3>
+                    <p class="text-sm text-secondary mt-2">Tourism & Construction</p>
+                 </div>
+                 <div class="p-6">
+                    <div class="text-4xl mb-4 text-gray-700">⛏️</div>
+                    <h3 class="text-lg font-bold text-white">Perth</h3>
+                    <p class="text-sm text-secondary mt-2">Mining Services & Industrial</p>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-gray-950" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-6">
+          {faqs.map((faq, index) => (
+            <div class="bg-white/5 border border-white/5 rounded-xl p-6 hover:bg-white/10 transition-colors" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <h3 class="text-xl font-bold mb-3 text-white" itemprop="name">{faq.question}</h3>
+              <div class="text-secondary leading-relaxed" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
-    <section id="contact" class="py-24 bg-surface relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
-      <div class="container mx-auto px-4 text-center max-w-3xl">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">Stop Bleeding Revenue. <br/><span class="text-white">Start Automating.</span></h2>
-        <p class="text-xl text-secondary mb-10">
-          The technology isn't coming. It's here. The only question is whether you will wield it, or be replaced by it.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-             <a href="/contact" class="btn btn-primary text-lg px-10 py-5 shadow-lg shadow-blue-500/20">
-            Book Your Free AI Audit
-            </a>
-            <a href="tel:+61400000000" class="btn btn-secondary text-lg px-10 py-5">
-                Call SystemPros Australia
-            </a>
-        </div>
-        <p class="mt-6 text-sm text-secondary/60">
-            Limited consulting slots available for Q1 2026.
-        </p>
+    <section id="contact" class="py-24 text-center bg-gradient-to-t from-yellow-900/10 to-transparent relative overflow-hidden">
+      <div class="absolute inset-0 bg-[url('/assets/grid.svg')] bg-[size:50px_50px] opacity-[0.05]"></div>
+      <div class="container mx-auto px-4 relative z-10">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Automate your AU Business?</h2>
+          <p class="text-xl text-secondary mb-10 max-w-2xl mx-auto">
+              Don't get left behind. Join the Australian businesses that are scaling faster and cheaper with SystemPros.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+             <a href="/contact" class="btn btn-primary text-xl px-12 py-5 shadow-2xl shadow-yellow-500/20 hover:scale-105 transition-transform bg-yellow-600 border-yellow-500 hover:bg-yellow-700">
+                Book Strategy Audit
+             </a>
+             <a href="tel:+61400000000" class="btn btn-secondary text-xl px-12 py-5 border-white/10 hover:bg-white/5">
+                Call SystemPros AU
+             </a>
+          </div>
+          <p class="mt-8 text-sm text-secondary opacity-60">
+              Consulting slots for Q1 2026 filling fast.
+          </p>
       </div>
     </section>
+
   </main>
+
   <Footer />
 </Layout>
-
-<style>
-  .animate-float-delayed {
-    animation: float 6s ease-in-out infinite;
-    animation-delay: 2s;
-  }
-  
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-  }
-</style>

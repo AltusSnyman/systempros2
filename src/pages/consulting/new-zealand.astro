@@ -5,58 +5,102 @@ import heroImage from '../../assets/consulting_nz_hero.png';
 import growthImage from '../../assets/consulting_nz_growth.png';
 import Footer from '../../components/Footer.astro';
 import ServiceSchema from '../../components/seo/ServiceSchema.astro';
+import FAQSchema from '../../components/seo/FAQSchema.astro';
 import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
-import { Check, X, ArrowRight, TrendingUp, AlertTriangle, Lock, ShieldAlert, Coins, Timer } from 'lucide-react';
+import { Check, X, ArrowRight, TrendingUp, AlertTriangle, Lock, ShieldAlert, Coins, Timer, MapPin, Building2, Users, Laptop, Brain, BarChart3, Globe, Phone } from 'lucide-react';
 
 const pageTitle = "AI Consulting New Zealand | Artificial Intelligence Strategy | SystemPros";
-const pageDescription = "Don't let your NZ business fall behind. Expert AI consulting to automate workflows, reduce costs, and outpace competitors. Book your strategy session today.";
+const pageDescription = "Premier AI Consulting for New Zealand Businesses. We automate workflows, reduce overheads, and implement secure AI agents for Kiwi enterprises. Book a strategy session.";
+
+const faqs = [
+  {
+    question: "What exactly does an AI Consultant do for my NZ business?",
+    answer: "An AI consultant analyzes your current business operations to identify bottlenecks, repetitive tasks, and inefficiencies that can be solved with Artificial Intelligence. At SystemPros, we don't just advise; we build. We look at your customer support, sales pipelines, and data entry processes, then design and deploy custom AI agents (Voice, Chat, or Process Automation) to handle these tasks. For a New Zealand business, this often means replacing expensive outsourced call centers or freeing up local staff from low-value admin work so they can focus on growth."
+  },
+  {
+    question: "Is AI expensive to implement for a small Kiwi business?",
+    answer: "Contrary to popular belief, AI is a deflationary technology. While there is an upfront investment for strategy and setup, the ongoing operational costs are a fraction of human labor. For example, a SystemPros Voice AI agent costs roughly $0.20 per hour of conversation, compared to the NZ Minimum Wage of over $23/hour. Our consulting services are tiered, making enterprise-grade automation accessible to SMEs in Auckland, Wellington, and Christchurch."
+  },
+  {
+    question: "Will AI replace my current employees?",
+    answer: "AI replaces tasks, not necessarily people. Our goal is to remove the 'robotic' work from your human staff. Data entry, appointment reminders, invoice chasing, and basic triage should be automated. This allows your Kiwi team to focus on high-value interactions, complex problem solving, and relationship building—work that actually drives revenue. Most of our clients find their staff are happier when relieved of the drudgery of repetitive admin."
+  },
+  {
+    question: "How secure is my business data with AI?",
+    answer: "Security is our primary directive. We utilize enterprise-grade encryption and strictly adhere to New Zealand Privacy Act 2020 principles. We do not train public models on your private data. All SystemPros implementations can be ring-fenced, ensuring your customer lists, financial data, and proprietary processes remain strictly confidential. We offer on-premise solutions for highly sensitive industries like healthcare and finance."
+  },
+  {
+    question: "Do you serve businesses outside of Auckland?",
+    answer: "Absolutely. SystemPros operates fully remotely across New Zealand. We have active implementations in Wellington, Christchurch, Hamilton, Tauranga, and Dunedin. AI infrastructure is cloud-based, meaning we can deploy and update your digital workforce instantly, regardless of your physical headquarters. Our consultation process is conducted via video conference, and we offer on-site workshops for larger enterprise integrations."
+  },
+  {
+    question: "What industries do you specialize in?",
+    answer: "We have deep expertise in service-based industries where client communication and scheduling are critical. This includes Trades (Plumbing, Roofing, Electrical), Healthcare (Dental, Chiropractic, GPs), Professional Services (Legal, Accounting, Real Estate), and Aged Care. Any business that relies on the phone ringing or appointments being booked is a prime candidate for our automation."
+  },
+  {
+    question: "How long does an AI implementation take?",
+    answer: "A standard deployment usually takes 2-4 weeks. Week 1 is the 'Forensic Audit' where we map your processes. Week 2 is 'Build & Train' where we configure the agents. Week 3 is 'Testing & Refinement', and Week 4 is 'Go Live'. Complex enterprise integrations with legacy CRM systems may take longer, but our rapid deployment protocols are designed to get you ROI within the first month."
+  },
+  {
+    question: "Does the AI sound robotic?",
+    answer: "No. We use the latest conversational voice models that are indistinguishable from humans in standard contexts. Our 'Kiwi' models understand local slang, intonation, and geography. They pause, say 'um', and can handle interruptions naturally. Your customers often won't realize they are speaking to a machine until the booking confirmation arrives instantly in their inbox."
+  },
+  {
+    question: "Can the AI integrate with Xero?",
+    answer: "Yes, Xero integration is one of our most requested features for NZ businesses. Our AI agents can generate invoices, chase up overdue accounts, reconcile payments, and update client details directly in Xero. We also integrate with Salesforce, HubSpot, Pipedrive, and clinically specific software like Cliniko or Gensolve."
+  },
+  {
+    question: "What is the ROI on AI Consulting?",
+    answer: "Our clients typically see a 30-50% reduction in operational overheads within 6 months. By automating the 'first mile' of customer interaction (answering calls, qualifying leads), you stop missing opportunities. If your AI agent captures just one high-value lead that would have otherwise gone to voicemail, the system often pays for itself for the entire year."
+  }
+];
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
   <ServiceSchema 
-    name="SystemPros NZ | AI Strategic Consulting"
+    name="SystemPros New Zealand | AI Strategic Consulting"
     description={pageDescription}
-    areaServed={["New Zealand", "Auckland", "Wellington", "Christchurch", "Hamilton", "Tauranga"]}
+    areaServed={["New Zealand", "Auckland", "Wellington", "Christchurch", "Hamilton", "Tauranga", "Dunedin"]}
     serviceType="AI Consulting Service"
   />
+  <FAQSchema faqs={faqs} />
 
   <main class="overflow-hidden">
-    <!-- Breadcrumbs -->
-    <Breadcrumbs currentTitle="AI Consulting NZ" />
+    <Breadcrumbs currentTitle="AI Consulting New Zealand" />
 
-    <!-- Hero Section: Adapt or Die -->
-    <section class="relative pt-20 pb-32 overflow-hidden">
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-32 overflow-hidden bg-gray-950">
       <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-gradient-to-br from-gray-950 to-black opacity-95"></div>
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-red-900/10 to-transparent blur-3xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/20 to-gray-950 opacity-95"></div>
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-900/10 to-transparent blur-3xl"></div>
       </div>
 
       <div class="container mx-auto px-4 relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div class="fade-up">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 mb-8 animate-pulse">
-              <AlertTriangle className="w-4 h-4" />
-              <span class="text-sm font-bold tracking-wide uppercase">Critical Industry Alert</span>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 mb-8 animate-pulse">
+              <MapPin className="w-4 h-4" />
+              <span class="text-sm font-bold tracking-wide uppercase">Serving Aotearoa Business</span>
             </div>
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-8">
-              Adapt to AI or <br/>
-              <span class="text-gradient from-red-500 to-orange-600">Watch Your Competitors Take It All.</span>
+              Future-Proof Your <br/>
+              <span class="text-gradient from-blue-400 to-indigo-600">Kiwi Business.</span>
             </h1>
             <p class="text-xl text-gray-400 leading-relaxed max-w-lg mb-10">
-              The gap is widening. While you pay New Zealand wages for data entry, your competitors are automating everything for pennies. <strong class="text-white">Inaction is no longer safe—it's fatal.</strong>
+              The "Number 8 Wire" mentality isn't enough anymore. While New Zealand sleeps, the global market is automating. SystemPros brings Silicon Valley AI infrastructure to Auckland, Wellington, and Christchurch.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" class="btn btn-primary group bg-red-600 hover:bg-red-700 border-red-500 text-white">
-                Book Critical Strategy Audit
+              <a href="#contact" class="btn btn-primary group bg-blue-600 hover:bg-blue-700 border-blue-500 text-white">
+                Book Strategy Session
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#problem" class="btn btn-secondary border-gray-700 hover:border-gray-500">
-                See The Hidden Costs
+              <a href="#solutions" class="btn btn-secondary border-gray-700 hover:border-gray-500">
+                Explore Solutions
               </a>
             </div>
           </div>
           <div class="relative fade-in delay-200">
-            <div class="aspect-square rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-red-900/20 grayscale hover:grayscale-0 transition-all duration-700">
+            <div class="aspect-square rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/20 grayscale hover:grayscale-0 transition-all duration-700">
                <Image 
                 src={heroImage} 
                 alt="AI Strategy Meeting in Auckland" 
@@ -64,234 +108,264 @@ const pageDescription = "Don't let your NZ business fall behind. Expert AI consu
                 height={800} 
                 class="object-cover w-full h-full hover:scale-105 transition-transform duration-700" 
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
-            </div>
-            <!-- Floating Risk Card -->
-            <div class="absolute -bottom-6 -right-6 bg-gray-900/95 backdrop-blur-md p-6 rounded-xl border border-red-500/30 shadow-xl max-w-xs animate-float-delayed">
-              <div class="flex items-center gap-4 mb-3">
-                <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-red-500">
-                  <ShieldAlert className="w-6 h-6" />
-                </div>
-                <div>
-                  <div class="text-xs font-bold text-red-400 uppercase">Risk Assessment</div>
-                  <div class="text-xl font-bold text-white">High Vulnerability</div>
-                </div>
-              </div>
-              <p class="text-xs text-secondary mt-2">Manual workflows detected. Competitor efficiency > 400%.</p>
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-60"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- The Problem: The Hidden Tax (Loss Aversion) -->
-    <section id="problem" class="py-24 bg-gray-950 relative border-y border-white/5">
+    <!-- The Problem: NZ Specific -->
+    <section class="py-24 bg-gray-950 border-y border-white/5">
       <div class="container mx-auto px-4">
         <div class="text-center max-w-3xl mx-auto mb-20">
-          <h2 class="text-3xl md:text-5xl font-bold mb-6">The <span class="text-red-500">Hidden Tax</span> on Your NZ Business</h2>
+          <h2 class="text-3xl md:text-5xl font-bold mb-6">The <span class="text-red-500">Productivity Trap</span></h2>
           <p class="text-lg text-secondary">
-            Every hour your staff spends on tasks that AI could do in seconds is a direct tax on your profitability. You aren't just losing time; you are actively bleeding potential capital.
+            New Zealand businesses face unique challenges: high wage costs, geographic isolation, and a talent shortage. Sticking to traditional hiring models is becoming a liability.
           </p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-gradient-to-b from-gray-900 to-black p-8 rounded-2xl border border-white/5 hover:border-red-500/40 transition-all group">
-            <div class="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Coins className="w-7 h-7 text-gray-400 group-hover:text-red-500 transition-colors" />
-            </div>
-            <h3 class="text-xl font-bold mb-4 text-white">Wage Inflation Trap</h3>
-            <p class="text-secondary leading-relaxed mb-4">
-              NZ minimum wage and salary expectations are rising. Paying humans to answer FAQs or schedule appointments is mathematically unsustainable against AI agents costing $0.20/hour.
+          <div class="bg-white/5 p-8 rounded-2xl border border-white/5 hover:border-red-500/40 transition-all group">
+            <TrendingUp className="w-10 h-10 text-red-500 mb-6" />
+            <h3 class="text-xl font-bold mb-4 text-white">Wage Compression</h3>
+            <p class="text-secondary leading-relaxed">
+              With the median wage rising and productivity stagnating, margins are thinner than ever. Paying humans for repetitive data entry or simple phone queries is mathematically unsustainable.
             </p>
-            <ul class="space-y-2 text-sm text-red-400/80">
-                <li class="flex items-center gap-2"><X className="w-3 h-3" /> Overtime rates</li>
-                <li class="flex items-center gap-2"><X className="w-3 h-3" /> Sick leave coverage</li>
-            </ul>
           </div>
-
-          <div class="bg-gradient-to-b from-gray-900 to-black p-8 rounded-2xl border border-white/5 hover:border-red-500/40 transition-all group relative overflow-hidden">
-             <!-- Spotlight effect -->
-             <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div class="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Timer className="w-7 h-7 text-gray-400 group-hover:text-red-500 transition-colors" />
-            </div>
-            <h3 class="text-xl font-bold mb-4 text-white">Speed to Lead Failure</h3>
-            <p class="text-secondary leading-relaxed mb-4">
-              If you don't answer a lead in 5 minutes, you lose them. Your AI-enabled competitors answer in 5 seconds, 24/7/365. You are losing deals you didn't even know existed.
+          <div class="bg-white/5 p-8 rounded-2xl border border-white/5 hover:border-red-500/40 transition-all group">
+            <Users className="w-10 h-10 text-red-500 mb-6" />
+            <h3 class="text-xl font-bold mb-4 text-white">The Talent Void</h3>
+            <p class="text-secondary leading-relaxed">
+              Finding reliable staff in Auckland or Wellington is a battle. Retaining them is harder. AI provides a stable, knowledgeable workforce that never resigns, never gets sick, and never requires visa sponsorship.
             </p>
-             <ul class="space-y-2 text-sm text-red-400/80">
-                <li class="flex items-center gap-2"><X className="w-3 h-3" /> Missed after-hours calls</li>
-                <li class="flex items-center gap-2"><X className="w-3 h-3" /> Slow email response times</li>
-            </ul>
           </div>
-
-          <div class="bg-gradient-to-b from-gray-900 to-black p-8 rounded-2xl border border-white/5 hover:border-red-500/40 transition-all group">
-            <div class="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Lock className="w-7 h-7 text-gray-400 group-hover:text-red-500 transition-colors" />
-            </div>
-            <h3 class="text-xl font-bold mb-4 text-white">Knowledge Silos</h3>
-            <p class="text-secondary leading-relaxed mb-4">
-              When key staff leave, they take their knowledge with them. AI institutionalizes your business process, ensuring perfect execution regardless of staff turnover.
+          <div class="bg-white/5 p-8 rounded-2xl border border-white/5 hover:border-red-500/40 transition-all group">
+            <Globe className="w-10 h-10 text-red-500 mb-6" />
+            <h3 class="text-xl font-bold mb-4 text-white">Global Competition</h3>
+            <p class="text-secondary leading-relaxed">
+              Your competitors aren't just down the street anymore; they are online and using automation to undercut your prices and outperform your service speed. Adaptation is survival.
             </p>
-             <ul class="space-y-2 text-sm text-red-400/80">
-                <li class="flex items-center gap-2"><X className="w-3 h-3" /> Retraining costs</li>
-                <li class="flex items-center gap-2"><X className="w-3 h-3" /> Inconsistent service quality</li>
-            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- The Solution: Authority & Expertise -->
-    <section class="py-24 bg-black relative">
-       <!-- Grid background -->
-       <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-       
-      <div class="container mx-auto px-4 relative z-10">
-        <div class="flex flex-col lg:flex-row gap-16">
-            <div class="lg:w-1/2">
-                <h2 class="text-4xl md:text-5xl font-bold mb-8">The <span class="text-blue-500">SystemPros</span> Architecture</h2>
-                <p class="text-xl text-secondary mb-8">
-                    We don't just "install AI." We re-engineer your entire business stack for autonomous operation. Our 3-phase methodology ensures zero disruption and maximum ROI.
-                </p>
-                <div class="space-y-8">
-                    <div class="flex gap-4">
-                        <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold border border-blue-500/30 shrink-0">1</div>
-                        <div>
-                            <h4 class="text-xl font-bold text-white mb-2">Forensic Audit</h4>
-                            <p class="text-secondary">We analyze every workflow, call log, and email chain to identify exactly where you are burning cash.</p>
-                        </div>
-                    </div>
-                     <div class="flex gap-4">
-                        <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold border border-blue-500/30 shrink-0">2</div>
-                        <div>
-                            <h4 class="text-xl font-bold text-white mb-2">Strategy & Roadmap</h4>
-                            <p class="text-secondary">We build a custom implementation plan. No generic advice—specific agents for specific NZ business problems.</p>
-                        </div>
-                    </div>
-                     <div class="flex gap-4">
-                        <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold border border-blue-500/30 shrink-0">3</div>
-                        <div>
-                            <h4 class="text-xl font-bold text-white mb-2">Build & Deploy</h4>
-                            <p class="text-secondary">We build usage-ready Voice Agents, Chatbots, and Automation pipelines. We train them on your data, then hand you the keys.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="lg:w-1/2">
-                <div class="bg-gray-900 rounded-2xl border border-white/10 p-8 h-full relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-32 bg-blue-500/10 blur-3xl rounded-full"></div>
-                    <h3 class="text-2xl font-bold mb-6">What We Automate</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {[
-                            "Inbound Sales Calls",
-                            "Appointment Booking",
-                            "Customer Support Triage",
-                            "Lead Qualification",
-                            "Invoice Chase-up",
-                            "Staff Onboarding",
-                            "Database Reactivation",
-                            "Feedback Collection"
-                        ].map(item => (
-                            <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
-                                <Check className="w-4 h-4 text-green-400" />
-                                <span class="text-sm font-medium">{item}</span>
-                            </div>
-                        ))}
-                    </div>
-                    <div class="mt-8 pt-8 border-t border-white/5">
-                        <div class="text-sm text-secondary mb-2">Supported Integrations</div>
-                        <div class="flex gap-4 opacity-70 grayscale hover:grayscale-0 transition-all">
-                           <!-- Text placeholders for logos to keep it fast -->
-                           <span class="font-bold text-lg">Xero</span>
-                           <span class="font-bold text-lg">HubSpot</span>
-                           <span class="font-bold text-lg">Salesforce</span>
-                           <span class="font-bold text-lg">Slack</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
+    <!-- Detailed Solutions Landscape -->
+    <section id="solutions" class="py-32 bg-black relative">
+       <div class="absolute top-0 right-0 p-96 bg-blue-900/10 blur-[150px] rounded-full pointer-events-none"></div>
+       <div class="container mx-auto px-4 relative z-10">
+          <div class="mb-20">
+              <h2 class="text-4xl md:text-5xl font-bold mb-6">Comprehensive <span class="text-blue-500">AI Ecosystems</span></h2>
+              <p class="text-xl text-secondary max-w-2xl">
+                  We don't sell software; we sell outcomes. Our consulting engagements typically revolve around deploying one or more of these core pillars into your business architecture.
+              </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-16">
+              <!-- Pillar 1 -->
+              <div class="space-y-6">
+                  <div class="flex items-start gap-6">
+                      <div class="w-16 h-16 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0 border border-blue-500/20">
+                          <Phone className="w-8 h-8 text-blue-400" />
+                      </div>
+                      <div>
+                          <h3 class="text-2xl font-bold mb-3">AI Voice & Reception</h3>
+                          <p class="text-secondary mb-4 leading-relaxed">
+                              The frontline of your business. We replace voicemail and hold times with intelligent agents.
+                          </p>
+                          <ul class="space-y-2 mb-6">
+                              <li class="flex items-center gap-2 text-sm text-gray-300"><Check className="w-4 h-4 text-green-500" /> New Zealand Accent Models</li>
+                              <li class="flex items-center gap-2 text-sm text-gray-300"><Check className="w-4 h-4 text-green-500" /> 24/7 Appointment Scheduling</li>
+                              <li class="flex items-center gap-2 text-sm text-gray-300"><Check className="w-4 h-4 text-green-500" /> Emergency Triage Protocols</li>
+                          </ul>
+                          <a href="/voice-ai" class="text-blue-400 hover:text-blue-300 text-sm font-bold flex items-center gap-2">
+                              Explore Voice AI <ArrowRight className="w-4 h-4" />
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Pillar 2 -->
+              <div class="space-y-6">
+                  <div class="flex items-start gap-6">
+                      <div class="w-16 h-16 rounded-xl bg-purple-500/10 flex items-center justify-center shrink-0 border border-purple-500/20">
+                          <Brain className="w-8 h-8 text-purple-400" />
+                      </div>
+                      <div>
+                          <h3 class="text-2xl font-bold mb-3">Business Logic Automation</h3>
+                          <p class="text-secondary mb-4 leading-relaxed">
+                              The backend brain. Connecting your disjointed software stack into a cohesive, self-driving engine.
+                          </p>
+                          <ul class="space-y-2 mb-6">
+                              <li class="flex items-center gap-2 text-sm text-gray-300"><Check className="w-4 h-4 text-green-500" /> Automated Invoicing (Xero)</li>
+                              <li class="flex items-center gap-2 text-sm text-gray-300"><Check className="w-4 h-4 text-green-500" /> Dynamic Staff Rostering</li>
+                              <li class="flex items-center gap-2 text-sm text-gray-300"><Check className="w-4 h-4 text-green-500" /> Lead Qualification & Scoring</li>
+                          </ul>
+                          <a href="/solutions/ai-business-solutions" class="text-purple-400 hover:text-purple-300 text-sm font-bold flex items-center gap-2">
+                              See Business Solutions <ArrowRight className="w-4 h-4" />
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Industry Links Matrix -->
+          <div class="mt-24 pt-16 border-t border-white/5">
+              <h3 class="text-2xl font-bold mb-10 text-center">Tailored Industries</h3>
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  <a href="/solutions/dental" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-blue-500/20 rounded-md text-blue-400">🦷</span>
+                      <span class="font-medium">Dental Clinics</span>
+                  </a>
+                  <a href="/solutions/chiropractors" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-green-500/20 rounded-md text-green-400">🦴</span>
+                      <span class="font-medium">Chiropractic</span>
+                  </a>
+                   <a href="/solutions/roofing" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-orange-500/20 rounded-md text-orange-400">🏠</span>
+                      <span class="font-medium">Roofing & Trades</span>
+                  </a>
+                   <a href="/solutions/landscaping" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-green-500/20 rounded-md text-green-400">🌳</span>
+                      <span class="font-medium">Landscaping</span>
+                  </a>
+                   <a href="/solutions/auto-detailing" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-red-500/20 rounded-md text-red-400">🚗</span>
+                      <span class="font-medium">Auto Detailing</span>
+                  </a>
+                   <a href="/solutions/independent-living" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-teal-500/20 rounded-md text-teal-400">🤝</span>
+                      <span class="font-medium">Aged Care</span>
+                  </a>
+                   <a href="/solutions/counselling" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-pink-500/20 rounded-md text-pink-400">🧠</span>
+                      <span class="font-medium">Counselling</span>
+                  </a>
+                   <a href="/solutions/coaching" class="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 flex items-center gap-3">
+                      <span class="p-2 bg-yellow-500/20 rounded-md text-yellow-400">🚀</span>
+                      <span class="font-medium">Coaching</span>
+                  </a>
+              </div>
+          </div>
+       </div>
     </section>
 
-    <!-- The Future: Exponential Growth -->
-    <section class="py-24 relative overflow-hidden bg-gradient-to-b from-black to-gray-900">
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="order-2 lg:order-1 relative">
-                     <div class="absolute -inset-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl blur-lg opacity-30"></div>
-                    <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                        <Image 
-                            src={growthImage} 
-                            alt="Exponential Growth Chart showing AI Impact" 
-                            width={800} 
-                            height={800} 
-                            class="object-cover w-full h-full" 
-                        />
-                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <!-- Why NZ Chooses SystemPros -->
+    <section class="py-24 bg-gray-950">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center">Why Leading Kiwi Firms Choose SystemPros</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div class="flex gap-6">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0 text-blue-400 font-bold border border-blue-500/20">1</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-white">Data Sovereignty & Privacy</h4>
+                        <p class="text-secondary leading-relaxed">
+                            We understand the NZ Privacy Act 2020. Your data isn't just "in the cloud"; it's secured with strict access controls and encryption. We respect the taonga that is your business information.
+                        </p>
                     </div>
                 </div>
-                <div class="order-1 lg:order-2">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Unlock <span class="text-gradient from-green-400 to-emerald-500">Unlimited Scale</span></h2>
-                    <p class="text-lg text-secondary mb-8">
-                        When you decouple revenue from headcount, magic happens. You can handle 10x the volume without adding a single new staff member.
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div class="p-6 bg-white/5 rounded-xl border-l-4 border-green-500">
-                            <h4 class="text-white font-bold mb-1">Zero Marginal Cost</h4>
-                            <p class="text-sm text-secondary">Serving the 1,000th customer costs the same as the 1st. No recruitment fees. No training lag.</p>
-                        </div>
-                        <div class="p-6 bg-white/5 rounded-xl border-l-4 border-emerald-500">
-                            <h4 class="text-white font-bold mb-1">Global Standard Availability</h4>
-                            <p class="text-sm text-secondary">Your business is open 24/7. Capture leads while your competitors sleep. Dominate the "instant gratification" economy.</p>
-                        </div>
+                <div class="flex gap-6">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0 text-blue-400 font-bold border border-blue-500/20">2</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-white">Local Integration Support</h4>
+                        <p class="text-secondary leading-relaxed">
+                            We don't leave you to figure it out. Our team assists with the integration into Xero, MYOB, and other ANZ-specific software stacks, ensuring smooth financial operations.
+                        </p>
                     </div>
-
-                     <div class="mt-10">
-                        <a href="/contact" class="btn btn-primary bg-green-600 hover:bg-green-700 text-white border-green-500 w-full sm:w-auto text-center">
-                            Start Your Growth Engine
-                        </a>
-                     </div>
+                </div>
+                <div class="flex gap-6">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0 text-blue-400 font-bold border border-blue-500/20">3</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-white">Agile & Adaptive</h4>
+                        <p class="text-secondary leading-relaxed">
+                            Kiwi businesses are agile. Our AI solutions are designed to pivot with you. Needs change? Our modular architecture allows you to scale agents up or down instantly.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0 text-blue-400 font-bold border border-blue-500/20">4</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-white">ROI First Mentality</h4>
+                        <p class="text-secondary leading-relaxed">
+                            If it doesn't make money or save time, we don't build it. We provide transparent ROI calculators and reporting so you see exactly how much your digital workforce is earning you.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Regional Focus -->
+    <section class="py-24 bg-gradient-to-b from-black to-gray-900 border-t border-white/5">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Serving Regions Across New Zealand</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                 <div class="p-6">
+                    <div class="text-4xl mb-4 text-gray-700">🏙️</div>
+                    <h3 class="text-lg font-bold text-white">Auckland</h3>
+                    <p class="text-sm text-secondary mt-2">Corporate HQ & Enterprise Solutions</p>
+                 </div>
+                 <div class="p-6">
+                    <div class="text-4xl mb-4 text-gray-700">🌬️</div>
+                    <h3 class="text-lg font-bold text-white">Wellington</h3>
+                    <p class="text-sm text-secondary mt-2">Government & Professional Services</p>
+                 </div>
+                 <div class="p-6">
+                    <div class="text-4xl mb-4 text-gray-700">🏔️</div>
+                    <h3 class="text-lg font-bold text-white">Christchurch</h3>
+                    <p class="text-sm text-secondary mt-2">Tech Innovation & Manufacturing</p>
+                 </div>
+                 <div class="p-6">
+                    <div class="text-4xl mb-4 text-gray-700">🚜</div>
+                    <h3 class="text-lg font-bold text-white">Hamilton</h3>
+                    <p class="text-sm text-secondary mt-2">Agri-Tech & Logistics Automation</p>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-gray-950" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-6">
+          {faqs.map((faq, index) => (
+            <div class="bg-white/5 border border-white/5 rounded-xl p-6 hover:bg-white/10 transition-colors" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <h3 class="text-xl font-bold mb-3 text-white" itemprop="name">{faq.question}</h3>
+              <div class="text-secondary leading-relaxed" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
-    <section id="contact" class="py-24 bg-surface relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
-      <div class="container mx-auto px-4 text-center max-w-3xl">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">Stop Bleeding Revenue. <br/><span class="text-white">Start Automating.</span></h2>
-        <p class="text-xl text-secondary mb-10">
-          The technology isn't coming. It's here. The only question is whether you will wield it, or be replaced by it.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-             <a href="/contact" class="btn btn-primary text-lg px-10 py-5 shadow-lg shadow-blue-500/20">
-            Book Your Free AI Audit
-            </a>
-            <a href="tel:+64212550493" class="btn btn-secondary text-lg px-10 py-5">
+    <section id="contact" class="py-24 text-center bg-gradient-to-t from-blue-900/10 to-transparent relative overflow-hidden">
+      <div class="absolute inset-0 bg-[url('/assets/grid.svg')] bg-[size:50px_50px] opacity-[0.05]"></div>
+      <div class="container mx-auto px-4 relative z-10">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Modernize Your Operations?</h2>
+          <p class="text-xl text-secondary mb-10 max-w-2xl mx-auto">
+              Join the forward-thinking Kiwi businesses that are already using SystemPros to outperform the market.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+             <a href="/contact" class="btn btn-primary text-xl px-12 py-5 shadow-2xl shadow-blue-500/20 hover:scale-105 transition-transform bg-blue-600 border-blue-500 hover:bg-blue-700">
+                Book Your Audit
+             </a>
+             <a href="tel:+6490000000" class="btn btn-secondary text-xl px-12 py-5 border-white/10 hover:bg-white/5">
                 Call SystemPros NZ
-            </a>
-        </div>
-        <p class="mt-6 text-sm text-secondary/60">
-            Limited consulting slots available for Q1 2026.
-        </p>
+             </a>
+          </div>
+          <p class="mt-8 text-sm text-secondary opacity-60">
+              Limited consulting availability for Auckland & Wellington regions this quarter.
+          </p>
       </div>
     </section>
+
   </main>
+
   <Footer />
 </Layout>
-
-<style>
-  .animate-float-delayed {
-    animation: float 6s ease-in-out infinite;
-    animation-delay: 2s;
-  }
-  
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-  }
-</style>
