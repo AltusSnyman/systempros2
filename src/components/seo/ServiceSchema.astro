@@ -1,0 +1,40 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  serviceType: string;
+  areaServed?: string[];
+}
+
+const { 
+  name, 
+  description, 
+  serviceType,
+  areaServed = ["US", "AU", "NZ", "GB"] 
+} = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": name,
+  "description": description,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "SystemPros.ai",
+    "image": "https://systempros.ai/logo.png",
+    "telephone": "+18446979038",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    }
+  },
+  "serviceType": serviceType,
+  "areaServed": areaServed.map(country => ({
+    "@type": "Country",
+    "name": country
+  })),
+  "url": Astro.url.href
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

@@ -1,0 +1,15 @@
+{
+    "redirects": [
+        {
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "www.systempros.ai"
+                }
+            ],
+            "destination": "https://systempros.ai/:path*",
+            "permanent": true
+        }
+    ]
+}

@@ -1,0 +1,224 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServiceSchema from '../../components/seo/ServiceSchema.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import { Image } from 'astro:assets';
+
+// Generated Images (Placeholders until generation is complete/linked)
+import heroImage from '../../assets/voice_ai_nz_hero.png'; 
+import contentImage from '../../assets/voice_ai_nz_content.png';
+
+
+// Components
+import ROICalculator from '../../components/ROICalculator';
+
+// Icons
+import { Check, X, Clock, DollarSign, Shield, Phone, Globe, Star } from 'lucide-react';
+
+const pageTitle = "AI Voice Agents New Zealand | 24/7 Kiwi Phone Answering | SystemPros";
+const pageDescription = "Automate your NZ business phone lines with SystemPros. Our AI voice agents speak with a natural Kiwi accent, book appointments 24/7, and integrate with Xero. Try it free.";
+
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <ServiceSchema
+    name="SystemPros NZ | AI Virtual Receptionist"
+    description={pageDescription}
+    serviceType="Virtual Receptionist Service"
+    areaServed={["New Zealand", "Auckland", "Wellington", "Christchurch", "Hamilton", "Tauranga"]}
+  />
+  
+  <div class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <Image src={heroImage} alt="AI Network across New Zealand" class="w-full h-full object-cover opacity-40" />
+        <div class="absolute inset-0 bg-gradient-to-r from-main via-main/90 to-transparent"></div>
+    </div>
+
+    <div class="container mx-auto px-4 z-10 relative">
+        <Breadcrumbs currentTitle="Voice AI New Zealand" />
+        
+        <div class="max-w-4xl mt-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/5 backdrop-blur-sm mb-6 fade-up">
+                <span class="text-blue-400 text-xs font-bold tracking-wider uppercase">🇳🇿 #1 AI Voice Agent for NZ Business</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-8 fade-up delay-100">
+                Stop Missing Calls with <br/>
+                <span class="text-gradient from-blue-400 to-cyan-500">NZ's Best AI Voice Agents.</span>
+            </h1>
+            
+            <p class="text-xl text-secondary leading-relaxed max-w-2xl mb-10 fade-up delay-200">
+                The average Kiwi business misses over half their inbound leads due to staff shortages and after-hours volume. <br/><br/>
+                Deploy a <strong>SystemPros AI Receptionist</strong> today: It answers instantly, speaks with a natural <strong>Kiwi accent</strong>, handles 0800 calls, and books jobs directly into your calendar.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 fade-up delay-300">
+                <a href="/contact" class="btn-primary text-lg px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-[0_0_30px_rgba(59,130,246,0.4)]">
+                    Deploy AI in NZ
+                </a>
+                <a href="#calculator" class="px-8 py-4 rounded-full border border-white/10 hover:bg-white/5 transition-all font-semibold text-center">
+                    Calculate Savings
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <section id="comparison" class="py-24 bg-surface/30 border-t border-white/5">
+      <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+              <h2 class="text-3xl md:text-5xl font-bold mb-4">The Smart Business Choice</h2>
+              <p class="text-secondary max-w-2xl mx-auto">Why leading Kiwi companies are switching from traditional receptionists to AI.</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <!-- Traditional Way -->
+              <div class="p-8 rounded-3xl border border-white/10 bg-white/5 relative overflow-hidden">
+                  <div class="absolute top-0 left-0 w-full h-1 bg-red-500"></div>
+                  <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                      <span class="p-2 bg-red-500/10 rounded-lg text-red-500"><X /></span>
+                      Traditional Receptionist
+                  </h3>
+                  <ul class="space-y-4">
+                      <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                          <span class="text-secondary">Cost</span>
+                          <span class="font-mono text-red-400">$60k - $75k / year</span>
+                      </li>
+                      <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                          <span class="text-secondary">Availability</span>
+                          <span>9am - 5pm (40 hrs/wk)</span>
+                      </li>
+                      <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                          <span class="text-secondary">Capacity</span>
+                          <span>1 call at a time</span>
+                      </li>
+                      <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                          <span class="text-secondary">Sick Leave</span>
+                          <span>10 days / year</span>
+                      </li>
+                      <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                          <span class="text-secondary">Training Time</span>
+                          <span>3 - 6 Weeks</span>
+                      </li>
+                  </ul>
+              </div>
+
+              <!-- SystemPros Way -->
+              <div class="p-8 rounded-3xl border border-accent/30 bg-accent/5 relative overflow-hidden shadow-[0_0_50px_rgba(59,130,246,0.1)]">
+                  <div class="absolute top-0 left-0 w-full h-1 bg-accent"></div>
+                  <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                      <span class="p-2 bg-accent/10 rounded-lg text-accent"><Check /></span>
+                      SystemPros AI Agent
+                  </h3>
+                  <ul class="space-y-4">
+                      <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                          <span class="text-secondary">Cost</span>
+                          <span class="font-mono text-accent font-bold">~70% Cheaper</span>
+                      </li>
+                      <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                          <span class="text-secondary">Availability</span>
+                          <span class="text-white font-bold">24/7/365</span>
+                      </li>
+                      <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                          <span class="text-secondary">Capacity</span>
+                          <span class="text-white font-bold">Infinite Concurrent Calls</span>
+                      </li>
+                      <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                          <span class="text-secondary">Sick Leave</span>
+                          <span class="text-accent">Zero</span>
+                      </li>
+                       <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                          <span class="text-secondary">Training Time</span>
+                          <span class="text-accent">Instant</span>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section id="calculator" class="py-24 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-main to-blue-900/10 pointer-events-none"></div>
+      <div class="container mx-auto px-4 relative z-10">
+           <ROICalculator client:visible />
+      </div>
+  </section>
+
+  <section id="benefits" class="py-24">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1 relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
+                 <div class="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                 <Image src={contentImage} alt="Modern Auckland Office with AI" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            
+            <div class="order-1 lg:order-2 space-y-12">
+                <div>
+                    <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-6">
+                        <Clock className="w-6 h-6 text-blue-400" />
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Save Time & Reduce Burnout</h3>
+                    <p class="text-secondary leading-relaxed">
+                        Your skilled staff shouldn't be wasting time answering "What are your opening hours?" or "Where are you located?". 
+                        Let our AI handle the 80% of repetitive Tier-1 queries, so your team can focus on complex problem-solving and closing deals.
+                    </p>
+                </div>
+
+                <div>
+                    <div class="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center mb-6">
+                        <DollarSign className="w-6 h-6 text-green-400" />
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Minimize Overheads</h3>
+                    <p class="text-secondary leading-relaxed">
+                        Hiring in New Zealand is expensive. Between recruitment fees, high hourly rates, KiwiSaver contributions, and training costs, a single employee works out to be a massive investment. 
+                        AI Infrastructure is a fixed operational cost that scales instantly without the HR headaches.
+                    </p>
+                </div>
+
+                <div>
+                    <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6">
+                        <Star className="w-6 h-6 text-purple-400" />
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Build Your Reputation</h3>
+                    <p class="text-secondary leading-relaxed">
+                        In a service business, speed is everything. If you miss a call, that customer calls your competitor next. 
+                        By answering instantly—even at 7 PM on a Tuesday or 10 AM on a Sunday—you position yourself as the most reliable, professional option in your market.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-surface/50 border-t border-white/5">
+      <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold mb-12 text-center">Built for the NZ Ecosystem</h2>
+          <div class="grid md:grid-cols-3 gap-6 text-center">
+              <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 transition-colors">
+                  <div class="text-4xl mb-4">🥝</div>
+                  <h3 class="text-xl font-bold mb-2">Local Accents</h3>
+                  <p class="text-secondary text-sm">Fine-tuned models that understand and speak with natural New Zealand intonation.</p>
+              </div>
+              <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 transition-colors">
+                  <div class="text-4xl mb-4">📊</div>
+                  <h3 class="text-xl font-bold mb-2">Xero Integration</h3>
+                  <p class="text-secondary text-sm">Seamlessly push invoice data and customer details directly to your Xero account.</p>
+              </div>
+              <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 transition-colors">
+                  <div class="text-4xl mb-4">📞</div>
+                  <h3 class="text-xl font-bold mb-2">09, 04, 03 Numbers</h3>
+                  <p class="text-secondary text-sm">We provision local landline numbers for your AI, so you maintain a local presence.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="py-24 text-center">
+      <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold mb-6">Ready to Scale Your NZ Business?</h2>
+          <p class="text-xl text-secondary mb-10 max-w-2xl mx-auto">Join leading Kiwi enterprises using SystemPros to automate their workflow.</p>
+          <a href="/contact" class="btn-primary text-xl px-12 py-5">Book a Consultation</a>
+      </div>
+  </section>
+
+</Layout>

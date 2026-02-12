@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServiceSchema from '../../components/seo/ServiceSchema.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import { Image } from 'astro:assets';
+
+// Generated Images
+import heroImage from '../../assets/ai_business_solutions_hero.png';
+import contentImage from '../../assets/ai_business_solutions_content.png';
+
+const pageTitle = "Changing Business Solutions with AI | Enterprise Automation";
+const pageDescription = "Revolutionize your enterprise with SystemPros.ai. We transform traditional business models using advanced Voice AI, workflow automation, and predictive analytics.";
+
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <ServiceSchema
+    name="SystemPros Enterprise AI Solutions"
+    description={pageDescription}
+    serviceType="Business Process Automation"
+    areaServed={["US", "AU", "NZ", "GB"]}
+  />
+
+  <div class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+     <div class="absolute inset-0 z-0">
+        <Image src={heroImage} alt="Abstract AI Business Transformation" class="w-full h-full object-cover opacity-30" />
+        <div class="absolute inset-0 bg-gradient-to-br from-main via-main/90 to-transparent"></div>
+    </div>
+
+    <div class="container mx-auto px-4 z-10 relative">
+        <Breadcrumbs currentTitle="AI Business Solutions" />
+        
+        <div class="max-w-4xl mt-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/5 backdrop-blur-sm mb-6 fade-up">
+                <span class="text-purple-400 text-xs font-bold tracking-wider uppercase">🚀 Enterprise Transformation</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-8 fade-up delay-100">
+                Changing Business <br/>
+                <span class="text-gradient from-purple-400 to-blue-500">Solutions with AI.</span>
+            </h1>
+            
+            <p class="text-xl text-secondary leading-relaxed max-w-2xl mb-10 fade-up delay-200">
+                Traditional business models are obsolete. We replace manual workflows, call centers, and data entry with intelligent, autonomous agents that scale infinitely and cost a fraction of human labor.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 fade-up delay-300">
+                <a href="/contact" class="btn-primary text-lg px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-500 hover:to-blue-400 shadow-[0_0_30px_rgba(168,85,247,0.4)]">
+                    Transform Your Business
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <section class="py-24 bg-surface/30 border-t border-white/5">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+             <div class="space-y-8">
+                <h2 class="text-3xl md:text-5xl font-bold">
+                    The AI Advantage <br/>
+                    <span class="text-gradient from-purple-400 to-blue-500">in Numbers.</span>
+                </h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0">
+                            <span class="text-2xl">📉</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">70% Cost Reduction</h3>
+                            <p class="text-secondary">Replace recurring operational overhead with fixed-cost AI infrastructure that doesn't sleep, call in sick, or quit.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+                             <span class="text-2xl">🚀</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">10x Speed</h3>
+                            <p class="text-secondary">Process leads, analyze data, and respond to customers instantly. Speed is the new currency of business.</p>
+                        </div>
+                    </div>
+                    
+                     <div class="flex gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+                             <span class="text-2xl">🤖</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Zero Error Rate</h3>
+                            <p class="text-secondary">Eliminate human error in data entry, scheduling, and compliance tasks. Perfect execution, every time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
+                 <div class="absolute inset-0 bg-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                 <Image src={contentImage} alt="Future of Business Automation" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="py-24 text-center">
+      <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold mb-6">Future-Proof Your Enterprise</h2>
+          <p class="text-xl text-secondary mb-10 max-w-2xl mx-auto">Don't get left behind. Implement the systems that will define the next decade of business.</p>
+          <a href="/contact" class="btn-primary text-xl px-12 py-5 bg-gradient-to-r from-purple-600 to-blue-500">Get an Audit</a>
+      </div>
+  </section>
+
+</Layout>

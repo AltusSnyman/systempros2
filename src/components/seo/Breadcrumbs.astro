@@ -1,0 +1,36 @@
+---
+const { currentTitle } = Astro.props;
+
+const paths = [
+  { name: "Home", url: "/" },
+  { name: "Solutions", url: "/#vault" },
+  { name: currentTitle, url: Astro.url.href }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": paths.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.name,
+    "item": `https://systempros.ai${item.url.replace('https://systempros.ai', '')}` // Ensure absolute URL for schema
+  }))
+};
+---
+
+<nav aria-label="Breadcrumb" class="container mx-auto px-4 pt-4 pb-2 relative z-20">
+  <ol class="flex items-center gap-2 text-sm text-secondary/60">
+    <li>
+      <a href="/" class="hover:text-accent transition-colors">Home</a>
+    </li>
+    <li>/</li>
+    <li>
+      <a href="/#vault" class="hover:text-accent transition-colors">Solutions</a>
+    </li>
+    <li>/</li>
+    <li class="text-white font-medium" aria-current="page">{currentTitle}</li>
+  </ol>
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

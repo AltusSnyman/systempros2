@@ -3,6 +3,11 @@ import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import ROICalculator from '../../components/ROICalculator.jsx';
 import { Image } from 'astro:assets';
+import ServiceSchema from '../../components/seo/ServiceSchema.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+
+// Placeholder or generated images
+// Placeholder or generated images
 import heroImage from '../../assets/dental_hero_implant.png';
 import agitationImage from '../../assets/dental_agitation_phone.png';
 import roiBackground from '../../assets/dental_roi_chart.png';
@@ -10,11 +15,19 @@ import roiBackground from '../../assets/dental_roi_chart.png';
 ---
 
 <Layout 
-    title="AI Receptionist for Dentists & Orthodontists | Patient Automation"
-    description="Fill your hygiene schedule automatically. Our AI Dental Agent answers missed calls, books appointments in your PMS, and re-activates overdue patients 24/7."
+    title="AI Receptionist for Dental Practices | Patient Booking System"
+    description="Stop missing new patient calls. Our AI Dental Receptionist answers 24/7, integrates with OpenDental/Dentrix, and fills your hygiene schedule."
+    showChatWidget={false}
 >
+    <ServiceSchema 
+        name="AI Dental Receptionist"
+        description="Automated AI voice agent for dental practices that handles patient bookings, insurance queries, and scheduling in OpenDental/Dentrix."
+        serviceType="Dental Practice Automation"
+    />
     
-    <!-- SECTION 1: THE HERO (The "Empty Chair" Hook) -->
+    <Breadcrumbs currentTitle="Dental AI" />
+    
+    <!-- SECTION 1: THE HERO -->(The "Empty Chair" Hook) -->
     <section class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-main">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-main to-main z-0"></div>
         

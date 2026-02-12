@@ -5,6 +5,9 @@ import ROICalculator from '../../components/ROICalculator.jsx';
 import RoofingChatbot from '../../components/solutions/RoofingChatbot.tsx';
 import { Image } from 'astro:assets';
 
+import ServiceSchema from '../../components/seo/ServiceSchema.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+
 // Placeholder or generated images
 import heroImage from '../../assets/roofing_hero_storm.png';
 import agitationImage from '../../assets/roofing_agitation_ladder.png';
@@ -17,6 +20,13 @@ import agitationImage from '../../assets/roofing_agitation_ladder.png';
     description="Handle 1,000+ storm calls instantly. Our AI Roofing Agent pre-qualifies damage, books inspections in AccuLynx, and beats storm chasers to every lead."
     showChatWidget={false}
 >
+    <ServiceSchema 
+        name="AI Storm Response System"
+        description="Automated AI voice agent for roofing contractors that handles storm surge calls, qualifies leads, and books inspections."
+        serviceType="Roofing Lead Automation"
+    />
+    
+    <Breadcrumbs currentTitle="Roofing AI" />
     
     <!-- SECTION 1: THE HERO (The Storm Hook) -->
     <section class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-main">
