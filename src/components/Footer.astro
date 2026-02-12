@@ -50,18 +50,20 @@ const currentYear = new Date().getFullYear();
              </ul>
           </div>
           <div>
+             <h4 class="font-bold mb-4 text-white">Insights</h4>
+             <ul class="space-y-2 text-secondary">
+                <li><a href="/blog" class="hover:text-accent transition-colors font-semibold text-white">Main Blog Page</a></li>
+                <li><a href="/blog/scaling-with-ai-agents" class="hover:text-accent transition-colors">Scaling with AI Agents</a></li>
+                <li><a href="/blog/value-of-ai-consultant" class="hover:text-accent transition-colors">AI Consultant's Playbook</a></li>
+                <li><a href="/blog/empathetic-ai-customer-service" class="hover:text-accent transition-colors">Voice AI Connection</a></li>
+             </ul>
+          </div>
+          <div>
              <h4 class="font-bold mb-4 text-white">Company</h4>
              <ul class="space-y-2 text-secondary">
                 <li><a href="/about" class="hover:text-accent transition-colors">The Team</a></li>
                 <li><a href="/pricing" class="hover:text-accent transition-colors">Pricing</a></li>
                 <li><a href="/contact" class="hover:text-accent transition-colors">Book Audit</a></li>
-             </ul>
-          </div>
-          <div>
-             <h4 class="font-bold mb-4 text-white">Legal</h4>
-             <ul class="space-y-2 text-secondary">
-                <li><a href="/privacy" class="hover:text-accent transition-colors">Privacy Policy</a></li>
-                <li><a href="/terms" class="hover:text-accent transition-colors">Terms of Service</a></li>
              </ul>
           </div>
           <div>
@@ -78,7 +80,11 @@ const currentYear = new Date().getFullYear();
     </div>
 
     <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-secondary/50">
-       <p>&copy; {currentYear} SystemPros.ai. All rights reserved.</p>
+       <div class="flex gap-6 items-center">
+          <p>&copy; {currentYear} SystemPros.ai. All rights reserved.</p>
+          <a href="/privacy" class="hover:text-white transition-colors">Privacy</a>
+          <a href="/terms" class="hover:text-white transition-colors">Terms</a>
+       </div>
        <p class="font-mono bg-white/5 px-3 py-1 rounded-full">
          <span class="text-accent">●</span> Engineering in <span class="text-white">Auckland</span>, <span class="text-white">Sydney</span>, & <span class="text-white">New York</span>
        </p>

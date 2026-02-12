@@ -1,0 +1,116 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Breadcrumbs from '../components/seo/Breadcrumbs.astro';
+import Footer from '../components/Footer.astro'; // Assuming Footer is in components
+import { Calendar, User, Clock, ArrowLeft } from 'lucide-react';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage, author, tags } = Astro.props;
+
+// Schema.org Article
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "image": heroImage.src,
+  "author": {
+    "@type": "Person",
+    "name": author || "SystemPros AI"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SystemPros",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://systempros.ai/favicon.svg" // Update with actual logo URL if available
+    }
+  },
+  "datePublished": pubDate.toISOString(),
+  "dateModified": updatedDate ? updatedDate.toISOString() : pubDate.toISOString()
+};
+---
+
+<Layout title={title} description={description} image={heroImage.src}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <main class="min-h-screen bg-black">
+      <!-- Hero Section -->
+      <div class="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
+        <Image 
+          src={heroImage} 
+          alt={title} 
+          width={1920} 
+          height={1080} 
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+        
+        <div class="absolute bottom-0 left-0 w-full p-6 md:p-12 z-10">
+          <div class="container mx-auto">
+             <a href="/blog" class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-6 transition-colors">
+                <ArrowLeft className="w-4 h-4" /> Back to Insights
+             </a>
+             <div class="flex flex-wrap gap-3 mb-4">
+                {tags && tags.map(tag => (
+                    <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider border border-blue-500/30">
+                        {tag}
+                    </span>
+                ))}
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl">
+              {title}
+            </h1>
+            <div class="flex flex-wrap items-center gap-6 text-gray-400 text-sm md:text-base">
+               <div class="flex items-center gap-2">
+                  <User className="w-4 h-4 text-blue-500" />
+                  <span>{author}</span>
+               </div>
+               <div class="flex items-center gap-2">
+                  <Calendar className="w-4 h-4 text-blue-500" />
+                  <time datetime={pubDate.toISOString()}>
+                    {pubDate.toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </time>
+               </div>
+               {updatedDate && (
+                   <div class="flex items-center gap-2 italic">
+                      <Clock className="w-4 h-4 text-blue-500" />
+                      <span>Updated: {updatedDate.toLocaleDateString()}</span>
+                   </div>
+               )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Content -->
+    <article class="container mx-auto px-4 py-16 md:py-24">
+        <div class="max-w-3xl mx-auto prose prose-invert prose-lg prose-blue prose-headings:font-bold prose-headings:tracking-tight prose-a:text-blue-400 hover:prose-a:text-blue-300 prose-img:rounded-xl prose-img:border prose-img:border-white/10">
+            <slot />
+        </div>
+        
+        <!-- Share / CTA Footer -->
+        <div class="max-w-3xl mx-auto mt-20 pt-10 border-t border-white/10">
+            <div class="bg-gradient-to-br from-blue-900/20 to-black border border-blue-500/20 rounded-2xl p-8 text-center">
+                <h3 class="text-2xl font-bold mb-4">Ready to implement these insights?</h3>
+                <p class="text-gray-400 mb-8">
+                    Book a strategy session with SystemPros to discuss how we can tailor this solution for your business.
+                </p>
+                <a href="/contact" class="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/20">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </article>
+  </main>
+  
+  <Footer />
+</Layout>
