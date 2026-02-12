@@ -5,60 +5,60 @@ import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
 import { Image } from 'astro:assets';
 
 // Generated Images
-import heroImage from '../../assets/voice_ai_nz_hero_neon.png'; 
-import contentImage from '../../assets/voice_ai_nz_reception_neon.png';
+import heroImage from '../../assets/voice_ai_au_hero_neon.png'; 
+import contentImage from '../../assets/voice_ai_au_reception_neon.png';
 
 // Components
 import ROICalculator from '../../components/ROICalculator';
 import Footer from '../../components/Footer.astro';
 
 // Icons
-import { Check, X, Clock, DollarSign, Shield, Phone, Globe, Star, Zap, PhoneMissed, Coins } from 'lucide-react';
+import { Check, X, Clock, DollarSign, Phone, Globe, Star, Zap, PhoneMissed, Coins } from 'lucide-react';
 
-const pageTitle = "AI Voice Agents New Zealand | 24/7 Kiwi Phone Answering | SystemPros";
-const pageDescription = "Automate your NZ business phone lines with SystemPros. Our AI voice agents speak with a natural Kiwi accent, book appointments 24/7, and integrate with Xero. Try it free.";
+const pageTitle = "AI Voice Agents Australia | 24/7 Aussie Phone Answering | SystemPros";
+const pageDescription = "Automate your Australian business phone lines with SystemPros. Our AI voice agents speak with a natural Aussie accent, book appointments 24/7, and integrate with Xero & Salesforce.";
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
   <ServiceSchema
-    name="SystemPros NZ | AI Virtual Receptionist"
+    name="SystemPros AU | AI Virtual Receptionist"
     description={pageDescription}
     serviceType="Virtual Receptionist Service"
-    areaServed={["New Zealand", "Auckland", "Wellington", "Christchurch", "Hamilton", "Tauranga"]}
+    areaServed={["Australia", "Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide", "Gold Coast"]}
   />
   
   <!-- Hero Section -->
   <div class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
     <div class="absolute inset-0 z-0">
-        <Image src={heroImage} alt="AI Network across New Zealand" class="w-full h-full object-cover opacity-60" />
+        <Image src={heroImage} alt="AI Network across Australia" class="w-full h-full object-cover opacity-60" />
         <div class="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/80 to-transparent"></div>
         <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-950 to-transparent"></div>
     </div>
 
     <div class="container mx-auto px-4 z-10 relative">
-        <Breadcrumbs currentTitle="Voice AI New Zealand" />
+        <Breadcrumbs currentTitle="Voice AI Australia" />
         
         <div class="max-w-4xl mt-10">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/5 backdrop-blur-sm mb-6 animate-pulse">
-                <span class="text-blue-400 text-xs font-bold tracking-wider uppercase">🇳🇿 #1 AI Voice Agent for NZ Business</span>
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-yellow-500/30 bg-yellow-500/5 backdrop-blur-sm mb-6 animate-pulse">
+                <span class="text-yellow-400 text-xs font-bold tracking-wider uppercase">🇦🇺 #1 AI Voice Agent for Aussie Business</span>
             </div>
             
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-8">
                 Stop Missing Calls.<br/>
-                <span class="text-gradient from-red-500 to-orange-500">Stop Losing Money.</span>
+                <span class="text-gradient from-yellow-500 to-orange-500">Stop Losing Money.</span>
             </h1>
             
             <p class="text-xl text-gray-300 leading-relaxed max-w-2xl mb-10">
-                Every missed call is a lead gifting money to your competitor. <br/><br/>
-                Deploy a <strong>SystemPros AI Receptionist</strong> today: It answers instantly 24/7, speaks with a natural <strong>Kiwi accent</strong>, and books jobs directly into your calendar while you sleep.
+                Penalty rates and casual loading are killing your margins. <br/><br/>
+                Deploy a <strong>SystemPros AI Receptionist</strong> today: It answers instantly 24/7, speaks with a natural <strong>Australian accent</strong>, and books jobs directly into your calendar without the HR nightmare.
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4">
-                <a href="/contact" class="btn btn-primary bg-blue-600 hover:bg-blue-700 border-blue-500 text-white shadow-[0_0_30px_rgba(37,99,235,0.4)]">
-                    Deploy AI in NZ
+                <a href="/contact" class="btn btn-primary bg-yellow-600 hover:bg-yellow-700 border-yellow-500 text-white shadow-[0_0_30px_rgba(202,138,4,0.4)]">
+                    Deploy AI in Australia
                 </a>
                 <a href="#calculator" class="btn btn-secondary border-white/20 hover:bg-white/5">
-                    Calculate Lost Revenue
+                    Calculate Savings
                 </a>
             </div>
         </div>
@@ -69,8 +69,8 @@ const pageDescription = "Automate your NZ business phone lines with SystemPros. 
   <section id="comparison" class="py-24 bg-gray-950 border-t border-white/5 relative">
       <div class="container mx-auto px-4">
           <div class="text-center mb-16 max-w-3xl mx-auto">
-              <h2 class="text-3xl md:text-5xl font-bold mb-4">The <span class="text-red-500">Silent Killer</span> of NZ Service Businesses</h2>
-              <p class="text-secondary text-lg">You spend thousands on marketing to make the phone ring. Why are you letting 40% of those calls go to voicemail?</p>
+              <h2 class="text-3xl md:text-5xl font-bold mb-4">The <span class="text-red-500">Silent Killer</span> of AU Service Businesses</h2>
+              <p class="text-secondary text-lg">You spend thousands on Google Ads to make the phone ring. Why are you letting 40% of those calls go to voicemail?</p>
           </div>
 
           <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -85,9 +85,9 @@ const pageDescription = "Automate your NZ business phone lines with SystemPros. 
                       <li class="flex items-center justify-between border-b border-white/5 pb-2">
                           <div class="flex items-center gap-3">
                               <Coins className="w-5 h-5 text-red-400" />
-                              <span class="text-secondary">Wage Cost</span>
+                              <span class="text-secondary">Wage Cost (Award)</span>
                           </div>
-                          <span class="font-mono text-red-400 font-bold">$65k+ / year</span>
+                          <span class="font-mono text-red-400 font-bold">$70k+ (+ Super)</span>
                       </li>
                       <li class="flex items-center justify-between border-b border-white/5 pb-2">
                           <div class="flex items-center gap-3">
@@ -101,7 +101,7 @@ const pageDescription = "Automate your NZ business phone lines with SystemPros. 
                               <Clock className="w-5 h-5 text-red-400" />
                               <span class="text-secondary">Availability</span>
                           </div>
-                          <span class="text-white">40 hours/week</span>
+                          <span class="text-white">38 hours/week</span>
                       </li>
                   </ul>
               </div>
@@ -119,7 +119,7 @@ const pageDescription = "Automate your NZ business phone lines with SystemPros. 
                               <Coins className="w-5 h-5 text-green-400" />
                               <span class="text-secondary">Cost</span>
                           </div>
-                          <span class="font-mono text-green-400 font-bold">~$0.20 / hour</span>
+                          <span class="font-mono text-green-400 font-bold">~$0.25 / hour</span>
                       </li>
                       <li class="flex items-center justify-between border-b border-white/5 pb-2">
                           <div class="flex items-center gap-3">
@@ -143,7 +143,7 @@ const pageDescription = "Automate your NZ business phone lines with SystemPros. 
 
   <!-- Calculator Section -->
   <section id="calculator" class="py-24 relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-b from-gray-950 to-blue-950/20 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-gray-950 to-yellow-950/10 pointer-events-none"></div>
       <div class="container mx-auto px-4 relative z-10">
            <ROICalculator client:visible />
       </div>
@@ -154,18 +154,18 @@ const pageDescription = "Automate your NZ business phone lines with SystemPros. 
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="order-2 lg:order-1 relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
-                 <div class="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                 <div class="absolute inset-0 bg-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
                  <Image src={contentImage} alt="Hyperealistic AI Receptionist Interface" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
             </div>
             
             <div class="order-1 lg:order-2 space-y-12">
                 <div>
-                    <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-6">
-                        <Globe className="w-6 h-6 text-blue-400" />
+                    <div class="w-12 h-12 rounded-lg bg-yellow-500/10 flex items-center justify-center mb-6">
+                        <Globe className="w-6 h-6 text-yellow-400" />
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Features that Feel Human</h3>
                     <p class="text-secondary leading-relaxed">
-                        We don't sell robotic menus. Our agents pause, think, and speak with a <strong class="text-white">local Kiwi accent</strong>. Your customers won't even know they're talking to an AI until the booking confirmation lands in their inbox.
+                        We don't sell robotic menus. Our agents pause, think, and speak with a <strong class="text-white">local Australian accent</strong>. Your customers won't even know they're talking to an AI until the booking confirmation lands in their inbox.
                     </p>
                 </div>
 
@@ -175,7 +175,7 @@ const pageDescription = "Automate your NZ business phone lines with SystemPros. 
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Minimize Overheads</h3>
                     <p class="text-secondary leading-relaxed">
-                        Hiring in New Zealand is expensive. Between recruitment fees, high hourly rates, KiwiSaver contributions, and training costs, a single employee works out to be a massive investment. 
+                        Hiring in Australia is expensive. Between recruitment fees, high Award rates, Superannuation, and training costs, a single employee works out to be a massive investment. 
                         AI Infrastructure is a fixed operational cost that scales instantly without the HR headaches.
                     </p>
                 </div>
@@ -186,7 +186,7 @@ const pageDescription = "Automate your NZ business phone lines with SystemPros. 
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Build Your Accuracy</h3>
                     <p class="text-secondary leading-relaxed">
-                        Humans forget. AI records. Every call is transcribed, summarized, and pushed to your CRM (Xero, HubSpot, Salesforce). You get perfect data integrity, every single time.
+                        Humans forget. AI records. Every call is transcribed, summarized, and pushed to your CRM (Salesforce, HubSpot, Pipedrive). You get perfect data integrity, every single time.
                     </p>
                 </div>
             </div>
@@ -197,33 +197,33 @@ const pageDescription = "Automate your NZ business phone lines with SystemPros. 
   <!-- Ecosystem Section -->
   <section class="py-24 bg-surface/50 border-t border-white/5">
       <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold mb-12 text-center">Built for the NZ Ecosystem</h2>
+          <h2 class="text-3xl font-bold mb-12 text-center">Built for the Aussie Ecosystem</h2>
           <div class="grid md:grid-cols-3 gap-6 text-center">
               <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 transition-colors">
-                  <div class="text-4xl mb-4">🥝</div>
+                  <div class="text-4xl mb-4">🇦🇺</div>
                   <h3 class="text-xl font-bold mb-2">Local Accents</h3>
-                  <p class="text-secondary text-sm">Fine-tuned models that understand and speak with natural New Zealand intonation.</p>
+                  <p class="text-secondary text-sm">Fine-tuned models that understand and speak with natural Australian intonation.</p>
               </div>
               <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 transition-colors">
                   <div class="text-4xl mb-4">📊</div>
-                  <h3 class="text-xl font-bold mb-2">Xero Integration</h3>
-                  <p class="text-secondary text-sm">Seamlessly push invoice data and customer details directly to your Xero account.</p>
+                  <h3 class="text-xl font-bold mb-2">CRM Integration</h3>
+                  <p class="text-secondary text-sm">Seamlessly push invoice data and customer details directly to Xero, Salesforce or HubSpot.</p>
               </div>
               <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 transition-colors">
                   <div class="text-4xl mb-4">📞</div>
-                  <h3 class="text-xl font-bold mb-2">09, 04, 03 Numbers</h3>
-                  <p class="text-secondary text-sm">We provision local landline numbers for your AI, so you maintain a local presence.</p>
+                  <h3 class="text-xl font-bold mb-2">02, 03, 07 Numbers</h3>
+                  <p class="text-secondary text-sm">We provision local landline numbers for your AI (Sydney, Melbourne, Brisbane), so you maintain a local presence.</p>
               </div>
           </div>
       </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="py-24 text-center bg-gradient-to-t from-blue-900/10 to-transparent">
+  <section class="py-24 text-center bg-gradient-to-t from-yellow-900/10 to-transparent">
       <div class="container mx-auto px-4">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Scale Your NZ Business?</h2>
-          <p class="text-xl text-secondary mb-10 max-w-2xl mx-auto">Join leading Kiwi enterprises using SystemPros to automate their workflow.</p>
-          <a href="/contact" class="btn-primary text-xl px-12 py-5 shadow-2xl shadow-blue-500/20 hover:scale-105 transition-transform">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Scale Your Business?</h2>
+          <p class="text-xl text-secondary mb-10 max-w-2xl mx-auto">Join leading Australian enterprises using SystemPros to automate their workflow.</p>
+          <a href="/contact" class="btn-primary text-xl px-12 py-5 shadow-2xl shadow-yellow-500/20 hover:scale-105 transition-transform bg-yellow-600 border-yellow-500 hover:bg-yellow-700">
             Book a Voice AI Demo
           </a>
       </div>
