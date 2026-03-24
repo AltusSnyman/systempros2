@@ -37,7 +37,7 @@ const pageDescription = "Expert analysis on Voice AI, Automation, and the future
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {posts.map((post) => (
                     <article class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1">
-                        <a href={`/blog/${post.slug}`} class="block h-full flex flex-col">
+                        <a href={`/blog/${post.id}`} class="block h-full flex flex-col">
                             <div class="relative h-48 overflow-hidden">
                                 <Image 
                                     src={post.data.heroImage} 

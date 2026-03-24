@@ -1,0 +1,444 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import ServiceSchema from '../components/seo/ServiceSchema.astro';
+import FAQSchema from '../components/seo/FAQSchema.astro';
+
+const faqs = [
+    {
+        question: "How does AI marketing work for hair salons?",
+        answer: "We combine AI-powered voice agents with targeted Meta and Google advertising. The AI answers every call and inquiry 24/7, books appointments instantly, and follows up with clients who haven't rebooked — while our ad campaigns keep a steady flow of new clients coming through your door."
+    },
+    {
+        question: "How quickly will I see results?",
+        answer: "Most salons see their first new bookings from ads within the first week. The AI receptionist is live within 48 hours of onboarding. Reactivation campaigns targeting past clients typically generate rebookings within the first 5 days."
+    },
+    {
+        question: "Do I need to change my booking system?",
+        answer: "No. Our AI integrates with the tools you already use — whether that's Fresha, Timely, Vagaro, Square Appointments, or any other salon booking platform. Nothing changes for your stylists."
+    },
+    {
+        question: "What if a client wants to speak to a real person?",
+        answer: "The AI handles routine bookings, reschedules, and FAQs. Any complex request or client who asks for a person is transferred to your team instantly. You stay in control."
+    },
+    {
+        question: "How much do I need to spend on ads?",
+        answer: "We recommend a minimum ad budget of $500/month for local salon campaigns. Most of our salon clients invest $1,000-$2,000/month and see 5-8x returns in new booking revenue."
+    }
+];
+---
+
+<Layout
+    title="AI Marketing for Hair Salons | Fill Every Chair, Every Day"
+    description="Stop losing clients to no-shows, missed calls, and silent phones. SystemPros combines AI voice agents with Meta advertising to grow your salon's monthly revenue."
+    showChatWidget={false}
+>
+    <ServiceSchema
+        name="AI Marketing for Hair Salons"
+        description="AI-powered marketing and advertising system for hair salons that fills appointment books, reactivates past clients, and drives new bookings through Meta ads."
+        serviceType="Salon Marketing Automation"
+    />
+    <FAQSchema faqs={faqs} />
+
+    <!-- SECTION 1: HERO — The Empty Chair Problem -->
+    <section class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-main">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-900/20 via-main to-main z-0"></div>
+        <div class="absolute inset-0 bg-[url('/assets/grid.svg')] bg-center opacity-[0.03] pointer-events-none z-0"></div>
+
+        <div class="container mx-auto px-4 z-10 max-w-5xl text-center">
+            <div class="space-y-8 fade-up">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/5 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+                    <span class="text-purple-300 text-xs font-bold tracking-wider uppercase">AI-Powered Salon Growth</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.1]">
+                    Empty Chairs <br/>
+                    <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">Cost You $200/Hour.</span> <br/>
+                    We Fill Them.
+                </h1>
+
+                <p class="text-xl text-secondary leading-relaxed max-w-2xl mx-auto">
+                    Your stylists are talented. Your colour work is flawless. But none of that matters when chairs sit empty because calls go unanswered, no-shows stack up, and past clients forget you exist. <strong class="text-white">We fix that with AI and targeted advertising.</strong>
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact" class="btn-primary flex items-center justify-center gap-2 text-lg px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-500 hover:to-pink-400 shadow-[0_0_40px_rgba(168,85,247,0.4)]">
+                        Book Your Free Salon Growth Audit
+                    </a>
+                </div>
+
+                <p class="text-sm text-secondary/60">No contracts. No pressure. Just a clear plan to fill your book.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: PAIN POINTS — The Salon Owner's Trap -->
+    <section class="py-24 relative overflow-hidden bg-surface/30 border-y border-white/5">
+        <div class="container mx-auto px-4 z-10 max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Recognize Any of This?</h2>
+                <p class="text-xl text-secondary max-w-2xl mx-auto">
+                    You didn't open a salon to fight these battles every single week.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Pain 1 -->
+                <div class="p-8 rounded-2xl border border-red-500/10 bg-red-500/5 hover:border-red-500/30 transition-all group">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center text-2xl shrink-0 group-hover:bg-red-500/20 transition-colors">
+                            📱
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-2">Missed Calls = Lost Clients</h3>
+                            <p class="text-secondary text-sm leading-relaxed">
+                                A new client calls while your team is mid-colour. No answer. They call the salon down the road. That's not a missed call — that's <strong class="text-red-400">$3,000+ in lifetime revenue</strong> walking out your door before they even walked in.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pain 2 -->
+                <div class="p-8 rounded-2xl border border-red-500/10 bg-red-500/5 hover:border-red-500/30 transition-all group">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center text-2xl shrink-0 group-hover:bg-red-500/20 transition-colors">
+                            👻
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-2">No-Shows Are Bleeding You Dry</h3>
+                            <p class="text-secondary text-sm leading-relaxed">
+                                The average salon loses <strong class="text-red-400">$15,000-$30,000 a year</strong> to no-shows and last-minute cancellations. That's an entire stylist's wage — gone. And manually chasing confirmations eats up the time you should be spending on clients.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pain 3 -->
+                <div class="p-8 rounded-2xl border border-red-500/10 bg-red-500/5 hover:border-red-500/30 transition-all group">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center text-2xl shrink-0 group-hover:bg-red-500/20 transition-colors">
+                            📉
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-2">Posting on Instagram Isn't a Strategy</h3>
+                            <p class="text-secondary text-sm leading-relaxed">
+                                You spend hours on reels and stories. You get likes. But likes don't fill chairs. Without a <strong class="text-red-400">paid acquisition system</strong> driving local clients through your door, you're hoping the algorithm feeds your family.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pain 4 -->
+                <div class="p-8 rounded-2xl border border-red-500/10 bg-red-500/5 hover:border-red-500/30 transition-all group">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center text-2xl shrink-0 group-hover:bg-red-500/20 transition-colors">
+                            💤
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-2">Past Clients Vanish After Visit One</h3>
+                            <p class="text-secondary text-sm leading-relaxed">
+                                They loved the cut. Left a 5-star review. Then never came back. Not because they found someone better — because <strong class="text-red-400">nobody reminded them to rebook</strong>. Your client database is a goldmine you're not mining.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE SOLUTION — The Salon Growth Engine -->
+    <section class="py-32 relative">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    The <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Salon Growth Engine</span>
+                </h2>
+                <p class="text-secondary text-lg max-w-2xl mx-auto">
+                    Three systems working together to fill your chairs, recover lost revenue, and bring new faces through the door every week.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pillar 1 -->
+                <div class="glass-card hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 text-2xl group-hover:bg-purple-500 group-hover:text-white transition-colors duration-300">
+                        🤖
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">AI Receptionist</h3>
+                    <p class="text-sm text-purple-300 font-semibold mb-3">Never miss another booking</p>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        Answers every call — during appointments, after hours, on weekends. Books, reschedules, and answers FAQs in a natural voice. Integrates with Fresha, Timely, Vagaro, and more.
+                    </p>
+                    <ul class="space-y-2 text-sm text-secondary">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-purple-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            24/7 call answering
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-purple-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Automated confirmations & reminders
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-purple-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            No-show follow-up calls
+                        </li>
+                    </ul>
+                    <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden mt-6">
+                        <div class="h-full bg-purple-500 w-0 group-hover:w-full transition-all duration-700"></div>
+                    </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="glass-card hover:-translate-y-2 group relative">
+                    <div class="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg shadow-purple-500/50">CORE</div>
+                    <div class="w-14 h-14 rounded-xl bg-pink-500/10 flex items-center justify-center mb-6 text-2xl group-hover:bg-pink-500 group-hover:text-white transition-colors duration-300">
+                        🎯
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Meta & Google Ads</h3>
+                    <p class="text-sm text-pink-300 font-semibold mb-3">New clients on demand</p>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        We build and manage hyper-local ad campaigns that put your salon in front of people actively looking for a stylist. Balayage, extensions, colour correction — we target the services that fill your highest-revenue chairs.
+                    </p>
+                    <ul class="space-y-2 text-sm text-secondary">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-pink-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Geo-targeted to your suburb
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-pink-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Before & after creative that converts
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-pink-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Full-funnel: ad → booking → confirmation
+                        </li>
+                    </ul>
+                    <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden mt-6">
+                        <div class="h-full bg-pink-500 w-0 group-hover:w-full transition-all duration-700 delay-100"></div>
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="glass-card hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 text-2xl group-hover:bg-purple-500 group-hover:text-white transition-colors duration-300">
+                        🔄
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Client Reactivation</h3>
+                    <p class="text-sm text-purple-300 font-semibold mb-3">Wake up your dormant database</p>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        Our AI calls clients who haven't booked in 60+ days with a personal, natural-sounding message. "Hi Sarah, we noticed it's been a while since your last balayage — want me to book you in this week?" It works.
+                    </p>
+                    <ul class="space-y-2 text-sm text-secondary">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-purple-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Personalised AI outreach calls
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-purple-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Targets 60, 90, 120+ day gaps
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-purple-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Turns dead leads into booked revenue
+                        </li>
+                    </ul>
+                    <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden mt-6">
+                        <div class="h-full bg-purple-500 w-0 group-hover:w-full transition-all duration-700 delay-200"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: THE NUMBERS — What's Possible -->
+    <section class="py-24 relative bg-surface/30 border-y border-white/5">
+        <div class="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
+            <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(168,85,247,0.1)_50%,transparent_75%,transparent_100%)] bg-[length:40px_40px]"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10 max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">What a Full Book <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Actually Looks Like</span></h2>
+                <p class="text-secondary text-lg max-w-2xl mx-auto">
+                    These are the shifts salon owners see when AI handles the phones and ads bring consistent traffic.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center p-8 rounded-2xl border border-white/10 bg-surface/50 backdrop-blur-sm">
+                    <div class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">95%</div>
+                    <div class="text-sm text-secondary">Calls Answered</div>
+                    <div class="text-xs text-secondary/50 mt-1">vs. ~40% industry average</div>
+                </div>
+                <div class="text-center p-8 rounded-2xl border border-white/10 bg-surface/50 backdrop-blur-sm">
+                    <div class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">60%</div>
+                    <div class="text-sm text-secondary">No-Show Reduction</div>
+                    <div class="text-xs text-secondary/50 mt-1">automated reminders + follow-up</div>
+                </div>
+                <div class="text-center p-8 rounded-2xl border border-white/10 bg-surface/50 backdrop-blur-sm">
+                    <div class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">5-8x</div>
+                    <div class="text-sm text-secondary">Ad Spend ROI</div>
+                    <div class="text-xs text-secondary/50 mt-1">typical return on Meta campaigns</div>
+                </div>
+                <div class="text-center p-8 rounded-2xl border border-white/10 bg-surface/50 backdrop-blur-sm">
+                    <div class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">30%</div>
+                    <div class="text-sm text-secondary">Clients Reactivated</div>
+                    <div class="text-xs text-secondary/50 mt-1">from dormant database in 30 days</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: OLD WAY vs. SYSTEMPROS -->
+    <section class="py-24">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-center text-3xl md:text-4xl font-bold mb-16">The old way vs. <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">SystemPros</span></h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-8">
+                <!-- Old Way -->
+                <div class="p-8 border-l-4 border-red-500/50 bg-surface/30 rounded-r-xl md:rounded-xl mb-8 md:mb-0">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <span class="text-red-500">&#10005;</span> What Most Salons Do
+                    </h3>
+                    <ul class="space-y-4 text-secondary">
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 shrink-0"></span>
+                            Post on Instagram and hope the algorithm blesses you
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 shrink-0"></span>
+                            Miss calls during colour and blowdry appointments
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 shrink-0"></span>
+                            Send manual text reminders (when you remember)
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 shrink-0"></span>
+                            Let past clients disappear without follow-up
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 shrink-0"></span>
+                            Boost posts for $50 and call it "advertising"
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- SystemPros -->
+                <div class="p-8 border-l-4 border-purple-500 bg-purple-500/5 rounded-r-xl md:rounded-xl relative">
+                    <div class="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg shadow-purple-500/50">YOUR UNFAIR ADVANTAGE</div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        The SystemPros Salon Engine
+                    </h3>
+                    <ul class="space-y-4 text-white">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-purple-400 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            AI answers every call and books instantly — 24/7
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-purple-400 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Targeted Meta & Google ads driving local clients weekly
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-purple-400 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Automated reminders slash no-shows by 60%
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-purple-400 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            AI reactivation calls bring back dormant clients
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-purple-400 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Full reporting dashboard — know your ROI to the dollar
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: HOW IT WORKS -->
+    <section class="py-24 relative bg-surface/30 border-y border-white/5">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Live in <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">48 Hours</span></h2>
+                <p class="text-secondary text-lg">Three steps. No tech skills required.</p>
+            </div>
+
+            <div class="space-y-8">
+                <div class="flex items-start gap-6 group">
+                    <div class="w-12 h-12 rounded-full bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 font-bold text-lg shrink-0 group-hover:bg-purple-500 group-hover:text-white transition-colors">1</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Free Salon Growth Audit</h3>
+                        <p class="text-secondary text-sm leading-relaxed">We analyse your current booking flow, call answer rate, and client retention. You get a clear report showing exactly where revenue is leaking — and how much.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-6 group">
+                    <div class="w-12 h-12 rounded-full bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 font-bold text-lg shrink-0 group-hover:bg-purple-500 group-hover:text-white transition-colors">2</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">We Build Your Growth Engine</h3>
+                        <p class="text-secondary text-sm leading-relaxed">We deploy your AI receptionist, connect it to your booking system, and launch your first ad campaigns — all within 48 hours. Your team doesn't need to learn anything new.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-6 group">
+                    <div class="w-12 h-12 rounded-full bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 font-bold text-lg shrink-0 group-hover:bg-purple-500 group-hover:text-white transition-colors">3</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Watch Your Chairs Fill Up</h3>
+                        <p class="text-secondary text-sm leading-relaxed">New clients book from ads. Past clients rebook from AI calls. No-shows drop. You focus on what you do best — making people look incredible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: FAQ -->
+    <section class="py-24">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Common Questions</h2>
+
+            <div class="space-y-4">
+                {faqs.map((faq) => (
+                    <details class="group rounded-2xl border border-white/10 bg-surface/50 backdrop-blur-sm overflow-hidden">
+                        <summary class="flex items-center justify-between cursor-pointer p-6 text-white font-semibold hover:text-purple-300 transition-colors list-none [&::-webkit-details-marker]:hidden">
+                            <span>{faq.question}</span>
+                            <svg class="w-5 h-5 text-secondary group-open:rotate-45 transition-transform duration-200 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-secondary text-sm leading-relaxed border-t border-white/5 pt-4">
+                            {faq.answer}
+                        </div>
+                    </details>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: FINAL CTA -->
+    <section class="py-32 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent"></div>
+        <div class="absolute inset-0 bg-[url('/assets/grid.svg')] bg-center opacity-[0.03] pointer-events-none"></div>
+        <div class="container mx-auto px-4 relative z-10 max-w-3xl">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tighter">
+                Stop Losing Revenue <br/>to Empty Chairs.
+            </h2>
+            <p class="text-xl text-secondary mb-10 max-w-xl mx-auto">
+                Get a free, no-obligation audit of your salon's growth potential. We'll show you exactly how many clients and dollars you're leaving on the table — and how to fix it.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="/contact" class="btn-primary text-xl px-12 py-6 bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-500 hover:to-pink-400 shadow-[0_0_40px_rgba(168,85,247,0.4)]">
+                    Book Your Free Salon Growth Audit
+                </a>
+            </div>
+            <p class="text-sm text-secondary/50 mt-6">Takes 15 minutes. Zero commitment. Real numbers.</p>
+        </div>
+    </section>
+
+    <Footer />
+</Layout>
+
+<style>
+    .fade-up {
+        @apply opacity-0 animate-[fade-up_0.8s_ease-out_forwards];
+    }
+</style>

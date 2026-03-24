@@ -1,0 +1,444 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import ServiceSchema from '../components/seo/ServiceSchema.astro';
+import FAQSchema from '../components/seo/FAQSchema.astro';
+
+const faqs = [
+    {
+        question: "How does AI marketing work for plumbing companies?",
+        answer: "We combine AI-powered voice agents with targeted Meta and Google advertising. The AI answers every call 24/7 — even when your crew is under a house — books jobs instantly, and follows up with leads who didn't convert. Meanwhile, our ad campaigns keep a steady stream of emergency and scheduled jobs flowing in."
+    },
+    {
+        question: "How quickly will I see new jobs coming in?",
+        answer: "Most plumbing companies see their first ad-generated bookings within the first week. The AI receptionist is live within 48 hours of onboarding. Speed-to-lead campaigns start converting immediately — when someone submits a quote request, AI calls them back within 10 seconds."
+    },
+    {
+        question: "Does it work with my existing job management software?",
+        answer: "Yes. Our AI integrates with ServiceTitan, Housecall Pro, Jobber, FieldPulse, and most major plumbing software platforms. Nothing changes for your techs in the field."
+    },
+    {
+        question: "What if a customer has a complex issue that needs a real plumber?",
+        answer: "The AI handles routine bookings, quotes, scheduling, and FAQs. Any complex diagnostic question or customer who asks for a person is transferred to your team instantly. You stay in control of every job."
+    },
+    {
+        question: "How much do I need to spend on ads?",
+        answer: "We recommend a minimum ad budget of $1,000/month for local plumbing campaigns. Most of our plumbing clients invest $2,000-$5,000/month and see 6-10x returns because the average job value is high — one emergency call can pay for the entire month's ad spend."
+    }
+];
+---
+
+<Layout
+    title="AI Marketing for Plumbers | More Jobs, Less Chasing"
+    description="Stop losing emergency calls to voicemail. SystemPros combines AI voice agents with Meta and Google advertising to keep your plumbing schedule packed and your revenue growing."
+    showChatWidget={false}
+>
+    <ServiceSchema
+        name="AI Marketing for Plumbing Companies"
+        description="AI-powered marketing and advertising system for plumbers that captures every emergency call, books jobs 24/7, and drives new customers through Meta and Google ads."
+        serviceType="Plumbing Marketing Automation"
+    />
+    <FAQSchema faqs={faqs} />
+
+    <!-- SECTION 1: HERO — The Missed Emergency -->
+    <section class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-main">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-cyan-900/20 via-main to-main z-0"></div>
+        <div class="absolute inset-0 bg-[url('/assets/grid.svg')] bg-center opacity-[0.03] pointer-events-none z-0"></div>
+
+        <div class="container mx-auto px-4 z-10 max-w-5xl text-center">
+            <div class="space-y-8 fade-up">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/5 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    <span class="text-cyan-300 text-xs font-bold tracking-wider uppercase">AI-Powered Plumbing Growth</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.1]">
+                    A Burst Pipe Waits <br/>
+                    <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">For Nobody.</span> <br/>
+                    Neither Should Your Phone.
+                </h1>
+
+                <p class="text-xl text-secondary leading-relaxed max-w-2xl mx-auto">
+                    Your best tech is elbow-deep in a slab leak. The phone rings. Nobody answers. That homeowner with a flooded kitchen calls the next plumber on Google. <strong class="text-white">That's a $500-$5,000 job — gone in 8 seconds.</strong> We make sure it never happens again.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact" class="btn-primary flex items-center justify-center gap-2 text-lg px-10 py-5 bg-gradient-to-r from-cyan-600 to-blue-500 hover:from-cyan-500 hover:to-blue-400 shadow-[0_0_40px_rgba(6,182,212,0.4)]">
+                        Book Your Free Plumbing Growth Audit
+                    </a>
+                </div>
+
+                <p class="text-sm text-secondary/60">No contracts. No pressure. Just a clear plan to fill your schedule.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: PAIN POINTS — The Plumber's Dilemma -->
+    <section class="py-24 relative overflow-hidden bg-surface/30 border-y border-white/5">
+        <div class="container mx-auto px-4 z-10 max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Sound Familiar?</h2>
+                <p class="text-xl text-secondary max-w-2xl mx-auto">
+                    You didn't get your license to sit in an office chasing leads. But here you are.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Pain 1 -->
+                <div class="p-8 rounded-2xl border border-red-500/10 bg-red-500/5 hover:border-red-500/30 transition-all group">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center text-2xl shrink-0 group-hover:bg-red-500/20 transition-colors">
+                            🚨
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-2">Emergency Calls Go to Voicemail</h3>
+                            <p class="text-secondary text-sm leading-relaxed">
+                                A homeowner's hot water cylinder just burst. They call you. No answer — you're on a job. They call the next plumber. That's not a missed call — that's <strong class="text-red-400">$800+ in emergency revenue</strong> handed to your competitor in under 10 seconds.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pain 2 -->
+                <div class="p-8 rounded-2xl border border-red-500/10 bg-red-500/5 hover:border-red-500/30 transition-all group">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center text-2xl shrink-0 group-hover:bg-red-500/20 transition-colors">
+                            🐌
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-2">Slow Follow-Up Kills Your Close Rate</h3>
+                            <p class="text-secondary text-sm leading-relaxed">
+                                Someone fills out a quote request on your website at 9pm. You see it at 7am. By then they've already booked someone else. <strong class="text-red-400">78% of jobs go to the first responder</strong> — and right now, that's not you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pain 3 -->
+                <div class="p-8 rounded-2xl border border-red-500/10 bg-red-500/5 hover:border-red-500/30 transition-all group">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center text-2xl shrink-0 group-hover:bg-red-500/20 transition-colors">
+                            💸
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-2">You're Paying for Leads You Never Call</h3>
+                            <p class="text-secondary text-sm leading-relaxed">
+                                Hipages, Oneflare, Google Local Services — you're paying for leads that sit in your inbox while you're crawling under a house. <strong class="text-red-400">Every hour you wait, conversion drops 90%.</strong> You're burning ad spend without a system to catch it.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pain 4 -->
+                <div class="p-8 rounded-2xl border border-red-500/10 bg-red-500/5 hover:border-red-500/30 transition-all group">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center text-2xl shrink-0 group-hover:bg-red-500/20 transition-colors">
+                            📉
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-2">Feast or Famine — No Consistent Pipeline</h3>
+                            <p class="text-secondary text-sm leading-relaxed">
+                                One week you're booked solid. The next, crickets. You rely on word-of-mouth and hope. <strong class="text-red-400">Hope is not a marketing strategy.</strong> Without a predictable system driving new jobs, your revenue is a rollercoaster.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE SOLUTION — The Plumbing Growth Engine -->
+    <section class="py-32 relative">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    The <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Plumbing Growth Engine</span>
+                </h2>
+                <p class="text-secondary text-lg max-w-2xl mx-auto">
+                    Three systems working around the clock so you can focus on the work — not chasing it.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pillar 1 -->
+                <div class="glass-card hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 text-2xl group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-300">
+                        🤖
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">AI Dispatch Agent</h3>
+                    <p class="text-sm text-cyan-300 font-semibold mb-3">Every call answered, every job booked</p>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        Answers every call — during jobs, after hours, weekends. Triages emergencies from routine work. Books directly into your calendar or job management platform. Sounds like a real dispatcher, not a robot.
+                    </p>
+                    <ul class="space-y-2 text-sm text-secondary">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            24/7 emergency call handling
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Triages urgent vs. scheduled work
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Integrates with ServiceTitan, Jobber & more
+                        </li>
+                    </ul>
+                    <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden mt-6">
+                        <div class="h-full bg-cyan-500 w-0 group-hover:w-full transition-all duration-700"></div>
+                    </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="glass-card hover:-translate-y-2 group relative">
+                    <div class="absolute -top-3 -right-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg shadow-cyan-500/50">CORE</div>
+                    <div class="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 text-2xl group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
+                        🎯
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Meta & Google Ads</h3>
+                    <p class="text-sm text-blue-300 font-semibold mb-3">New jobs on demand, every week</p>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        We build and manage hyper-local ad campaigns that put your business in front of homeowners the moment something breaks. Burst pipes, blocked drains, hot water failures — we target the high-value emergency searches and the scheduled maintenance jobs.
+                    </p>
+                    <ul class="space-y-2 text-sm text-secondary">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Geo-targeted to your service area
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Emergency + maintenance campaigns
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Full-funnel: ad → call → booked job
+                        </li>
+                    </ul>
+                    <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden mt-6">
+                        <div class="h-full bg-blue-500 w-0 group-hover:w-full transition-all duration-700 delay-100"></div>
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="glass-card hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 text-2xl group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-300">
+                        ⚡
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Speed-to-Lead Engine</h3>
+                    <p class="text-sm text-cyan-300 font-semibold mb-3">Call back web leads in under 10 seconds</p>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        When a homeowner submits a form on your site or a lead platform, our AI calls them back instantly. While they're still staring at their leaking pipe, your "dispatcher" is on the line booking the job. Your competitors are still checking their inbox.
+                    </p>
+                    <ul class="space-y-2 text-sm text-secondary">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Sub-10-second response time
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Works with any lead source
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Beats competitors to every enquiry
+                        </li>
+                    </ul>
+                    <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden mt-6">
+                        <div class="h-full bg-cyan-500 w-0 group-hover:w-full transition-all duration-700 delay-200"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: THE NUMBERS — What's Possible -->
+    <section class="py-24 relative bg-surface/30 border-y border-white/5">
+        <div class="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
+            <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(6,182,212,0.1)_50%,transparent_75%,transparent_100%)] bg-[length:40px_40px]"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10 max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">What a Full Schedule <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Actually Looks Like</span></h2>
+                <p class="text-secondary text-lg max-w-2xl mx-auto">
+                    These are the shifts plumbing companies see when AI handles the phones and ads bring consistent work.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center p-8 rounded-2xl border border-white/10 bg-surface/50 backdrop-blur-sm">
+                    <div class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">95%</div>
+                    <div class="text-sm text-secondary">Calls Answered</div>
+                    <div class="text-xs text-secondary/50 mt-1">including after-hours emergencies</div>
+                </div>
+                <div class="text-center p-8 rounded-2xl border border-white/10 bg-surface/50 backdrop-blur-sm">
+                    <div class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">&lt;10s</div>
+                    <div class="text-sm text-secondary">Lead Response Time</div>
+                    <div class="text-xs text-secondary/50 mt-1">web form to callback</div>
+                </div>
+                <div class="text-center p-8 rounded-2xl border border-white/10 bg-surface/50 backdrop-blur-sm">
+                    <div class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">6-10x</div>
+                    <div class="text-sm text-secondary">Ad Spend ROI</div>
+                    <div class="text-xs text-secondary/50 mt-1">one emergency job pays for the month</div>
+                </div>
+                <div class="text-center p-8 rounded-2xl border border-white/10 bg-surface/50 backdrop-blur-sm">
+                    <div class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">3x</div>
+                    <div class="text-sm text-secondary">More Booked Jobs</div>
+                    <div class="text-xs text-secondary/50 mt-1">from the same lead volume</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: OLD WAY vs. SYSTEMPROS -->
+    <section class="py-24">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-center text-3xl md:text-4xl font-bold mb-16">The old way vs. <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">SystemPros</span></h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-8">
+                <!-- Old Way -->
+                <div class="p-8 border-l-4 border-red-500/50 bg-surface/30 rounded-r-xl md:rounded-xl mb-8 md:mb-0">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <span class="text-red-500">&#10005;</span> What Most Plumbers Do
+                    </h3>
+                    <ul class="space-y-4 text-secondary">
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 shrink-0"></span>
+                            Miss calls while on jobs — customers call the next result
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 shrink-0"></span>
+                            Check lead emails hours later when the job is already gone
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 shrink-0"></span>
+                            Rely on word-of-mouth and pray for referrals
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 shrink-0"></span>
+                            Pay for shared leads on platforms and lose to faster responders
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 shrink-0"></span>
+                            Hire an office person at $50k+/year just to answer phones
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- SystemPros -->
+                <div class="p-8 border-l-4 border-cyan-500 bg-cyan-500/5 rounded-r-xl md:rounded-xl relative">
+                    <div class="absolute -top-3 -right-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg shadow-cyan-500/50">YOUR UNFAIR ADVANTAGE</div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        The SystemPros Plumbing Engine
+                    </h3>
+                    <ul class="space-y-4 text-white">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-cyan-400 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            AI answers every call and books jobs instantly — 24/7
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-cyan-400 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Web leads get a callback in under 10 seconds
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-cyan-400 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Targeted Meta & Google ads driving local jobs weekly
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-cyan-400 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Emergency triage — AI prioritises urgent calls to your mobile
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-cyan-400 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Full reporting dashboard — know your cost per job to the dollar
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: HOW IT WORKS -->
+    <section class="py-24 relative bg-surface/30 border-y border-white/5">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Live in <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">48 Hours</span></h2>
+                <p class="text-secondary text-lg">Three steps. No tech skills required.</p>
+            </div>
+
+            <div class="space-y-8">
+                <div class="flex items-start gap-6 group">
+                    <div class="w-12 h-12 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold text-lg shrink-0 group-hover:bg-cyan-500 group-hover:text-white transition-colors">1</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Free Plumbing Growth Audit</h3>
+                        <p class="text-secondary text-sm leading-relaxed">We analyse your call answer rate, lead response time, and current job pipeline. You get a clear report showing exactly where jobs are leaking out of your funnel — and how much revenue you're leaving on the table.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-6 group">
+                    <div class="w-12 h-12 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold text-lg shrink-0 group-hover:bg-cyan-500 group-hover:text-white transition-colors">2</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">We Build Your Growth Engine</h3>
+                        <p class="text-secondary text-sm leading-relaxed">We deploy your AI dispatch agent, connect it to your job management platform, set up speed-to-lead automation, and launch your first ad campaigns — all within 48 hours. Your techs don't need to learn anything new.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-6 group">
+                    <div class="w-12 h-12 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold text-lg shrink-0 group-hover:bg-cyan-500 group-hover:text-white transition-colors">3</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Watch Your Schedule Fill Up</h3>
+                        <p class="text-secondary text-sm leading-relaxed">New customers call from ads. Emergency jobs are captured 24/7. Web leads convert before your competitors even see them. You focus on what you do best — fixing problems and running your crew.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: FAQ -->
+    <section class="py-24">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Common Questions</h2>
+
+            <div class="space-y-4">
+                {faqs.map((faq) => (
+                    <details class="group rounded-2xl border border-white/10 bg-surface/50 backdrop-blur-sm overflow-hidden">
+                        <summary class="flex items-center justify-between cursor-pointer p-6 text-white font-semibold hover:text-cyan-300 transition-colors list-none [&::-webkit-details-marker]:hidden">
+                            <span>{faq.question}</span>
+                            <svg class="w-5 h-5 text-secondary group-open:rotate-45 transition-transform duration-200 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-secondary text-sm leading-relaxed border-t border-white/5 pt-4">
+                            {faq.answer}
+                        </div>
+                    </details>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: FINAL CTA -->
+    <section class="py-32 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-cyan-900/20 to-transparent"></div>
+        <div class="absolute inset-0 bg-[url('/assets/grid.svg')] bg-center opacity-[0.03] pointer-events-none"></div>
+        <div class="container mx-auto px-4 relative z-10 max-w-3xl">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tighter">
+                Stop Losing Jobs <br/>to Voicemail.
+            </h2>
+            <p class="text-xl text-secondary mb-10 max-w-xl mx-auto">
+                Get a free, no-obligation audit of your plumbing company's growth potential. We'll show you exactly how many jobs you're missing, what they're worth, and how to capture every single one.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="/contact" class="btn-primary text-xl px-12 py-6 bg-gradient-to-r from-cyan-600 to-blue-500 hover:from-cyan-500 hover:to-blue-400 shadow-[0_0_40px_rgba(6,182,212,0.4)]">
+                    Book Your Free Plumbing Growth Audit
+                </a>
+            </div>
+            <p class="text-sm text-secondary/50 mt-6">Takes 15 minutes. Zero commitment. Real numbers.</p>
+        </div>
+    </section>
+
+    <Footer />
+</Layout>
+
+<style>
+    .fade-up {
+        @apply opacity-0 animate-[fade-up_0.8s_ease-out_forwards];
+    }
+</style>
